@@ -32,9 +32,14 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
       <div className="container-custom mx-auto flex items-center justify-between h-16 md:h-20">
         <a href="#home" className="flex items-center">
+          <img 
+            src="/images/logo.png" 
+            alt="Hyper Carga Logo" 
+            className="w-[100px] h-auto mr-2" 
+          />
           <div className="text-white font-bold text-xl flex items-center">
             <span className="text-hyper-blue">Hyper</span>
-            <span className="text-hyper-green">Carga</span>
+            <span className="text-hyper-green"> Carga</span>
           </div>
         </a>
         

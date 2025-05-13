@@ -9,6 +9,12 @@ import ContactSection from "@/components/ContactSection";
 import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import SolutionsSection from "@/components/SolutionsSection";
+import PartnersSection from "@/components/PartnersSection";
+import HyperCargaSolutionsSection from "@/components/HyperCargaSolutionsSection";
+import CasesSection from "@/components/CasesSection";
+import MediaSection from "@/components/MediaSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
 const Index = () => {
@@ -22,6 +28,11 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
+        <SolutionsSection />
+        <PartnersSection />
+        <HyperCargaSolutionsSection />
+        <CasesSection />
+        <MediaSection />
         <AboutSection />
         <ProductsSection />
         <BlogSection />
@@ -30,6 +41,7 @@ const Index = () => {
       </main>
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 };
