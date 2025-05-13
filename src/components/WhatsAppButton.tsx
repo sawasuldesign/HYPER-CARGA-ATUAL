@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MessageSquare } from "lucide-react";
+import { WhatsApp } from "lucide-react";
 
 const WhatsAppButton = () => {
   return (
@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <MessageSquare size={30} />
+      <WhatsApp size={30} />
     </a>
   );
 };
