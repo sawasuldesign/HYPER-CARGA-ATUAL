@@ -1,0 +1,117 @@
+
+import React from "react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-darker pt-16 border-t border-border/30">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="text-white font-bold text-xl flex items-center">
+              <span className="text-hyper-blue">Hyper</span>
+              <span className="text-hyper-green">Carga</span>
+            </div>
+            <p className="text-white/60 text-sm">
+              Empresa brasileira especializada no desenvolvimento de soluções de carregamento
+              para veículos elétricos, combinando alta tecnologia, eficiência energética e 
+              compromisso ambiental.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-semibold text-lg mb-6">Links Rápidos</h3>
+            <ul className="space-y-3">
+              {["Home", "Sobre", "Produtos", "Blog", "Contato", "Seja um parceiro"].map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+                    className="text-white/60 hover:text-hyper-green transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h3 className="font-semibold text-lg mb-6">Produtos</h3>
+            <ul className="space-y-3">
+              {[
+                "HyperCharge Pro Max",
+                "HyperWall Home",
+                "HyperStation Business",
+                "HyperControl Platform",
+                "HyperCharge App"
+              ].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#products"
+                    className="text-white/60 hover:text-hyper-green transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-semibold text-lg mb-6">Newsletter</h3>
+            <p className="text-white/60 text-sm mb-4">
+              Inscreva-se para receber novidades sobre nossa empresa e o setor de mobilidade elétrica.
+            </p>
+            <form className="flex space-x-2">
+              <input
+                type="email"
+                placeholder="Seu e-mail"
+                className="flex-1 bg-dark border border-border px-4 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-hyper-blue/50"
+              />
+              <button
+                type="submit"
+                className="bg-hyper-blue hover:bg-hyper-blue/90 text-white p-2 rounded-md"
+              >
+                <Mail className="h-5 w-5" />
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="border-t border-border/30 mt-12 py-6 text-center md:text-left md:flex md:justify-between md:items-center">
+          <p className="text-white/60 text-sm">
+            &copy; {new Date().getFullYear()} Hyper Carga. Todos os direitos reservados.
+          </p>
+          <div className="mt-4 md:mt-0 space-x-4 text-sm text-white/60">
+            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
