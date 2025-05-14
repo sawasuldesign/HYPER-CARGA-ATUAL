@@ -58,11 +58,14 @@ const HeroSection = () => {
           
           <div className="relative h-[400px] lg:h-[500px] animated-element">
             <div className="absolute inset-0 flex items-center justify-center">
-              <img 
-                src="/images/charging-station-mall.jpg" 
-                alt="Carregadores HyperCarga em um estacionamento de shopping" 
-                className="relative z-10 w-[400px] h-[300px] object-cover rounded-[10px] shadow-[5px_5px_10px_rgba(0,0,0,0.2)]"
-              />
+              <div className="relative w-[80%] mx-auto">
+                <div className="absolute inset-0 bg-gradient-blue-green rounded-xl blur-2xl opacity-20 animate-pulse-light"></div>
+                <img 
+                  src="/images/charging-station.png" 
+                  alt="Carregador HyperCarga para veículos elétricos" 
+                  className="relative z-10 w-full h-full object-contain animate-float"
+                />
+              </div>
             </div>
           </div>
         </div>
