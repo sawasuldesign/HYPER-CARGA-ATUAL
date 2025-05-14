@@ -47,6 +47,7 @@ const BlogSection = () => {
           <a
             href="/blog"
             className="flex items-center text-hyper-blue hover:text-hyper-green transition-colors animated-element"
+            aria-label="Ver todas as publicações do blog"
           >
             Ver todas as publicações
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,7 +63,7 @@ const BlogSection = () => {
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={post.image}
-                  alt={post.title}
+                  alt={`Imagem de capa do post: ${post.title}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 bg-hyper-blue/90 text-white text-xs px-2 py-1 rounded">
@@ -93,6 +94,7 @@ const BlogSection = () => {
                 <a
                   href={`/blog/${post.id}`}
                   className="inline-flex items-center text-sm font-medium text-hyper-blue hover:text-hyper-green transition-colors"
+                  aria-label={`Ler mais sobre: ${post.title}`}
                 >
                   Ler mais
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -19,19 +19,19 @@ const Footer = () => {
               compromisso ambiental.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -41,13 +41,20 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
-              {["Home", "Sobre", "Produtos", "Blog", "Contato", "Seja um parceiro"].map((item) => (
-                <li key={item}>
+              {[
+                { name: "Home", href: "/" },
+                { name: "Sobre", href: "#about" },
+                { name: "Produtos", href: "#products" },
+                { name: "Blog", href: "#blog" },
+                { name: "Contato", href: "#contact" },
+                { name: "Loja", href: "/loja" }
+              ].map((item) => (
+                <li key={item.name}>
                   <a
-                    href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+                    href={item.href}
                     className="text-white/60 hover:text-hyper-green transition-colors"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -88,10 +95,12 @@ const Footer = () => {
                 type="email"
                 placeholder="Seu e-mail"
                 className="flex-1 bg-dark border border-border px-4 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-hyper-blue/50"
+                aria-label="Seu e-mail para newsletter"
               />
               <button
                 type="submit"
                 className="bg-hyper-blue hover:bg-hyper-blue/90 text-white p-2 rounded-md"
+                aria-label="Assinar newsletter"
               >
                 <Mail className="h-5 w-5" />
               </button>

@@ -27,6 +27,7 @@ const ContactSection = () => {
                     id="name"
                     className="w-full bg-dark border border-border px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-hyper-blue/50 text-white"
                     placeholder="Seu nome"
+                    aria-label="Seu nome"
                   />
                 </div>
                 <div>
@@ -38,6 +39,7 @@ const ContactSection = () => {
                     id="email"
                     className="w-full bg-dark border border-border px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-hyper-blue/50 text-white"
                     placeholder="seu@email.com"
+                    aria-label="Seu email"
                   />
                 </div>
               </div>
@@ -51,6 +53,7 @@ const ContactSection = () => {
                   id="subject"
                   className="w-full bg-dark border border-border px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-hyper-blue/50 text-white"
                   placeholder="Assunto da mensagem"
+                  aria-label="Assunto da mensagem"
                 />
               </div>
 
@@ -63,12 +66,14 @@ const ContactSection = () => {
                   rows={5}
                   className="w-full bg-dark border border-border px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-hyper-blue/50 text-white"
                   placeholder="Sua mensagem..."
+                  aria-label="Sua mensagem"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 className="btn-primary w-full sm:w-auto"
+                aria-label="Enviar mensagem"
               >
                 Enviar mensagem
               </button>

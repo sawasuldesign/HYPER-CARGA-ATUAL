@@ -73,7 +73,7 @@ const HeroSection = () => {
       
       <div className="absolute bottom-8 left-0 right-0 flex justify-center">
         <a 
-          href="#about" 
+          href="#solutions" 
           className="text-white/50 hover:text-white transition-colors p-2"
           aria-label="Scroll para saber mais"
         >

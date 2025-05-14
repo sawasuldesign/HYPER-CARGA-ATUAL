@@ -23,6 +23,7 @@ const PartnerSection = () => {
           <a 
             href="#contact" 
             className="btn-primary inline-flex items-center"
+            aria-label="Entre em contato para se tornar um parceiro"
           >
             Quero ser um parceiro
             <ChevronRight className="ml-2 h-5 w-5" />
