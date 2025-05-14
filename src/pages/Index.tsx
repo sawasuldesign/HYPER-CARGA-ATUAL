@@ -6,10 +6,15 @@ import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
-import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
+import CardsSection from "@/components/CardsSection";
+import PartnersSection from "@/components/PartnersSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import CasesSection from "@/components/CasesSection";
+import MediaSection from "@/components/MediaSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   useEffect(() => {
@@ -22,14 +27,19 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <HeroSection />
+        <CardsSection />
         <AboutSection />
         <ProductsSection />
+        <SolutionsSection />
+        <PartnersSection />
+        <CasesSection />
+        <MediaSection />
         <BlogSection />
         <ContactSection />
-        <PartnerSection />
       </main>
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 };
