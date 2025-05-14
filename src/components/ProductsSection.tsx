@@ -32,25 +32,32 @@ const ProductsSection = () => {
     gestao: [
       {
         id: 4,
-        name: "Projetos de Instalação",
-        image: "/images/installation.png",
-        description: "Projetos personalizados para instalação de infraestrutura de recarga em diferentes contextos.",
-        features: ["Análise de viabilidade", "Dimensionamento elétrico", "Instalação profissional", "Comissionamento"],
+        name: "HyperControl Platform",
+        image: "/images/software-1.png",
+        description: "Software de gerenciamento para controle total da sua infraestrutura de carregamento.",
+        features: ["Monitoramento em tempo real", "Relatórios detalhados", "Gestão de usuários", "Integração de pagamentos"],
+      },
+      {
+        id: 5,
+        name: "HyperCharge App",
+        image: "/images/software-2.png",
+        description: "Aplicativo para usuários localizarem pontos de recarga e gerenciarem seus carregamentos.",
+        features: ["Mapa de carregadores", "Reserva de estações", "Histórico de utilização", "Pagamento integrado"],
       }
     ]
   };
 
   const categories = [
     { id: "carregadores", label: "Carregadores" },
-    { id: "gestao", label: "Projetos de Instalação" },
+    { id: "gestao", label: "Sistemas de Gestão" },
   ];
 
   return (
-    <section id="products" className="section bg-[#0000FF]">
+    <section id="products" className="section bg-darker">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animated-element">
-          <h2 className="section-title text-white">Nossos Produtos</h2>
-          <p className="section-subtitle text-white">Soluções completas de recarga para todos os contextos</p>
+          <h2 className="section-title">Nossos Produtos</h2>
+          <p className="section-subtitle">Soluções completas de recarga para todos os contextos</p>
         </div>
 
         {/* Category Tabs */}
@@ -60,7 +67,7 @@ const ProductsSection = () => {
               key={category.id}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                 activeTab === category.id
-                  ? "bg-[#00FF00] text-white"
+                  ? "bg-hyper-blue text-white"
                   : "bg-dark text-white/60 hover:bg-dark/80 hover:text-white"
               }`}
               onClick={() => setActiveTab(category.id)}
@@ -73,7 +80,7 @@ const ProductsSection = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products[activeTab as keyof typeof products].map((product) => (
-            <div key={product.id} className="bg-dark rounded-xl overflow-hidden border-2 border-[#00FF00] hover:border-[#00FF00] transition-all animated-element">
+            <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
               <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
                 <img
                   src={product.image}
@@ -82,14 +89,14 @@ const ProductsSection = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">{product.name}</h3>
-                <p className="text-white mb-4">{product.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <p className="text-white/70 mb-4">{product.description}</p>
                 
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00FF00] mt-2 mr-2"></span>
-                      <span className="text-sm text-white">{feature}</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-hyper-green mt-2 mr-2"></span>
+                      <span className="text-sm text-white/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -97,16 +104,16 @@ const ProductsSection = () => {
                 <div className="flex justify-between items-center">
                   <a
                     href="#contact"
-                    className="text-[#0000FF] bg-white hover:text-[#00FF00] text-sm font-medium flex items-center transition-colors px-3 py-1 rounded"
+                    className="text-hyper-blue hover:text-hyper-green text-sm font-medium flex items-center transition-colors"
                   >
                     Solicitar orçamento
                     <ChevronRight className="ml-1 h-4 w-4" />
                   </a>
                   
                   <button
-                    className="flex items-center text-sm text-white hover:text-[#00FF00] transition-colors"
+                    className="flex items-center text-sm text-white/70 hover:text-white/90 transition-colors"
                   >
-                    <Download className="mr-1 h-4 w-4 text-[#00FF00]" />
+                    <Download className="mr-1 h-4 w-4" />
                     Ficha técnica
                   </button>
                 </div>
@@ -117,7 +124,7 @@ const ProductsSection = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center animated-element">
-          <a href="#contact" className="btn-primary bg-[#00FF00] text-white py-3 px-6 rounded-md inline-flex items-center hover:bg-[#00FF00]/90 transition-all duration-300">
+          <a href="#contact" className="btn-primary">
             Fale com um especialista
           </a>
         </div>

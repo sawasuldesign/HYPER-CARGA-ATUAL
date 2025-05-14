@@ -6,9 +6,9 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center bg-[#0000FF] overflow-hidden"
+      className="relative min-h-screen flex items-center bg-dark overflow-hidden"
       style={{
-        backgroundImage: "linear-gradient(to right bottom, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0.95))",
+        backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('/images/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
@@ -22,35 +22,35 @@ const HeroSection = () => {
       <div className="container-custom relative z-10 mt-16 md:mt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animated-element">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#00FF00]/10 text-white text-sm font-medium">
-              <ZapIcon className="h-4 w-4 mr-2 text-[#00FF00]" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-hyper-blue/10 text-hyper-blue text-sm font-medium">
+              <ZapIcon className="h-4 w-4 mr-2" />
               <span>Energia brasileira, inovação sustentável</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-              Soluções de <span className="text-[#00FF00]">carregamento</span> para o <span className="text-[#00FF00]">futuro</span> da mobilidade
+              Soluções de <span className="text-hyper-blue">carregamento</span> para o <span className="text-hyper-green">futuro</span> da mobilidade
             </h1>
             
-            <p className="text-lg text-white md:pr-10">
+            <p className="text-lg text-white/80 md:pr-10">
               Desenvolvemos e fabricamos no Brasil carregadores para veículos elétricos
               com alta tecnologia, eficiência energética e compromisso ambiental.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <a href="#products" className="btn-primary bg-[#00FF00] text-white py-3 px-6 rounded-md inline-flex items-center hover:bg-[#00FF00]/90 transition-all duration-300">
+              <a href="#products" className="btn-primary">
                 Conheça nossos produtos
                 <ChevronRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#about" className="btn-outline border border-white text-white py-3 px-6 rounded-md inline-flex items-center hover:bg-white/10 transition-all duration-300">
+              <a href="#about" className="btn-outline">
                 Saiba mais
               </a>
             </div>
             
             <div className="flex items-center space-x-4 pt-4">
               <div className="flex -space-x-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#00FF00] text-white text-xs">100%</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-hyper-blue text-white text-xs">100%</span>
               </div>
-              <p className="text-sm text-white">
+              <p className="text-sm text-white/80">
                 Tecnologia <span className="font-semibold">100% brasileira</span> com excelência internacional
               </p>
             </div>
@@ -59,10 +59,11 @@ const HeroSection = () => {
           <div className="relative h-[400px] lg:h-[500px] animated-element">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-[80%] mx-auto">
+                <div className="absolute inset-0 bg-gradient-blue-green rounded-xl blur-2xl opacity-20 animate-pulse-light"></div>
                 <img 
                   src="/images/charging-station.png" 
                   alt="Carregador HyperCarga para veículos elétricos" 
-                  className="relative z-10 w-[400px] h-[300px] object-cover rounded-[10px] border-2 border-[#00FF00] shadow-[5px_5px_10px_rgba(0,0,0,0.2)] animate-float"
+                  className="relative z-10 w-full h-full object-contain animate-float"
                 />
               </div>
             </div>
