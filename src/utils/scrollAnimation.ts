@@ -10,7 +10,7 @@ export const initScrollAnimation = () => {
       }
     });
   }, {
-    threshold: 0.25
+    threshold: 0.15
   });
 
   animatedElements.forEach((element) => {

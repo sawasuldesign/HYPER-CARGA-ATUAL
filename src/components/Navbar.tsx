@@ -37,17 +37,18 @@ const Navbar = () => {
         { name: "Carregadores com a sua marca", href: "/servicos/marca-personalizada" }
       ]
     },
-    { name: "Contato", href: "#cta", ariaLabel: "Ir para a seção de chamada para ação" },
+    { name: "Blog", href: "#blog", ariaLabel: "Ir para a seção blog" },
+    { name: "Contato", href: "#contact", ariaLabel: "Ir para a seção contato" },
     { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja", isButton: true }
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 animated-element ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
       <div className="container-custom mx-auto flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center" aria-label="Hyper Carga - Página inicial">
           <div className="font-bold text-xl flex items-center">
             <span className="text-hyper-blue">Hyper</span>
-            <span className="text-hyper-green">&nbsp;Carga</span>
+            <span className="text-hyper-green">Carga</span>
           </div>
         </a>
         

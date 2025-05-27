@@ -1,45 +1,41 @@
 
 import React from "react";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Carregadores e Equipamentos",
       subtitle: "Alta tecnologia carregando seu veículo",
-      image: "https://i.imgur.com/lsP0plf.png",
-      href: "/servicos/negocios-frotas",
-      alt: "Carregadores Hyper Carga"
+      image: "/images/chargers-bg.jpg",
+      href: "/servicos/carregadores"
     },
     {
       title: "Projetos, Instalação e Manutenção",
-      subtitle: "Ciência energética sob medida",
-      image: "https://i.imgur.com/ALH6KkC.png",
-      href: "/servicos/projeto-instalacao",
-      alt: "Instalação Hyper Carga"
+      subtitle: "Ciência energética e funcional sob medida",
+      image: "/images/installation-bg.jpg",
+      href: "/servicos/instalacao"
     },
     {
-      title: "Gestão de Pontos de Recarga",
-      subtitle: "Tecnologia via apps Hyper Carga",
-      image: "https://i.imgur.com/ywl1xih.jpeg",
-      href: "/servicos/marca-personalizada",
-      alt: "Gestão de recarga Hyper Carga"
+      title: "Gestão e Operação de Pontos de Recarga",
+      subtitle: "Tecnologia e integração através da inteligência e apps Hyper Carga",
+      image: "/images/management-bg.jpg",
+      href: "/servicos/gestao"
     },
     {
-      title: "Aluguel de Carregadores",
-      subtitle: "Formando mentes da eletromobilidade",
-      image: "https://i.imgur.com/ywl1xih.jpeg",
-      href: "/servicos/aluguel",
-      alt: "Aluguel de carregadores Hyper Carga"
+      title: "Cursos",
+      subtitle: "Formando as novas mentes da eletromobilidade",
+      image: "/images/courses-bg.jpg",
+      href: "/cursos"
     }
   ];
 
   return (
-    <section id="services" className="section bg-dark relative">
+    <section id="services" className="section bg-dark">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animated-element">
-          <h2 className="text-white text-3xl font-bold mb-2">Nossos Serviços</h2>
-          <p className="text-white/70">Soluções completas para a mobilidade elétrica</p>
+          <h2 className="section-title">Nossos Serviços</h2>
+          <p className="section-subtitle">Soluções completas para a mobilidade elétrica</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -64,8 +60,8 @@ const ServicesSection = () => {
                 
                 <a 
                   href={service.href}
-                  className="bg-hyper-green hover:bg-hyper-green/80 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none inline-flex items-center self-start"
-                  aria-label={`Saiba mais sobre ${service.title}`}
+                  className="btn-secondary inline-flex items-center self-start"
+                  aria-label={`Conheça mais sobre ${service.title}`}
                 >
                   Saiba mais
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -75,17 +71,6 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-
-      {/* WhatsApp Button */}
-      <a 
-        href="https://wa.me/555436983939" 
-        className="fixed bottom-6 right-6 z-40 bg-hyper-green hover:bg-hyper-green/80 p-3 rounded-full shadow-lg transition-transform hover:scale-110 duration-300"
-        aria-label="Contactar via WhatsApp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <MessageCircle className="h-6 w-6 text-white" />
-      </a>
     </section>
   );
 };

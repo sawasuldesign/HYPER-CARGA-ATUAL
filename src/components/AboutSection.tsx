@@ -1,6 +1,6 @@
 
 import React from "react";
-import { CheckCircle, ArrowRight, Factory, ShieldCheck, Zap } from "lucide-react";
+import { CheckCircle, Zap, ShieldCheck, Factory } from "lucide-react";
 
 const AboutSection = () => {
   const features = [
@@ -25,8 +25,8 @@ const AboutSection = () => {
     <section id="about" className="section bg-dark">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animated-element">
-          <h2 className="text-white text-3xl font-bold mb-2">Sobre a Hyper Carga</h2>
-          <p className="text-white/70">Nascemos com o propósito de acelerar a transição energética no Brasil</p>
+          <h2 className="section-title">Sobre a Hyper Carga</h2>
+          <p className="section-subtitle">Nascemos com o propósito de acelerar a transição energética no Brasil</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -54,12 +54,8 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <a 
-              href="#about" 
-              className="bg-hyper-blue hover:bg-hyper-blue/90 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none inline-flex items-center"
-            >
-              Saiba mais
-              <ArrowRight className="ml-2 h-4 w-4" />
+            <a href="#products" className="btn-secondary">
+              Conheça nossos produtos
             </a>
           </div>
 
@@ -68,7 +64,7 @@ const AboutSection = () => {
               <div className="aspect-[4/3] relative z-10">
                 <img 
                   src="/images/about-image.jpg" 
-                  alt="Sobre a Hyper Carga" 
+                  alt="Equipe Hyper Carga" 
                   className="object-cover h-full w-full rounded-xl"
                 />
               </div>
@@ -89,8 +85,8 @@ const AboutSection = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {features.map((feature, index) => (
-            <div key={index} className="border border-hyper-mid-green/30 rounded-lg bg-darker p-6 transition-all duration-300 hover:border-hyper-mid-green/60 animated-element">
-              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-hyper-green/10 text-hyper-green mb-4">
+            <div key={index} className="highlight-box animated-element">
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-hyper-blue/10 text-hyper-blue mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>

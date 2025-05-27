@@ -1,62 +1,37 @@
 
 import React from "react";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="bg-darker pt-16 border-t border-border/30">
+    <footer className="bg-darker pt-16 border-t border-border/30">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 animated-element">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="text-white font-bold text-xl flex items-center">
               <span className="text-hyper-blue">Hyper</span>
-              <span className="text-hyper-green">&nbsp;Carga</span>
+              <span className="text-hyper-green">Carga</span>
             </div>
-            
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-hyper-green mt-1 flex-shrink-0" />
-                <p className="text-white/60 text-sm">
-                  R. André Aguzzoli, 20 - L46 - Bela Vista, Caxias do Sul - RS, 95072-030
-                </p>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-hyper-green flex-shrink-0" />
-                <a 
-                  href="mailto:marketing@sawasul.com.br" 
-                  className="text-white/60 text-sm hover:text-hyper-green transition-colors"
-                >
-                  marketing@sawasul.com.br
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-hyper-green flex-shrink-0" />
-                <a 
-                  href="tel:+555436983939" 
-                  className="text-white/60 text-sm hover:text-hyper-green transition-colors"
-                >
-                  (54) 3698-3939
-                </a>
-              </div>
-            </div>
-            
+            <p className="text-white/60 text-sm">
+              Empresa brasileira especializada no desenvolvimento de soluções de carregamento
+              para veículos elétricos, combinando alta tecnologia, eficiência energética e 
+              compromisso ambiental.
+            </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-hyper-blue hover:text-hyper-blue/80 transition-colors" aria-label="Facebook">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-hyper-blue hover:text-hyper-blue/80 transition-colors" aria-label="Instagram">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-hyper-blue hover:text-hyper-blue/80 transition-colors" aria-label="LinkedIn">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-hyper-blue hover:text-hyper-blue/80 transition-colors" aria-label="Twitter">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-hyper-blue hover:text-hyper-blue/80 transition-colors" aria-label="YouTube">
+              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -67,11 +42,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               {[
-                { name: "Home", href: "#home" },
+                { name: "Home", href: "/" },
                 { name: "Sobre", href: "#about" },
                 { name: "Produtos", href: "#products" },
-                { name: "Serviços", href: "#services" },
-                { name: "Contato", href: "#cta" },
+                { name: "Blog", href: "#blog" },
+                { name: "Contato", href: "#contact" },
                 { name: "Loja", href: "/loja" }
               ].map((item) => (
                 <li key={item.name}>
@@ -91,19 +66,18 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-6">Produtos</h3>
             <ul className="space-y-3">
               {[
-                { name: "Walbox 7,04/22 kW", text: "Quero%20um%20orçamento%20do%20Walbox" },
-                { name: "Carregador DC 80 kW", text: "Quero%20um%20orçamento%20do%20DC%2080kW" },
-                { name: "Portátil Multicabos", text: "Quero%20um%20orçamento%20do%20Portátil" },
-                { name: "Carregador DC 40 kW", text: "Quero%20um%20orçamento%20do%20DC%2040kW" }
+                "HyperCharge Pro Max",
+                "HyperWall Home",
+                "HyperStation Business",
+                "HyperControl Platform",
+                "HyperCharge App"
               ].map((item) => (
-                <li key={item.name}>
+                <li key={item}>
                   <a
-                    href={`https://wa.me/555436983939?text=${item.text}`}
+                    href="#products"
                     className="text-white/60 hover:text-hyper-green transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    {item.name}
+                    {item}
                   </a>
                 </li>
               ))}

@@ -8,9 +8,13 @@ import ProductsSection from "@/components/ProductsSection";
 import ServicesSection from "@/components/ServicesSection";
 import PartnersCarouselSection from "@/components/PartnersCarouselSection";
 import CasesSection from "@/components/CasesSection";
-import CtaSection from "@/components/CtaSection";
+import MediaCarouselSection from "@/components/MediaCarouselSection";
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
+import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
 const Index = () => {
@@ -50,10 +54,14 @@ const Index = () => {
         <ServicesSection />
         <PartnersCarouselSection />
         <CasesSection />
-        <CtaSection />
+        <MediaCarouselSection />
+        <BlogSection />
+        <ContactSection />
+        <PartnerSection />
       </main>
       <Footer />
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 };
