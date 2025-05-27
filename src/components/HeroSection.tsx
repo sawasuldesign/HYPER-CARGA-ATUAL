@@ -32,16 +32,15 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg text-white/80 md:pr-10">
-              Desenvolvemos e fabricamos no Brasil carregadores para veículos elétricos
-              com alta tecnologia, eficiência energética e compromisso ambiental.
+              Tecnologia brasileira para eficiência energética e sustentabilidade.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <a href="#products" className="btn-primary">
+              <a href="#products" className="btn-primary" aria-label="Ir para a seção de produtos">
                 Conheça nossos produtos
                 <ChevronRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#about" className="btn-outline">
+              <a href="#about" className="btn-outline" aria-label="Ir para a seção sobre">
                 Saiba mais
               </a>
             </div>
@@ -61,8 +60,8 @@ const HeroSection = () => {
               <div className="relative w-[80%] mx-auto">
                 <div className="absolute inset-0 bg-gradient-blue-green rounded-xl blur-2xl opacity-20 animate-pulse-light"></div>
                 <img 
-                  src="/images/charging-station.png" 
-                  alt="Carregador HyperCarga para veículos elétricos" 
+                  src="https://i.imgur.com/pGWHvrI.png" 
+                  alt="Carregador Hyper Carga" 
                   className="relative z-10 w-full h-full object-contain animate-float"
                 />
               </div>

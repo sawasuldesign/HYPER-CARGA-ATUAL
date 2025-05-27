@@ -6,27 +6,31 @@ const SolutionsSection = () => {
   const solutions = [
     {
       title: "Motoristas",
-      image: "/images/driver-bg.jpg",
+      image: "https://i.imgur.com/1OXZrUZ.png",
       href: "/solucoes/motoristas",
-      cta: "Acesse as Soluções"
+      cta: "Acesse as Soluções",
+      alt: "Soluções para motoristas"
     },
     {
       title: "Frotas e Empresas",
-      image: "/images/fleet-bg.jpg",
+      image: "https://i.imgur.com/IQWDgYh.png",
       href: "/solucoes/frotas",
-      cta: "Acesse as Soluções"
+      cta: "Acesse as Soluções",
+      alt: "Soluções para frotas"
     },
     {
       title: "Academy by Hyper Carga",
       image: "/images/academy-bg.jpg",
       href: "/cursos",
-      cta: "Acesse os Cursos"
+      cta: "Acesse os Cursos",
+      alt: "Academy Hyper Carga"
     },
     {
       title: "Hyper Carga Store",
-      image: "/images/store-bg.jpg",
+      image: "https://i.imgur.com/AFisAN6.png",
       href: "/loja",
-      cta: "Acesse a nossa Loja"
+      cta: "Acesse a nossa Loja",
+      alt: "Loja Hyper Carga"
     }
   ];
 
@@ -34,8 +38,8 @@ const SolutionsSection = () => {
     <section id="solutions" className="section bg-dark">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12 animated-element">
-          <h2 className="section-title">Nossas Soluções</h2>
-          <p className="section-subtitle">
+          <h2 className="text-white text-3xl font-bold mb-2">Nossas Soluções</h2>
+          <p className="text-white/70">
             Descubra como a Hyper Carga está transformando a mobilidade elétrica
           </p>
         </div>
@@ -61,7 +65,7 @@ const SolutionsSection = () => {
                 
                 <a 
                   href={solution.href}
-                  className="btn-secondary inline-flex items-center self-start"
+                  className="bg-hyper-green hover:bg-hyper-green/80 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none inline-flex items-center self-start"
                   aria-label={`${solution.cta} para ${solution.title}`}
                 >
                   {solution.cta}
