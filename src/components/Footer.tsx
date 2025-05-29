@@ -1,83 +1,96 @@
 
 import React from "react";
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube, Mail, MapPin, Phone } from "lucide-react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const links = [
+    { name: "Home", href: "/", ariaLabel: "Ir para a página inicial" },
+    { name: "Sobre", href: "#about", ariaLabel: "Ir para a seção Sobre" },
+    { name: "Produtos", href: "#products", ariaLabel: "Ir para a seção Produtos" },
+    { name: "Serviços", href: "#services", ariaLabel: "Ir para a seção Serviços" },
+    { name: "Contato", href: "#partner", ariaLabel: "Ir para a seção Contato" },
+    { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja" },
+  ];
+
+  const products = [
+    { name: "Walbox 7,04/22 kW", href: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Walbox%207,04/22%20kW" },
+    { name: "Carregador DC 80 kW", href: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Carregador%20DC%2080%20kW" },
+    { name: "Portátil Multicabos 7,04 kW Max", href: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Portátil%20Multicabos%207,04%20kW" },
+    { name: "Carregador DC 40 kW", href: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW" },
+  ];
+
+  const socials = [
+    { icon: Facebook, href: "#", ariaLabel: "Visite nosso Facebook" },
+    { icon: Instagram, href: "#", ariaLabel: "Visite nosso Instagram" },
+    { icon: Linkedin, href: "#", ariaLabel: "Visite nosso LinkedIn" },
+    { icon: Twitter, href: "#", ariaLabel: "Visite nosso Twitter" },
+    { icon: Youtube, href: "#", ariaLabel: "Visite nosso YouTube" },
+  ];
+
   return (
-    <footer className="bg-darker pt-16 border-t border-border/30">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <div className="text-white font-bold text-xl flex items-center">
-              <span className="text-hyper-blue">Hyper</span>
-              <span className="text-hyper-green">Carga</span>
+    <footer id="footer" className="bg-darker py-12 animated-element fade-in-up">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Informações da Empresa */}
+          <div>
+            <div className="flex items-center space-x-1 mb-4">
+              <span className="text-2xl font-bold text-hyper-blue">Hyper</span>
+              <span className="text-2xl font-bold text-hyper-green">Carga</span>
             </div>
-            <p className="text-white/60 text-sm">
-              Empresa brasileira especializada no desenvolvimento de soluções de carregamento
-              para veículos elétricos, combinando alta tecnologia, eficiência energética e 
-              compromisso ambiental.
+            <p className="text-white/70 mb-4">
+              A Hyper Carga desenvolve soluções de carregamento para veículos elétricos com tecnologia
+              brasileira e foco em sustentabilidade.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-white/60 hover:text-hyper-blue transition-colors" aria-label="YouTube">
-                <Youtube className="h-5 w-5" />
-              </a>
+            
+            {/* Informações de Contato */}
+            <div className="space-y-2 text-white/70 text-sm">
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 text-hyper-green mr-2 mt-0.5 flex-shrink-0" />
+                <p>R. André Aguzzoli, 20 - L46 - Bela Vista, Caxias do Sul - RS, 95072-030</p>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 text-hyper-green mr-2" />
+                <p>marketing@sawasul.com.br</p>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 text-hyper-green mr-2" />
+                <a href="tel:+555436983939" className="hover:text-hyper-blue transition-colors">
+                  (54) 3698-3939
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Links Rápidos */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Links Rápidos</h3>
-            <ul className="space-y-3">
-              {[
-                { name: "Home", href: "/" },
-                { name: "Sobre", href: "#about" },
-                { name: "Produtos", href: "#products" },
-                { name: "Blog", href: "#blog" },
-                { name: "Contato", href: "#contact" },
-                { name: "Loja", href: "/loja" }
-              ].map((item) => (
-                <li key={item.name}>
+            <h3 className="text-xl font-bold text-white mb-4">Links Rápidos</h3>
+            <ul className="space-y-2">
+              {links.map((link) => (
+                <li key={link.name}>
                   <a
-                    href={item.href}
-                    className="text-white/60 hover:text-hyper-green transition-colors"
+                    href={link.href}
+                    className="text-white/70 hover:text-hyper-blue transition-colors"
+                    aria-label={link.ariaLabel}
                   >
-                    {item.name}
+                    {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Produtos */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Produtos</h3>
-            <ul className="space-y-3">
-              {[
-                "HyperCharge Pro Max",
-                "HyperWall Home",
-                "HyperStation Business",
-                "HyperControl Platform",
-                "HyperCharge App"
-              ].map((item) => (
-                <li key={item}>
+            <h3 className="text-xl font-bold text-white mb-4">Produtos</h3>
+            <ul className="space-y-2">
+              {products.map((product) => (
+                <li key={product.name}>
                   <a
-                    href="#products"
-                    className="text-white/60 hover:text-hyper-green transition-colors"
+                    href={product.href}
+                    className="text-white/70 hover:text-hyper-blue transition-colors text-sm"
+                    aria-label={`Solicitar orçamento do ${product.name}`}
                   >
-                    {item}
+                    {product.name}
                   </a>
                 </li>
               ))}
@@ -86,36 +99,52 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Newsletter</h3>
-            <p className="text-white/60 text-sm mb-4">
-              Inscreva-se para receber novidades sobre nossa empresa e o setor de mobilidade elétrica.
-            </p>
-            <form className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Seu e-mail"
-                className="flex-1 bg-dark border border-border px-4 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-hyper-blue/50"
-                aria-label="Seu e-mail para newsletter"
-              />
-              <button
-                type="submit"
-                className="bg-hyper-blue hover:bg-hyper-blue/90 text-white p-2 rounded-md"
-                aria-label="Assinar newsletter"
-              >
-                <Mail className="h-5 w-5" />
-              </button>
+            <h3 className="text-xl font-bold text-white mb-4">Newsletter</h3>
+            <form className="mb-6">
+              <div className="flex items-center border border-border/40 rounded-lg">
+                <input
+                  type="email"
+                  placeholder="Seu email"
+                  className="bg-transparent text-white/70 p-2 w-full outline-none placeholder:text-white/50"
+                  aria-label="Insira seu email para a newsletter"
+                />
+                <button
+                  type="submit"
+                  className="bg-hyper-blue text-white p-2 rounded-r-lg hover:bg-hyper-blue/80 transition-colors"
+                  aria-label="Inscrever-se na newsletter"
+                >
+                  <Mail className="h-5 w-5" />
+                </button>
+              </div>
             </form>
+
+            {/* Socials */}
+            <div className="flex space-x-4">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="text-hyper-blue hover:text-hyper-blue/80 transition-colors"
+                  aria-label={social.ariaLabel}
+                >
+                  <social.icon className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-border/30 mt-12 py-6 text-center md:text-left md:flex md:justify-between md:items-center">
-          <p className="text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} Hyper Carga. Todos os direitos reservados.
-          </p>
-          <div className="mt-4 md:mt-0 space-x-4 text-sm text-white/60">
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+        {/* Rodapé Inferior */}
+        <div className="mt-8 pt-8 border-t border-border/40 text-center text-white/70">
+          <p>&copy; {new Date().getFullYear()} Hyper Carga. Todos os direitos reservados.</p>
+          <div className="mt-2">
+            <a href="/termos" className="text-white/70 hover:text-hyper-blue transition-colors" aria-label="Termos de Uso">
+              Termos de Uso
+            </a>
+            <span className="mx-2">|</span>
+            <a href="/privacidade" className="text-white/70 hover:text-hyper-blue transition-colors" aria-label="Política de Privacidade">
+              Política de Privacidade
+            </a>
           </div>
         </div>
       </div>
