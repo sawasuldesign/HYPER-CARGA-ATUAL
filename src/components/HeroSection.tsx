@@ -37,11 +37,11 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <a href="#products" className="btn-primary">
+              <a href="#products" className="inline-flex items-center bg-hyper-blue text-white px-6 py-3 rounded-lg hover:bg-hyper-blue/90 transition-colors">
                 Conheça nossos produtos
                 <ChevronRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#about" className="btn-outline">
+              <a href="#about" className="inline-flex items-center border border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors">
                 Saiba mais
               </a>
             </div>
@@ -58,14 +58,17 @@ const HeroSection = () => {
           
           <div className="relative h-[400px] lg:h-[500px] animated-element">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-[80%] mx-auto">
-                <div className="absolute inset-0 bg-gradient-blue-green rounded-xl blur-2xl opacity-20 animate-pulse-light"></div>
-                <img 
-                  src="/images/charging-station.png" 
-                  alt="Carregador HyperCarga para veículos elétricos" 
-                  className="relative z-10 w-full h-full object-contain animate-float"
-                />
-              </div>
+              <video
+                className="w-full md:w-1/2 h-auto rounded-lg max-w-[600px] animated-element fade-in-up shadow-lg"
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="Vídeo introdutório da Hyper Carga"
+              >
+                <source src="https://imgur.com/yB8CsB4.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
             </div>
           </div>
         </div>

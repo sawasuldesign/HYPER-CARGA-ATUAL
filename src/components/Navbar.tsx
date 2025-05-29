@@ -37,18 +37,17 @@ const Navbar = () => {
         { name: "Carregadores com a sua marca", href: "/servicos/marca-personalizada" }
       ]
     },
-    { name: "Blog", href: "#blog", ariaLabel: "Ir para a seção blog" },
     { name: "Contato", href: "#contact", ariaLabel: "Ir para a seção contato" },
-    { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja", isButton: true }
+    { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja" }
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 animated-element ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
       <div className="container-custom mx-auto flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center" aria-label="Hyper Carga - Página inicial">
           <div className="font-bold text-xl flex items-center">
             <span className="text-hyper-blue">Hyper</span>
-            <span className="text-hyper-green">Carga</span>
+            <span className="text-hyper-green ml-1">Carga</span>
           </div>
         </a>
         
@@ -59,7 +58,7 @@ const Navbar = () => {
               {item.hasDropdown ? (
                 <div className="flex items-center">
                   <button
-                    className={`nav-item inline-flex items-center`}
+                    className={`nav-item inline-flex items-center text-sm font-medium text-white hover:text-hyper-blue transition-colors px-4 py-2`}
                     aria-haspopup="true"
                     aria-expanded={isServicesOpen}
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -72,7 +71,7 @@ const Navbar = () => {
                   
                   {/* Desktop Dropdown */}
                   <div 
-                    className={`absolute top-full left-0 mt-1 w-64 bg-darker border border-border/40 rounded-md shadow-lg overflow-hidden transition-all duration-200 origin-top-left ${isServicesOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
+                    className={`absolute top-full left-0 mt-1 w-64 bg-darker/95 backdrop-blur border border-border/40 rounded-md shadow-lg overflow-hidden transition-all duration-200 origin-top-left ${isServicesOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
                   >
@@ -81,7 +80,7 @@ const Navbar = () => {
                         <a
                           key={dropItem.name}
                           href={dropItem.href}
-                          className="block px-4 py-2 text-sm text-white hover:bg-dark hover:text-hyper-blue transition-colors"
+                          className="block px-4 py-2 text-sm text-white hover:bg-dark hover:text-hyper-blue border-l-2 border-transparent hover:border-hyper-blue/30 transition-colors"
                         >
                           {dropItem.name}
                         </a>
@@ -92,7 +91,7 @@ const Navbar = () => {
               ) : (
                 <a
                   href={item.href}
-                  className={`${item.isButton ? 'btn-primary' : 'nav-item'}`}
+                  className="nav-item text-sm font-medium text-white hover:text-hyper-blue transition-colors px-4 py-2"
                   aria-label={item.ariaLabel}
                 >
                   {item.name}
@@ -115,7 +114,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-darker">
+        <div className="md:hidden bg-darker/95 backdrop-blur">
           <div className="px-4 py-2 space-y-2">
             {navItems.map((item) => (
               <div key={item.name}>
@@ -140,7 +139,7 @@ const Navbar = () => {
                           <a
                             key={dropItem.name}
                             href={dropItem.href}
-                            className="block py-2 px-4 text-sm text-white hover:bg-dark hover:text-hyper-blue rounded-md"
+                            className="block py-2 px-4 text-sm text-white hover:bg-dark hover:text-hyper-blue border-l-2 border-transparent hover:border-hyper-blue/30 rounded-md"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {dropItem.name}
@@ -152,7 +151,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className={`block py-3 px-4 text-white hover:bg-dark hover:text-hyper-blue rounded-md ${item.isButton ? 'bg-hyper-green hover:bg-hyper-green/90' : ''}`}
+                    className="block py-3 px-4 text-white hover:bg-dark hover:text-hyper-blue rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label={item.ariaLabel}
                   >

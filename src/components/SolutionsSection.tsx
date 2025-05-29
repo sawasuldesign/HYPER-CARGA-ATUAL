@@ -6,25 +6,25 @@ const SolutionsSection = () => {
   const solutions = [
     {
       title: "Motoristas",
-      image: "/images/driver-bg.jpg",
+      image: "https://imgur.com/glydj6W.jpg",
       href: "/solucoes/motoristas",
       cta: "Acesse as Soluções"
     },
     {
       title: "Frotas e Empresas",
-      image: "/images/fleet-bg.jpg",
+      image: "https://imgur.com/IQWDgYh.jpg",
       href: "/solucoes/frotas",
       cta: "Acesse as Soluções"
     },
     {
-      title: "Academy by Hyper Carga",
-      image: "/images/academy-bg.jpg",
+      title: "Tudo sobre os carregadores",
+      image: "https://imgur.com/rs036oz.jpg",
       href: "/cursos",
-      cta: "Acesse os Cursos"
+      cta: "seu carregador ideal"
     },
     {
       title: "Hyper Carga Store",
-      image: "/images/store-bg.jpg",
+      image: "https://imgur.com/0ev9Idx.jpg",
       href: "/loja",
       cta: "Acesse a nossa Loja"
     }
@@ -61,7 +61,7 @@ const SolutionsSection = () => {
                 
                 <a 
                   href={solution.href}
-                  className="btn-secondary inline-flex items-center self-start"
+                  className="inline-flex items-center bg-hyper-green text-white px-4 py-2 rounded-lg hover:bg-hyper-green/90 transition-colors self-start"
                   aria-label={`${solution.cta} para ${solution.title}`}
                 >
                   {solution.cta}

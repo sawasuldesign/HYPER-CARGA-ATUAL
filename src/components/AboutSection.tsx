@@ -54,21 +54,25 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <a href="#products" className="btn-secondary">
+            <a href="#products" className="inline-flex items-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors">
               Conheça nossos produtos
             </a>
           </div>
 
           <div className="relative animated-element">
-            <div className="relative rounded-xl overflow-hidden">
-              <div className="aspect-[4/3] relative z-10">
-                <img 
-                  src="/images/about-image.jpg" 
-                  alt="Equipe Hyper Carga" 
-                  className="object-cover h-full w-full rounded-xl"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-hyper-blue/20 to-hyper-green/20 rounded-xl mix-blend-overlay"></div>
+            <div className="w-full md:w-1/2 aspect-video relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-20 rounded-lg"></div>
+              <video
+                className="w-full h-full rounded-lg object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="Vídeo sobre a Hyper Carga"
+              >
+                <source src="https://imgur.com/IWYUnfj.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
             </div>
             
             {/* Decorative pattern */}
@@ -85,7 +89,7 @@ const AboutSection = () => {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {features.map((feature, index) => (
-            <div key={index} className="highlight-box animated-element">
+            <div key={index} className="bg-darker p-6 rounded-lg border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-hyper-blue/10 text-hyper-blue mb-4">
                 {feature.icon}
               </div>

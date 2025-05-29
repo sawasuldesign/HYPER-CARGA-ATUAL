@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Download, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const ProductsSection = () => {
   const [activeTab, setActiveTab] = useState("carregadores");
@@ -9,40 +9,45 @@ const ProductsSection = () => {
     carregadores: [
       {
         id: 1,
-        name: "HyperCharge Pro Max",
-        image: "/images/product-1.png",
-        description: "Carregador rápido DC de alta potência, ideal para estações públicas e corredores elétricos.",
-        features: ["150kW de potência", "Conectores CCS e CHAdeMO", "Display touchscreen 15\"", "Pagamento integrado"],
+        name: "Walbox 7,04/22 kW",
+        image: "https://i.imgur.com/S7BjPNj.png",
+        description: "Solução residencial compacta com tecnologia inteligente de carregamento eficiente.",
+        features: ["1x Tipo 2", "OCPP 1.6 (Opcional na versão 7,04 kW)", "Baixo consumo em standby", "Suporte nacional"],
+        whatsappText: "Quero%20um%20orçamento%20do%20Walbox%207,04/22%20kW"
       },
       {
         id: 2,
-        name: "HyperWall Home",
-        image: "/images/product-2.png",
-        description: "Solução residencial compacta com tecnologia inteligente de carregamento eficiente.",
-        features: ["22kW de potência", "Conector Tipo 2", "Wi-Fi e Bluetooth", "Programação inteligente"],
+        name: "Carregador DC 80 kW",
+        image: "https://i.imgur.com/niHd06L.png",
+        description: "Carregador rápido DC de alta potência, ideal para estações públicas e corredores elétricos.",
+        features: ["2x CCS2", "Display 50″", "Baixo consumo em standby", "Suporte nacional"],
+        whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2080%20kW"
       },
       {
         id: 3,
-        name: "HyperStation Business",
-        image: "/images/product-3.png",
+        name: "Portátil Multicabos 7,04 kW Max",
+        image: "https://i.imgur.com/fpm0qQt.png",
+        description: "As estações de recarga Portátil Multicabos AC são a solução perfeita para quem quer flexibilidade e confiabilidade. Carregue em qualquer lugar.",
+        features: ["1x Tipo 2", "Ponteiras intercambiáveis de 10A, 20A e 32A", "Tomada 32A inclusa", "Bolsa de transporte"],
+        whatsappText: "Quero%20um%20orçamento%20do%20Portátil%20Multicabos%207,04%20kW"
+      },
+      {
+        id: 4,
+        name: "Carregador DC 40 kW",
+        image: "https://i.imgur.com/YRGjdvb.png",
         description: "Estação de carregamento dupla para empresas, condomínios e estabelecimentos comerciais.",
-        features: ["2x 22kW de potência", "Conectores Tipo 2", "Gerenciamento de usuários", "Balanceamento de carga"],
+        features: ["1x CCS2", "OCPP 1.6", "Baixo consumo em standby", "Suporte nacional"],
+        whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW"
       }
     ],
     gestao: [
       {
-        id: 4,
+        id: 5,
         name: "HyperControl Platform",
         image: "/images/software-1.png",
         description: "Software de gerenciamento para controle total da sua infraestrutura de carregamento.",
         features: ["Monitoramento em tempo real", "Relatórios detalhados", "Gestão de usuários", "Integração de pagamentos"],
-      },
-      {
-        id: 5,
-        name: "HyperCharge App",
-        image: "/images/software-2.png",
-        description: "Aplicativo para usuários localizarem pontos de recarga e gerenciarem seus carregamentos.",
-        features: ["Mapa de carregadores", "Reserva de estações", "Histórico de utilização", "Pagamento integrado"],
+        whatsappText: "Quero%20informações%20sobre%20HyperControl%20Platform"
       }
     ]
   };
@@ -101,22 +106,15 @@ const ProductsSection = () => {
                   ))}
                 </ul>
                 
-                <div className="flex justify-between items-center">
-                  <a
-                    href="#contact"
-                    className="text-hyper-blue hover:text-hyper-green text-sm font-medium flex items-center transition-colors"
-                  >
-                    Solicitar orçamento
-                    <ChevronRight className="ml-1 h-4 w-4" />
-                  </a>
-                  
-                  <button
-                    className="flex items-center text-sm text-white/70 hover:text-white/90 transition-colors"
-                  >
-                    <Download className="mr-1 h-4 w-4" />
-                    Ficha técnica
-                  </button>
-                </div>
+                <a
+                  href={`https://wa.me/555436983939?text=${product.whatsappText}`}
+                  className="inline-flex items-center bg-hyper-blue text-white px-4 py-2 rounded-lg hover:bg-hyper-blue/90 transition-colors w-full justify-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Solicitar orçamento
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </div>
             </div>
           ))}
@@ -124,7 +122,12 @@ const ProductsSection = () => {
 
         {/* CTA */}
         <div className="mt-16 text-center animated-element">
-          <a href="#contact" className="btn-primary">
+          <a 
+            href="https://wa.me/555436983939" 
+            className="inline-flex items-center bg-hyper-blue text-white px-6 py-3 rounded-lg hover:bg-hyper-blue/90 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Fale com um especialista
           </a>
         </div>

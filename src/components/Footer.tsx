@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="text-white font-bold text-xl flex items-center">
               <span className="text-hyper-blue">Hyper</span>
-              <span className="text-hyper-green">Carga</span>
+              <span className="text-hyper-green ml-1">Carga</span>
             </div>
             <p className="text-white/60 text-sm">
               Empresa brasileira especializada no desenvolvimento de soluções de carregamento
@@ -45,7 +45,6 @@ const Footer = () => {
                 { name: "Home", href: "/" },
                 { name: "Sobre", href: "#about" },
                 { name: "Produtos", href: "#products" },
-                { name: "Blog", href: "#blog" },
                 { name: "Contato", href: "#contact" },
                 { name: "Loja", href: "/loja" }
               ].map((item) => (
@@ -66,11 +65,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-6">Produtos</h3>
             <ul className="space-y-3">
               {[
-                "HyperCharge Pro Max",
-                "HyperWall Home",
-                "HyperStation Business",
-                "HyperControl Platform",
-                "HyperCharge App"
+                "Walbox 7,04/22 kW",
+                "Carregador DC 80 kW",
+                "Portátil Multicabos 7,04 kW Max",
+                "Carregador DC 40 kW",
+                "HyperControl Platform"
               ].map((item) => (
                 <li key={item}>
                   <a

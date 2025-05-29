@@ -1,32 +1,28 @@
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Carregadores e Equipamentos",
       subtitle: "Alta tecnologia carregando seu veículo",
-      image: "/images/chargers-bg.jpg",
-      href: "/servicos/carregadores"
+      image: "https://i.imgur.com/lsP0plf.png"
     },
     {
       title: "Projetos, Instalação e Manutenção",
       subtitle: "Ciência energética e funcional sob medida",
-      image: "/images/installation-bg.jpg",
-      href: "/servicos/instalacao"
+      image: "https://i.imgur.com/ALH6KkC.png"
     },
     {
-      title: "Gestão e Operação de Pontos de Recarga",
+      title: "Gestão de Pontos de Recarga",
       subtitle: "Tecnologia e integração através da inteligência e apps Hyper Carga",
-      image: "/images/management-bg.jpg",
-      href: "/servicos/gestao"
+      image: "https://i.imgur.com/ywl1xih.jpeg"
     },
     {
-      title: "Cursos",
+      title: "Aluguel de Carregadores",
       subtitle: "Formando as novas mentes da eletromobilidade",
-      image: "/images/courses-bg.jpg",
-      href: "/cursos"
+      image: "https://i.imgur.com/MWtCa0x.png"
     }
   ];
 
@@ -56,20 +52,22 @@ const ServicesSection = () => {
               
               <div className="relative z-10 h-full flex flex-col justify-end p-6">
                 <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-white/70 mb-6">{service.subtitle}</p>
-                
-                <a 
-                  href={service.href}
-                  className="btn-secondary inline-flex items-center self-start"
-                  aria-label={`Conheça mais sobre ${service.title}`}
-                >
-                  Saiba mais
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                <p className="text-white/70">{service.subtitle}</p>
               </div>
             </div>
           ))}
         </div>
+
+        {/* WhatsApp Button */}
+        <a 
+          href="https://wa.me/555436983939" 
+          className="fixed bottom-6 right-6 z-40 bg-hyper-green hover:bg-hyper-green/80 p-3 rounded-full shadow-lg transition-transform hover:scale-110 duration-300"
+          aria-label="Contactar via WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MessageCircle className="h-6 w-6 text-white" />
+        </a>
       </div>
     </section>
   );

@@ -4,12 +4,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const PartnersCarouselSection = () => {
   const partners = [
-    { name: "Audi", image: "/images/partner-audi.png" },
-    { name: "BMW", image: "/images/partner-bmw.png" },
-    { name: "Parceiro 1", image: "/images/partner-placeholder-1.png" },
-    { name: "Parceiro 2", image: "/images/partner-placeholder-2.png" },
-    { name: "Parceiro 3", image: "/images/partner-placeholder-3.png" },
-    { name: "Parceiro 4", image: "/images/partner-placeholder-4.png" },
+    { name: "Alfredo Jaconi", image: "https://i.imgur.com/aEwYFyN.png" },
+    { name: "Allos", image: "https://i.imgur.com/aleJWhs.png" },
+    { name: "Quinta São Luiz", image: "https://i.imgur.com/7glfNYZ.png" },
+    { name: "Villagio", image: "https://i.imgur.com/Np2xtnG.png" },
+    { name: "UCS", image: "https://i.imgur.com/AjVi8aR.png" },
+    { name: "Gramado Parks", image: "https://i.imgur.com/wC3kXoM.png" },
+    { name: "Beira Rio", image: "https://i.imgur.com/UiYWtPd.png" },
+    { name: "Recreio da Juventude", image: "https://i.imgur.com/vWAQt3J.png" },
+    { name: "Babymania", image: "https://i.imgur.com/sDifmGb.png" },
+    { name: "Arena", image: "https://i.imgur.com/SEfZzdh.png" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
