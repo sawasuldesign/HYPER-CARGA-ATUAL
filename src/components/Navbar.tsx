@@ -37,7 +37,8 @@ const Navbar = () => {
         { name: "Carregadores com a sua marca", href: "/servicos/marca-personalizada" }
       ]
     },
-    { name: "Contato", href: "#partner", ariaLabel: "Ir para a seção contato" },
+    { name: "Blog", href: "#blog", ariaLabel: "Ir para a seção blog" },
+    { name: "Contato", href: "#contact", ariaLabel: "Ir para a seção contato" },
     { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja", isButton: true }
   ];
 

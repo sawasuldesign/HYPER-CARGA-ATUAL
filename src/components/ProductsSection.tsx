@@ -1,58 +1,48 @@
 
 import React, { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { Download, ChevronRight } from "lucide-react";
 
-const ProductsSection: React.FC = () => {
+const ProductsSection = () => {
   const [activeTab, setActiveTab] = useState("carregadores");
 
   const products = {
     carregadores: [
       {
         id: 1,
-        name: "Walbox 7,04/22 kW",
-        image: "https://i.imgur.com/pGWHvrI.png",
-        description: "Solução residencial compacta com tecnologia inteligente.",
-        subDescription: "1x Tipo 2, OCPP 1.6 (opcional 7,04 kW), baixo consumo, suporte nacional.",
-        whatsappLink: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Walbox%207,04/22%20kW",
-        alt: "Walbox 7,04/22 kW carregador residencial"
+        name: "HyperCharge Pro Max",
+        image: "/images/product-1.png",
+        description: "Carregador rápido DC de alta potência, ideal para estações públicas e corredores elétricos.",
+        features: ["150kW de potência", "Conectores CCS e CHAdeMO", "Display touchscreen 15\"", "Pagamento integrado"],
       },
       {
         id: 2,
-        name: "Carregador DC 80 kW",
-        image: "https://i.imgur.com/Xdv2UgQ.png", 
-        description: "Carregador rápido DC para estações públicas.",
-        subDescription: "2x CCS2, display 50\", baixo consumo, suporte nacional.",
-        whatsappLink: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Carregador%20DC%2080%20kW",
-        alt: "Carregador DC 80 kW para estações públicas"
+        name: "HyperWall Home",
+        image: "/images/product-2.png",
+        description: "Solução residencial compacta com tecnologia inteligente de carregamento eficiente.",
+        features: ["22kW de potência", "Conector Tipo 2", "Wi-Fi e Bluetooth", "Programação inteligente"],
       },
       {
         id: 3,
-        name: "Portátil Multicabos 7,04 kW Max",
-        image: "https://i.imgur.com/1OXZrUZ.png",
-        description: "Solução portátil para flexibilidade.",
-        subDescription: "1x Tipo 2, ponteiras 10A/20A/32A, tomada 32A, bolsa.",
-        whatsappLink: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Portátil%20Multicabos%207,04%20kW",
-        alt: "Portátil Multicabos 7,04 kW Max carregador"
-      },
-      {
-        id: 4,
-        name: "Carregador DC 40 kW",
-        image: "https://i.imgur.com/IqYaNLl.png",
-        description: "Estação dupla para empresas e condomínios.",
-        subDescription: "1x CCS2, OCPP 1.6, baixo consumo, suporte nacional.",
-        whatsappLink: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW",
-        alt: "Carregador DC 40 kW para empresas"
+        name: "HyperStation Business",
+        image: "/images/product-3.png",
+        description: "Estação de carregamento dupla para empresas, condomínios e estabelecimentos comerciais.",
+        features: ["2x 22kW de potência", "Conectores Tipo 2", "Gerenciamento de usuários", "Balanceamento de carga"],
       }
     ],
     gestao: [
       {
-        id: 5,
+        id: 4,
         name: "HyperControl Platform",
-        image: "https://i.imgur.com/ywl1xih.jpeg",
+        image: "/images/software-1.png",
         description: "Software de gerenciamento para controle total da sua infraestrutura de carregamento.",
-        subDescription: "Monitoramento em tempo real, relatórios detalhados, gestão de usuários, integração de pagamentos.",
-        whatsappLink: "https://wa.me/555436983939?text=Quero%20um%20orçamento%20do%20HyperControl%20Platform",
-        alt: "HyperControl Platform software de gestão"
+        features: ["Monitoramento em tempo real", "Relatórios detalhados", "Gestão de usuários", "Integração de pagamentos"],
+      },
+      {
+        id: 5,
+        name: "HyperCharge App",
+        image: "/images/software-2.png",
+        description: "Aplicativo para usuários localizarem pontos de recarga e gerenciarem seus carregamentos.",
+        features: ["Mapa de carregadores", "Reserva de estações", "Histórico de utilização", "Pagamento integrado"],
       }
     ]
   };
@@ -63,13 +53,15 @@ const ProductsSection: React.FC = () => {
   ];
 
   return (
-    <section id="products" className="bg-darker py-16 animated-element fade-in-up">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-white">Nossos Produtos</h2>
-        <p className="mt-4 text-lg text-white/70">Soluções completas de recarga para todos os contextos</p>
+    <section id="products" className="section bg-darker">
+      <div className="container-custom">
+        <div className="text-center max-w-3xl mx-auto mb-16 animated-element">
+          <h2 className="section-title">Nossos Produtos</h2>
+          <p className="section-subtitle">Soluções completas de recarga para todos os contextos</p>
+        </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 mt-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animated-element">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -88,30 +80,53 @@ const ProductsSection: React.FC = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products[activeTab as keyof typeof products].map((product) => (
-            <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all">
+            <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
               <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
                 <img
                   src={product.image}
-                  alt={product.alt}
+                  alt={product.name}
                   className="object-contain h-full max-w-full transition-transform hover:scale-105"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white">{product.name}</h3>
-                <p className="text-white/70 mb-2">{product.description}</p>
-                <p className="text-white/60 text-sm mb-6">{product.subDescription}</p>
+                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <p className="text-white/70 mb-4">{product.description}</p>
                 
-                <a
-                  href={product.whatsappLink}
-                  className="inline-flex items-center bg-hyper-blue text-white px-4 py-2 rounded-lg hover:bg-hyper-blue/80 transition"
-                  aria-label={`Solicitar orçamento do ${product.name}`}
-                >
-                  Solicite um orçamento
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                <ul className="space-y-2 mb-6">
+                  {product.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="w-1.5 h-1.5 rounded-full bg-hyper-green mt-2 mr-2"></span>
+                      <span className="text-sm text-white/80">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex justify-between items-center">
+                  <a
+                    href="#contact"
+                    className="text-hyper-blue hover:text-hyper-green text-sm font-medium flex items-center transition-colors"
+                  >
+                    Solicitar orçamento
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </a>
+                  
+                  <button
+                    className="flex items-center text-sm text-white/70 hover:text-white/90 transition-colors"
+                  >
+                    <Download className="mr-1 h-4 w-4" />
+                    Ficha técnica
+                  </button>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center animated-element">
+          <a href="#contact" className="btn-primary">
+            Fale com um especialista
+          </a>
         </div>
       </div>
     </section>

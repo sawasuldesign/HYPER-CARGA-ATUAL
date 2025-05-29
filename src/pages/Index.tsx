@@ -1,60 +1,67 @@
 
-import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import SolutionsSection from "../components/SolutionsSection";
-import AboutSection from "../components/AboutSection";
-import ProductsSection from "../components/ProductsSection";
-import ServicesSection from "../components/ServicesSection";
-import PartnersCarouselSection from "../components/PartnersCarouselSection";
-import PartnerSection from "../components/PartnerSection";
-import CasesSection from "../components/CasesSection";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import { initScrollAnimation } from "../utils/scrollAnimation";
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import AboutSection from "@/components/AboutSection";
+import ProductsSection from "@/components/ProductsSection";
+import ServicesSection from "@/components/ServicesSection";
+import PartnersCarouselSection from "@/components/PartnersCarouselSection";
+import CasesSection from "@/components/CasesSection";
+import MediaCarouselSection from "@/components/MediaCarouselSection";
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
+import PartnerSection from "@/components/PartnerSection";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { initScrollAnimation } from "@/utils/scrollAnimation";
 
-// Componente principal da SPA
-const Index: React.FC = () => {
-  // Inicializa animações de scroll
+const Index = () => {
   useEffect(() => {
+    // Initialize scroll animations
     initScrollAnimation();
+
+    // Add Google font
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
+    document.head.appendChild(link);
+
+    // Update document title and meta
+    document.title = "Hyper Carga - Energia brasileira, inovação sustentável";
+    
+    const metaDescription = document.createElement("meta");
+    metaDescription.name = "description";
+    metaDescription.content = "Soluções de carregamento para veículos elétricos com tecnologia 100% brasileira.";
+    document.head.appendChild(metaDescription);
+
+    return () => {
+      // Clean up
+      document.head.removeChild(link);
+      document.head.removeChild(metaDescription);
+    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-dark text-white font-['Inter'] scroll-smooth">
-      {/* Navegação fixa no topo */}
+    <div className="flex flex-col min-h-screen bg-dark text-white">
       <Navbar />
-      {/* Seções da página */}
-      <main>
-        <section id="home">
-          <HeroSection />
-        </section>
-        <section id="solutions" className="animated-element">
-          <SolutionsSection />
-        </section>
-        <section id="about" className="animated-element">
-          <AboutSection />
-        </section>
-        <section id="products" className="animated-element">
-          <ProductsSection />
-        </section>
-        <section id="services" className="animated-element">
-          <ServicesSection />
-        </section>
-        <section id="partners" className="animated-element">
-          <PartnersCarouselSection />
-        </section>
-        <section id="partner" className="animated-element">
-          <PartnerSection />
-        </section>
-        <section id="cta" className="animated-element">
-          <CasesSection />
-        </section>
+      <main className="flex-grow">
+        <HeroSection />
+        <SolutionsSection />
+        <AboutSection />
+        <ProductsSection />
+        <ServicesSection />
+        <PartnersCarouselSection />
+        <CasesSection />
+        <MediaCarouselSection />
+        <BlogSection />
+        <ContactSection />
+        <PartnerSection />
       </main>
-      {/* Rodapé */}
       <Footer />
-      {/* Botão de voltar ao topo */}
       <ScrollToTop />
+      <WhatsAppButton />
     </div>
   );
 };
