@@ -60,7 +60,7 @@ const AboutSection = () => {
           </div>
 
           <div className="relative animated-element">
-            <div className="w-full md:w-1/2 aspect-video relative">
+            <div className="w-[70%] aspect-video relative mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-20 rounded-lg"></div>
               <video
                 className="w-full h-full rounded-lg object-cover"

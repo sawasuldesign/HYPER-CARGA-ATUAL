@@ -59,7 +59,7 @@ const HeroSection = () => {
           <div className="relative h-[400px] lg:h-[500px] animated-element">
             <div className="absolute inset-0 flex items-center justify-center">
               <video
-                className="w-full md:w-1/2 h-auto rounded-lg max-w-[600px] animated-element fade-in-up shadow-lg"
+                className="w-full md:w-[70%] h-auto rounded-lg max-w-[600px] animated-element fade-in-up shadow-lg"
                 autoPlay
                 loop
                 muted

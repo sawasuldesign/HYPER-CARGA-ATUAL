@@ -6,7 +6,7 @@ const PartnersCarouselSection = () => {
   const partners = [
     { name: "Alfredo Jaconi", image: "https://i.imgur.com/aEwYFyN.png" },
     { name: "Allos", image: "https://i.imgur.com/aleJWhs.png" },
-    { name: "Quinta São Luiz", image: "https://i.imgur.com/7glfNYZ.png" },
+    { name: "Quinta São Luiz", image: "https://i.imgur.com/XbYBlzR.png" },
     { name: "Villagio", image: "https://i.imgur.com/Np2xtnG.png" },
     { name: "UCS", image: "https://i.imgur.com/AjVi8aR.png" },
     { name: "Gramado Parks", image: "https://i.imgur.com/wC3kXoM.png" },

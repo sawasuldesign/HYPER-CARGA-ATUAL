@@ -13,6 +13,26 @@ const PartnerSection = () => {
           </p>
         </div>
 
+        {/* Two-column button layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-md mx-auto animated-element">
+          <a 
+            href="https://wa.me/555436983939" 
+            className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fale com um especialista
+          </a>
+          <a 
+            href="/catalogo.pdf" 
+            className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Catálogo PDF
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Informações de Contato */}
           <div className="animated-element">

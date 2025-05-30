@@ -40,21 +40,45 @@ const ProductsSection = () => {
         whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW"
       }
     ],
-    gestao: [
+    instalacao: [
       {
         id: 5,
-        name: "HyperControl Platform",
+        name: "Instalação 1",
         image: "/images/software-1.png",
-        description: "Software de gerenciamento para controle total da sua infraestrutura de carregamento.",
-        features: ["Monitoramento em tempo real", "Relatórios detalhados", "Gestão de usuários", "Integração de pagamentos"],
-        whatsappText: "Quero%20informações%20sobre%20HyperControl%20Platform"
+        description: "Descrição da instalação 1",
+        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
+        whatsappText: "Quero%20informações%20sobre%20Instalação%201"
+      },
+      {
+        id: 6,
+        name: "Instalação 2",
+        image: "/images/software-1.png",
+        description: "Descrição da instalação 2",
+        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
+        whatsappText: "Quero%20informações%20sobre%20Instalação%202"
+      },
+      {
+        id: 7,
+        name: "Instalação 3",
+        image: "/images/software-1.png",
+        description: "Descrição da instalação 3",
+        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
+        whatsappText: "Quero%20informações%20sobre%20Instalação%203"
+      },
+      {
+        id: 8,
+        name: "Instalação 4",
+        image: "/images/software-1.png",
+        description: "Descrição da instalação 4",
+        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
+        whatsappText: "Quero%20informações%20sobre%20Instalação%204"
       }
     ]
   };
 
   const categories = [
     { id: "carregadores", label: "Carregadores" },
-    { id: "gestao", label: "Sistemas de Gestão" },
+    { id: "instalacao", label: "Instalação" },
   ];
 
   return (
@@ -82,8 +106,8 @@ const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Products Grid - 2 columns layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products[activeTab as keyof typeof products].map((product) => (
             <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
               <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
@@ -112,7 +136,7 @@ const ProductsSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Solicitar orçamento
+                  Solicitar orçamento +
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
