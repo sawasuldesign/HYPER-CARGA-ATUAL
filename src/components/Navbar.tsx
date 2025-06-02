@@ -43,7 +43,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 animated-element ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-darker/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}>
       <div className="container-custom mx-auto flex items-center justify-between h-16 md:h-20">
         <a href="/" className="flex items-center" aria-label="Hyper Carga - Página inicial">
           <div className="font-bold text-xl flex items-center">
