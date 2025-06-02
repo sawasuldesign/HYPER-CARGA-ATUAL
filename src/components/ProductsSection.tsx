@@ -81,6 +81,8 @@ const ProductsSection = () => {
     { id: "instalacao", label: "Instalação" },
   ];
 
+  const currentProducts = products[activeTab as keyof typeof products] || [];
+
   return (
     <section id="products" className="section bg-darker">
       <div className="container-custom">
@@ -108,7 +110,7 @@ const ProductsSection = () => {
 
         {/* Products Grid - 2 columns layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {products[activeTab as keyof typeof products].map((product) => (
+          {currentProducts.map((product) => (
             <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
               <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
                 <img

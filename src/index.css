@@ -119,3 +119,16 @@
 .animated-element.in-view {
   @apply animate-fade-in-up;
 }
+
+/* Additional animations */
+.delay-200.in-view {
+  animation-delay: 200ms;
+}
+
+.delay-400.in-view {
+  animation-delay: 400ms;
+}
+
+.delay-600.in-view {
+  animation-delay: 600ms;
+}
