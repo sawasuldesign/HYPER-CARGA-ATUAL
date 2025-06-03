@@ -24,9 +24,9 @@ const PartnerSection = () => {
             Fale com um especialista
           </a>
           <a 
-            href="/catalogo.pdf" 
+            href="https://drive.google.com/uc?export=download&id=1RdLoL4qmtPmli3jgD5sC5H1ottLNptf7" 
             className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors"
-            download
+            download="catalogo_carregadores_hyper_carga.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

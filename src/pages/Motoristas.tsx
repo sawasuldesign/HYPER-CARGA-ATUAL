@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { useEffect } from "react";
+import { MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
@@ -8,8 +8,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
 const Motoristas = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   useEffect(() => {
     initScrollAnimation();
 
@@ -75,64 +73,40 @@ const Motoristas = () => {
         {/* Motoristas Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <div className="border border-border/40 rounded-lg overflow-hidden animated-element">
-                {/* Header */}
-                <div
-                  className="flex items-center p-4 bg-darker hover:bg-darker/80 transition-colors cursor-pointer"
-                  onClick={() => setIsExpanded(!isExpanded)}
-                >
-                  <h2 className="text-2xl font-bold text-hyper-green flex-1">
-                    Soluções para Motoristas
-                  </h2>
-                  {isExpanded ? (
-                    <ChevronUp className="h-6 w-6 text-white/50" />
-                  ) : (
-                    <ChevronDown className="h-6 w-6 text-white/50" />
-                  )}
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold text-white mb-4 animated-element">
+                Soluções para Motoristas
+              </h2>
+              <p className="text-base text-white/70 mb-6 animated-element">
+                Carregue seu veículo com segurança, rapidez e gestão inteligente.
+              </p>
+              <p className="text-lg text-white/70 mb-4 animated-element">
+                A Hyper Carga entende as necessidades de quem vive a mobilidade elétrica no dia a dia. Por isso, oferecemos soluções práticas e eficientes para motoristas particulares, condutores de aplicativos e profissionais que precisam manter seu veículo carregado com comodidade e economia.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="space-y-2">
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Rede de estações em pontos estratégicos
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Tecnologia compatível com todos os modelos
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Monitoramento em tempo real e cobrança simplificada
+                  </p>
                 </div>
-
-                {/* Content */}
-                {isExpanded && (
-                  <div className="p-4 bg-darker/50 text-white/70 space-y-2">
-                    <h3 className="text-lg text-white/70 mb-4">
-                      Carregue seu veículo com segurança, rapidez e gestão inteligente.
-                    </h3>
-                    
-                    <p className="text-white/70">
-                      A Hyper Carga entende as necessidades de quem vive a mobilidade elétrica no dia a dia. Por isso, oferecemos soluções práticas e eficientes para motoristas particulares, condutores de aplicativos e profissionais que precisam manter seu veículo carregado com comodidade e economia.
-                    </p>
-
-                    <h4 className="text-base font-bold text-hyper-green my-4">
-                      O que a Hyper Carga oferece para você:
-                    </h4>
-
-                    <div className="space-y-3">
-                      <p className="text-white/70">
-                        ✅ <strong>Rede de estações em pontos estratégicos:</strong> Contamos com estações de recarga rápidas e inteligentes em diversos locais, para você carregar seu veículo enquanto faz suas atividades cotidianas, com segurança e tecnologia de ponta.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Tecnologia compatível com todos os modelos:</strong> Nossas estações AC e DC são compatíveis com os principais modelos de veículos elétricos disponíveis no mercado, utilizando conectores padrão Tipo 2 e CCS2.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Monitoramento em tempo real e cobrança simplificada:</strong> Com nosso sistema de gestão, você acompanha: Tempo de recarga, Energia consumida (kWh), Valor cobrado na hora, pelo tempo ou energia utilizada.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Recargas ultrarrápidas para quem tem pressa:</strong> Conte com estações DC de até 320kW, capazes de realizar recargas rápidas e seguras para você seguir viagem sem perder tempo.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Planos personalizados para motoristas de aplicativo e profissionais:</strong> Se você é motorista parceiro ou utiliza seu carro elétrico para trabalho, consulte nossas condições especiais de planos de recarga e locação de carregadores portáteis.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Opções de carregadores para sua casa ou condomínio:</strong> Leve a experiência Hyper Carga para o seu dia a dia com nossos carregadores Wallbox AC de 7,2kW a 22kW e modelos portáteis multicabos. Instalação fácil e homologada para ambientes residenciais e corporativos.
-                      </p>
-                    </div>
-
-                    <p className="text-white/70 mt-6">
-                      👉 Consulte agora a estação mais próxima ou fale com nossa equipe e garanta seu carregador residencial. Experimente a liberdade da mobilidade elétrica com a Hyper Carga.
-                    </p>
-                  </div>
-                )}
+                <div className="space-y-2">
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Recargas ultrarrápidas para quem tem pressa
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Planos personalizados para motoristas de aplicativo e profissionais
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Opções de carregadores para sua casa ou condomínio
+                  </p>
+                </div>
               </div>
             </div>
           </div>

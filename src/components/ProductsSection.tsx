@@ -44,7 +44,7 @@ const ProductsSection = () => {
       {
         id: 5,
         name: "Instalação 1",
-        image: "/images/software-1.png",
+        image: "https://i.imgur.com/pGWHvrI.png",
         description: "Descrição da instalação 1",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%201"
@@ -52,7 +52,7 @@ const ProductsSection = () => {
       {
         id: 6,
         name: "Instalação 2",
-        image: "/images/software-1.png",
+        image: "https://i.imgur.com/pGWHvrI.png",
         description: "Descrição da instalação 2",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%202"
@@ -60,7 +60,7 @@ const ProductsSection = () => {
       {
         id: 7,
         name: "Instalação 3",
-        image: "/images/software-1.png",
+        image: "https://i.imgur.com/pGWHvrI.png",
         description: "Descrição da instalação 3",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%203"
@@ -68,7 +68,7 @@ const ProductsSection = () => {
       {
         id: 8,
         name: "Instalação 4",
-        image: "/images/software-1.png",
+        image: "https://i.imgur.com/pGWHvrI.png",
         description: "Descrição da instalação 4",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%204"

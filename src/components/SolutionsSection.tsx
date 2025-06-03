@@ -25,7 +25,7 @@ const SolutionsSection = () => {
     {
       title: "Hyper Carga Store",
       image: "https://imgur.com/0ev9Idx.jpg",
-      href: "https://hypercarga.lojavirtualnuvem.com.br/contato/?product=274082003",
+      href: "https://hypercarga.lojavirtualnuvem.com.br/",
       cta: "Acesse a nossa Loja"
     }
   ];

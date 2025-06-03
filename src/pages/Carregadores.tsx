@@ -172,7 +172,7 @@ const Carregadores = () => {
               {/* Second Column */}
               <div className="flex justify-center">
                 <img
-                  src="https://imgur.com/AFisAN6.jpg"
+                  src="https://imgur.com/oz7dc74.jpg"
                   alt="Carregador Hyper Carga em ação"
                   className="w-full md:w-auto max-h-64 md:max-h-96 object-cover rounded-lg animate-float mb-6 md:mb-0"
                 />

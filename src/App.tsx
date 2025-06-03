@@ -9,6 +9,10 @@ import Motoristas from "./pages/Motoristas";
 import Carregadores from "./pages/Carregadores";
 import AluguelCarregadores from "./pages/AluguelCarregadores";
 import FrotasEmpresas from "./pages/FrotasEmpresas";
+import CarregadoresFrotasNegocios from "./pages/services/CarregadoresFrotasNegocios";
+import CarregadoresCasa from "./pages/services/CarregadoresCasa";
+import ProjetosInstalacao from "./pages/services/ProjetosInstalacao";
+import CarregadoresMarca from "./pages/services/CarregadoresMarca";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/solucoes/carregadores" element={<Carregadores />} />
           <Route path="/servicos/aluguel" element={<AluguelCarregadores />} />
           <Route path="/solucoes/frotas" element={<FrotasEmpresas />} />
+          <Route path="/servicos/carregadores-frotas" element={<CarregadoresFrotasNegocios />} />
+          <Route path="/servicos/carregadores-casa" element={<CarregadoresCasa />} />
+          <Route path="/servicos/projetos-instalacao" element={<ProjetosInstalacao />} />
+          <Route path="/servicos/carregadores-marca" element={<CarregadoresMarca />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

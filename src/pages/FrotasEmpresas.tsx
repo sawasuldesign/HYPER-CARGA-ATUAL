@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { useEffect } from "react";
+import { MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
@@ -8,8 +8,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
 const FrotasEmpresas = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   useEffect(() => {
     initScrollAnimation();
 
@@ -75,67 +73,46 @@ const FrotasEmpresas = () => {
         {/* Frotas e Empresas Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <div className="border border-border/40 rounded-lg overflow-hidden animated-element">
-                {/* Header */}
-                <div
-                  className="flex items-center p-4 bg-darker hover:bg-darker/80 transition-colors cursor-pointer"
-                  onClick={() => setIsExpanded(!isExpanded)}
-                >
-                  <h2 className="text-2xl font-bold text-hyper-green flex-1">
-                    Soluções para Frotas e Empresas
-                  </h2>
-                  {isExpanded ? (
-                    <ChevronUp className="h-6 w-6 text-white/50" />
-                  ) : (
-                    <ChevronDown className="h-6 w-6 text-white/50" />
-                  )}
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl font-bold text-white mb-4 animated-element">
+                Soluções para Frotas e Empresas
+              </h2>
+              <p className="text-base text-white/70 mb-6 animated-element">
+                Infraestrutura de recarga sob medida para o crescimento da sua operação elétrica.
+              </p>
+              <p className="text-lg text-white/70 mb-4 animated-element">
+                Se a sua empresa ou frota já opera ou planeja operar veículos elétricos, a Hyper Carga é o parceiro ideal para estruturar toda a rede de recarga com segurança, eficiência e retorno financeiro.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div className="space-y-2">
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Tecnologia nacional de ponta
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Projetos personalizados para o seu negócio
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Locação de estações de recarga com condições diferenciadas
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Ganhos desde a ativação das estações
+                  </p>
                 </div>
-
-                {/* Content */}
-                {isExpanded && (
-                  <div className="p-4 bg-darker/50 text-white/70 space-y-2">
-                    <h3 className="text-lg text-white/70 mb-4">
-                      Infraestrutura de recarga sob medida para o crescimento da sua operação elétrica.
-                    </h3>
-                    
-                    <p className="text-white/70">
-                      Se a sua empresa ou frota já opera ou planeja operar veículos elétricos, a Hyper Carga é o parceiro ideal para estruturar toda a rede de recarga com segurança, eficiência e retorno financeiro.
-                    </p>
-
-                    <h4 className="text-base font-bold text-hyper-green my-4">
-                      Por que escolher a Hyper Carga?
-                    </h4>
-
-                    <div className="space-y-3">
-                      <p className="text-white/70">
-                        ✅ <strong>Projetos personalizados para o seu negócio:</strong> Nossa equipe de engenharia elétrica desenvolve projetos exclusivos para atender à demanda da sua frota ou operação corporativa. Cada solução é dimensionada conforme a estrutura elétrica e o perfil de consumo do seu ambiente.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Locação de estações de recarga com condições diferenciadas:</strong> Oferecemos planos de locação sob medida para empresas e operadores de frota, com benefícios exclusivos para quem precisa de alta disponibilidade e gestão centralizada de pontos de recarga.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Ganhos desde a ativação das estações:</strong> As estações de recarga podem começar a gerar receita desde o primeiro mês de operação. Você define o valor do kWh, otimiza seus custos de abastecimento e ainda pode monetizar o serviço junto a terceiros.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Gestão inteligente e relatórios completos:</strong> Incluímos em todas as locações nosso software de gestão de recarga, que permite acompanhar: Consumo de cada veículo ou unidade, Horários de maior demanda, Relatórios mensais em PDF para gestão de frota, Controle total dos carregamentos realizados, horários e valores cobrados.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Manutenção preventiva garantida:</strong> Toda a manutenção preventiva é realizada pela nossa equipe, sem custo adicional para o cliente. Assim, sua operação segue segura e sem imprevistos.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Tecnologia de ponta para veículos leves e pesados:</strong> Trabalhamos com estações de recarga DC ultrarrápidas de até 320kW e modelos AC de 7,2kW a 22kW, ideais para atender desde carros elétricos leves até veículos de carga pesada e utilitários.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Infraestrutura para operações internas e pontos públicos:</strong> Seja para abastecer sua frota no pátio da empresa ou disponibilizar estações para seus clientes e colaboradores, temos soluções completas e personalizáveis — inclusive com possibilidade de personalizar as estações com a sua marca.
-                      </p>
-                    </div>
-
-                    <p className="text-white/70 mt-6">
-                      👉 Fale com nosso time comercial e solicite um projeto de viabilidade para sua empresa. Descubra como a Hyper Carga pode otimizar seus custos operacionais e acelerar sua transição para a mobilidade elétrica.
-                    </p>
-                  </div>
-                )}
+                <div className="space-y-2">
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Gestão inteligente e relatórios completos
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Manutenção preventiva garantida
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Tecnologia de ponta para veículos leves e pesados
+                  </p>
+                  <p className="text-white text-base mb-2 animated-element">
+                    ✔️ Infraestrutura para operações internas e pontos públicos
+                  </p>
+                </div>
               </div>
             </div>
           </div>
