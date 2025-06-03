@@ -70,11 +70,11 @@ const Motoristas = () => {
           </a>
         </section>
 
-        {/* Motoristas Section */}
+        {/* Soluções para Motoristas Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-white mb-4 animated-element">
+              <h2 className="text-3xl font-bold text-white mb-4 animated-element">
                 Soluções para Motoristas
               </h2>
               <p className="text-base text-white/70 mb-6 animated-element">
@@ -84,29 +84,25 @@ const Motoristas = () => {
                 A Hyper Carga entende as necessidades de quem vive a mobilidade elétrica no dia a dia. Por isso, oferecemos soluções práticas e eficientes para motoristas particulares, condutores de aplicativos e profissionais que precisam manter seu veículo carregado com comodidade e economia.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                <div className="space-y-2">
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Rede de estações em pontos estratégicos
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Tecnologia compatível com todos os modelos
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Monitoramento em tempo real e cobrança simplificada
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Recargas ultrarrápidas para quem tem pressa
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Planos personalizados para motoristas de aplicativo e profissionais
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Opções de carregadores para sua casa ou condomínio
-                  </p>
-                </div>
+              <div className="text-left space-y-2 mb-8">
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Rede de estações em pontos estratégicos
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Tecnologia compatível com todos os modelos
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Monitoramento em tempo real e cobrança simplificada
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Recargas ultrarrápidas para quem tem pressa
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Planos personalizados para motoristas de aplicativo e profissionais
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Opções de carregadores para sua casa ou condomínio
+                </p>
               </div>
             </div>
           </div>

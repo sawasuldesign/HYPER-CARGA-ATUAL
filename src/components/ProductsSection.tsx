@@ -10,7 +10,7 @@ const ProductsSection = () => {
       {
         id: 1,
         name: "Walbox 7,04/22 kW",
-        image: "https://i.imgur.com/S7BjPNj.png",
+        image: "https://i.imgur.com/H2jfR1r.png",
         description: "Solução residencial compacta com tecnologia inteligente de carregamento eficiente.",
         features: ["1x Tipo 2", "OCPP 1.6 (Opcional na versão 7,04 kW)", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Walbox%207,04/22%20kW"
@@ -18,7 +18,7 @@ const ProductsSection = () => {
       {
         id: 2,
         name: "Carregador DC 80 kW",
-        image: "https://i.imgur.com/niHd06L.png",
+        image: "https://i.imgur.com/oC4s8bY.png",
         description: "Carregador rápido DC de alta potência, ideal para estações públicas e corredores elétricos.",
         features: ["2x CCS2", "Display 50″", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2080%20kW"
@@ -26,7 +26,7 @@ const ProductsSection = () => {
       {
         id: 3,
         name: "Portátil Multicabos 7,04 kW Max",
-        image: "https://i.imgur.com/fpm0qQt.png",
+        image: "https://i.imgur.com/9OtGpB8.png",
         description: "As estações de recarga Portátil Multicabos AC são a solução perfeita para quem quer flexibilidade e confiabilidade. Carregue em qualquer lugar.",
         features: ["1x Tipo 2", "Ponteiras intercambiáveis de 10A, 20A e 32A", "Tomada 32A inclusa", "Bolsa de transporte"],
         whatsappText: "Quero%20um%20orçamento%20do%20Portátil%20Multicabos%207,04%20kW"
@@ -34,7 +34,7 @@ const ProductsSection = () => {
       {
         id: 4,
         name: "Carregador DC 40 kW",
-        image: "https://i.imgur.com/YRGjdvb.png",
+        image: "https://i.imgur.com/GKrr3O7.png",
         description: "Estação de carregamento dupla para empresas, condomínios e estabelecimentos comerciais.",
         features: ["1x CCS2", "OCPP 1.6", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW"

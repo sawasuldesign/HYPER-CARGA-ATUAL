@@ -74,7 +74,7 @@ const CarregadoresCasa = () => {
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-white mb-4 animated-element">
+              <h2 className="text-3xl font-bold text-white mb-4 animated-element">
                 Carregadores para Casa e Pequenos Negócios
               </h2>
               <p className="text-base text-white/70 mb-6 animated-element">

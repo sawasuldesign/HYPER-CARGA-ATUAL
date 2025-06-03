@@ -70,11 +70,11 @@ const FrotasEmpresas = () => {
           </a>
         </section>
 
-        {/* Frotas e Empresas Section */}
+        {/* Soluções para Frotas e Empresas Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-white mb-4 animated-element">
+              <h2 className="text-3xl font-bold text-white mb-4 animated-element">
                 Soluções para Frotas e Empresas
               </h2>
               <p className="text-base text-white/70 mb-6 animated-element">
@@ -84,35 +84,31 @@ const FrotasEmpresas = () => {
                 Se a sua empresa ou frota já opera ou planeja operar veículos elétricos, a Hyper Carga é o parceiro ideal para estruturar toda a rede de recarga com segurança, eficiência e retorno financeiro.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-                <div className="space-y-2">
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Tecnologia nacional de ponta
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Projetos personalizados para o seu negócio
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Locação de estações de recarga com condições diferenciadas
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Ganhos desde a ativação das estações
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Gestão inteligente e relatórios completos
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Manutenção preventiva garantida
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Tecnologia de ponta para veículos leves e pesados
-                  </p>
-                  <p className="text-white text-base mb-2 animated-element">
-                    ✔️ Infraestrutura para operações internas e pontos públicos
-                  </p>
-                </div>
+              <div className="text-left space-y-2 mb-8">
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Tecnologia nacional de ponta
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Projetos personalizados para o seu negócio
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Locação de estações de recarga com condições diferenciadas
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Ganhos desde a ativação das estações
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Gestão inteligente e relatórios completos
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Manutenção preventiva garantida
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Tecnologia de ponta para veículos leves e pesados
+                </p>
+                <p className="text-white text-base mb-2 animated-element">
+                  ✔️ Infraestrutura para operações internas e pontos públicos
+                </p>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ const SolutionsSection = () => {
     },
     {
       title: "Tudo sobre os carregadores",
-      image: "https://imgur.com/rs036oz.jpg",
+      image: "https://imgur.com/oz7dc74.jpg",
       href: "/solucoes/carregadores",
       cta: "seu carregador ideal"
     },

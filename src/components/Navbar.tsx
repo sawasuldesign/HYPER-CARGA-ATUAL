@@ -30,16 +30,15 @@ const Navbar = () => {
       ariaLabel: "Expandir menu de serviços",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Carregadores para negócios e frotas", href: "/servicos/negocios-frotas" },
-        { name: "Carregadores para casa", href: "/servicos/casa" },
+        { name: "Carregadores para negócios e frotas", href: "/servicos/carregadores-frotas" },
+        { name: "Carregadores para casa", href: "/servicos/carregadores-casa" },
         { name: "Aluguel de carregadores", href: "/servicos/aluguel" },
-        { name: "Projeto e instalação", href: "/servicos/projeto-instalacao" },
-        { name: "Carregadores com a sua marca", href: "/servicos/marca-personalizada" }
+        { name: "Projeto e instalação", href: "/servicos/projetos-instalacao" },
+        { name: "Carregadores com a sua marca", href: "/servicos/carregadores-marca" }
       ]
     },
-    { name: "Blog", href: "#blog", ariaLabel: "Ir para a seção blog" },
     { name: "Contato", href: "#contact", ariaLabel: "Ir para a seção contato" },
-    { name: "Loja", href: "/loja", ariaLabel: "Ir para a loja" }
+    { name: "Loja", href: "https://hypercarga.lojavirtualnuvem.com.br/", ariaLabel: "Ir para a loja", external: true }
   ];
 
   return (
@@ -94,6 +93,8 @@ const Navbar = () => {
                   href={item.href}
                   className="nav-item text-sm font-medium text-white hover:text-hyper-blue transition-colors px-4 py-2"
                   aria-label={item.ariaLabel}
+                  target={item.external ? "_blank" : "_self"}
+                  rel={item.external ? "noopener noreferrer" : undefined}
                 >
                   {item.name}
                 </a>
@@ -155,6 +156,8 @@ const Navbar = () => {
                     className="block py-3 px-4 text-white hover:bg-dark hover:text-hyper-blue rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                     aria-label={item.ariaLabel}
+                    target={item.external ? "_blank" : "_self"}
+                    rel={item.external ? "noopener noreferrer" : undefined}
                   >
                     {item.name}
                   </a>
