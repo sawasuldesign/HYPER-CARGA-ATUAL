@@ -17,7 +17,7 @@ const PartnerSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-md mx-auto animated-element">
           <a 
             href="https://wa.me/555436983939" 
-            className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors whitespace-nowrap"
+            className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors md:w-auto md:whitespace-nowrap md:text-center"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -26,6 +26,7 @@ const PartnerSection = () => {
           <a 
             href="/catalogo.pdf" 
             className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors"
+            download
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
-const Motoristas = () => {
+const AluguelCarregadores = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const Motoristas = () => {
     link.href = "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap";
     document.head.appendChild(link);
 
-    document.title = "Soluções para Motoristas - Hyper Carga";
+    document.title = "Aluguel de Carregadores - Hyper Carga";
     
     const metaDescription = document.createElement("meta");
     metaDescription.name = "description";
-    metaDescription.content = "Soluções de carregamento para motoristas de veículos elétricos com a Hyper Carga.";
+    metaDescription.content = "Aluguel de carregadores para veículos elétricos com a Hyper Carga. Ganhos desde o primeiro mês!";
     document.head.appendChild(metaDescription);
 
     return () => {
@@ -49,7 +49,7 @@ const Motoristas = () => {
                 Potência para a Mobilidade Elétrica
               </p>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animated-element">
-                Soluções para Motoristas
+                Aluguel de Carregadores
               </h1>
               <a
                 href="#about"
@@ -72,7 +72,7 @@ const Motoristas = () => {
           </a>
         </section>
 
-        {/* Motoristas Section */}
+        {/* Aluguel Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
@@ -83,7 +83,7 @@ const Motoristas = () => {
                   onClick={() => setIsExpanded(!isExpanded)}
                 >
                   <h2 className="text-2xl font-bold text-hyper-green flex-1">
-                    Soluções para Motoristas
+                    Aluguel de Carregadores Hyper Carga
                   </h2>
                   {isExpanded ? (
                     <ChevronUp className="h-6 w-6 text-white/50" />
@@ -96,40 +96,57 @@ const Motoristas = () => {
                 {isExpanded && (
                   <div className="p-4 bg-darker/50 text-white/70 space-y-2">
                     <h3 className="text-lg text-white/70 mb-4">
-                      Carregue seu veículo com segurança, rapidez e gestão inteligente.
+                      A solução ideal para quem quer oferecer recarga veicular sem investir na compra de equipamentos.
                     </h3>
                     
                     <p className="text-white/70">
-                      A Hyper Carga entende as necessidades de quem vive a mobilidade elétrica no dia a dia. Por isso, oferecemos soluções práticas e eficientes para motoristas particulares, condutores de aplicativos e profissionais que precisam manter seu veículo carregado com comodidade e economia.
+                      Na Hyper Carga, oferecemos o serviço de <strong>locação de carregadores elétricos</strong> para empresas, estacionamentos, shoppings, hotéis, condomínios e negócios de todos os portes. Nossa proposta é simples: você disponibiliza o serviço de recarga, gera receita e fideliza seu público — sem precisar investir pesado na compra dos equipamentos.
                     </p>
 
                     <h4 className="text-base font-bold text-hyper-green my-4">
-                      O que a Hyper Carga oferece para você:
+                      Vantagens do nosso serviço de aluguel:
                     </h4>
 
                     <div className="space-y-3">
                       <p className="text-white/70">
-                        ✅ <strong>Rede de estações em pontos estratégicos:</strong> Contamos com estações de recarga rápidas e inteligentes em diversos locais, para você carregar seu veículo enquanto faz suas atividades cotidianas, com segurança e tecnologia de ponta.
+                        ✅ <strong>Ganhos desde o primeiro mês:</strong> Com a locação, sua estação já sai monetizando! Você define o preço do kWh cobrado e começa a recuperar o valor da locação e instalação desde o início.
                       </p>
                       <p className="text-white/70">
-                        ✅ <strong>Tecnologia compatível com todos os modelos:</strong> Nossas estações AC e DC são compatíveis com os principais modelos de veículos elétricos disponíveis no mercado, utilizando conectores padrão Tipo 2 e CCS2.
+                        ✅ <strong>Gestão completa e gratuita:</strong> Nosso software de cobrança e gestão de recarga está incluso na locação. Com ele, você acompanha: Quantidade de energia carregada por sessão, Horários de pico, Relatórios PDF completos por período, Curva ABC diária, semanal e mensal.
                       </p>
                       <p className="text-white/70">
-                        ✅ <strong>Monitoramento em tempo real e cobrança simplificada:</strong> Com nosso sistema de gestão, você acompanha: Tempo de recarga, Energia consumida (kWh), Valor cobrado na hora, pelo tempo ou energia utilizada.
+                        ✅ <strong>Instalação técnica sob medida:</strong> Antes de qualquer instalação, realizamos um estudo técnico para garantir a viabilidade elétrica do local e, se necessário, cuidamos de todo o processo junto à concessionária de energia.
                       </p>
                       <p className="text-white/70">
-                        ✅ <strong>Recargas ultrarrápidas para quem tem pressa:</strong> Conte com estações DC de até 320kW, capazes de realizar recargas rápidas e seguras para você seguir viagem sem perder tempo.
+                        ✅ <strong>Manutenção periódica inclusa:</strong> Cuidamos da manutenção preventiva dos equipamentos sem custo adicional durante todo o contrato, garantindo a segurança e o bom funcionamento da sua estação.
                       </p>
                       <p className="text-white/70">
-                        ✅ <strong>Planos personalizados para motoristas de aplicativo e profissionais:</strong> Se você é motorista parceiro ou utiliza seu carro elétrico para trabalho, consulte nossas condições especiais de planos de recarga e locação de carregadores portáteis.
+                        ✅ <strong>Personalização com a sua marca:</strong> Deseja ter um carregador com a identidade da sua empresa? Oferecemos a possibilidade de personalização, inclusive em modelos DC com telas 4K, onde você também pode comercializar espaços publicitários.
                       </p>
                       <p className="text-white/70">
-                        ✅ <strong>Opções de carregadores para sua casa ou condomínio:</strong> Leve a experiência Hyper Carga para o seu dia a dia com nossos carregadores Wallbox AC de 7,2kW a 22kW e modelos portáteis multicabos. Instalação fácil e homologada para ambientes residenciais e corporativos.
+                        ✅ <strong>Soluções para negócios e frotas:</strong> Possui uma frota eletrificada ou quer compartilhar estações? Criamos condições especiais de locação e parceria para empresas e operadores logísticos.
                       </p>
                     </div>
 
+                    <h4 className="text-base font-bold text-hyper-green my-4">
+                      Tipos de carregadores disponíveis para locação:
+                    </h4>
+
+                    <ul className="list-disc pl-6 space-y-1 text-white/70">
+                      <li>Linha DC: 40kWh, 80kWh, 120kWh, 160kWh e 320kWh</li>
+                      <li>Linha AC: Modelos customizados conforme a estrutura do seu espaço</li>
+                    </ul>
+
+                    <h4 className="text-base font-bold text-hyper-green my-4">
+                      Contrato flexível e seguro
+                    </h4>
+
+                    <p className="text-white/70">
+                      Prazo mínimo de 12 meses, com renovação automática, e possibilidade de expansão ou personalização de contrato para atender a demandas específicas.
+                    </p>
+
                     <p className="text-white/70 mt-6">
-                      👉 Consulte agora a estação mais próxima ou fale com nossa equipe e garanta seu carregador residencial. Experimente a liberdade da mobilidade elétrica com a Hyper Carga.
+                      ➡️ Entre em contato com nossa equipe técnica agora mesmo e solicite a viabilidade de instalação no seu endereço. Transforme seu espaço em ponto de recarga inteligente e comece a lucrar com a mobilidade elétrica.
                     </p>
                   </div>
                 )}
@@ -147,4 +164,4 @@ const Motoristas = () => {
   );
 };
 
-export default Motoristas;
+export default AluguelCarregadores;

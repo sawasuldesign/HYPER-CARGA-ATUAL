@@ -19,13 +19,13 @@ const SolutionsSection = () => {
     {
       title: "Tudo sobre os carregadores",
       image: "https://imgur.com/rs036oz.jpg",
-      href: "/cursos",
+      href: "/solucoes/carregadores",
       cta: "seu carregador ideal"
     },
     {
       title: "Hyper Carga Store",
       image: "https://imgur.com/0ev9Idx.jpg",
-      href: "/loja",
+      href: "https://hypercarga.lojavirtualnuvem.com.br/contato/?product=274082003",
       cta: "Acesse a nossa Loja"
     }
   ];
@@ -63,6 +63,8 @@ const SolutionsSection = () => {
                   href={solution.href}
                   className="inline-flex items-center bg-hyper-green text-white px-4 py-2 rounded-lg hover:bg-hyper-green/90 transition-colors self-start"
                   aria-label={`${solution.cta} para ${solution.title}`}
+                  target={solution.href.startsWith('http') ? "_blank" : "_self"}
+                  rel={solution.href.startsWith('http') ? "noopener noreferrer" : undefined}
                 >
                   {solution.cta}
                   <ArrowRight className="ml-2 h-4 w-4" />
