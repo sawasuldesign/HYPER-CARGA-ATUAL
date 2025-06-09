@@ -20,7 +20,7 @@ const CarregadoresCasa = () => {
     
     const metaDescription = document.createElement("meta");
     metaDescription.name = "description";
-    metaDescription.content = "Carregadores residenciais e para pequenos negócios com praticidade e segurança.";
+    metaDescription.content = "Carregadores elétricos para casa e pequenos negócios com a Hyper Carga.";
     document.head.appendChild(metaDescription);
 
     return () => {
@@ -37,7 +37,7 @@ const CarregadoresCasa = () => {
         <section 
           className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://i.imgur.com/glydj6W.jpg')"
+            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://imgur.com/ctrNRtR.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -81,81 +81,63 @@ const CarregadoresCasa = () => {
                 Praticidade, segurança e autonomia para carregar onde e quando quiser.
               </p>
               <p className="text-lg text-white/70 mb-4 animated-element">
-                Se você quer a liberdade de carregar seu carro elétrico em casa ou no seu negócio, a Hyper Carga oferece opções de carregadores Wallbox AC e portáteis 
-                sob medida para ambientes residenciais, pequenos estabelecimentos e áreas privativas. Descubra qual combina mais com seu estilo de vida:
+                Se você quer a liberdade de carregar seu carro elétrico em casa ou no seu negócio, a Hyper Carga oferece opções de carregadores Wallbox AC e portáteis sob medida para ambientes residenciais, pequenos estabelecimentos e áreas privativas. Descubra qual combina mais com seu estilo de vida:
               </p>
-              
-              {/* Service Categories */}
-              <div className="space-y-6 mt-8 text-left">
-                {/* Category 1 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/ctrNRtR.jpg"
-                      alt="Para casas, apartamentos e condomínios"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🏠 Para casas, apartamentos e condomínios</h3>
-                      <p className="text-base text-white">
-                        Wallbox AC 7,2kW e 22kW Compactos, elegantes e de instalação simplificada, esses carregadores são perfeitos para quem busca conveniência no dia a dia. 
-                        Deixe seu veículo carregando durante a noite e acorde com 100% de autonomia. Diferenciais: ✅ Baixo consumo em standby 
-                        ✅ Opção com Wi-Fi e gestão por aplicativo ✅ Compatível com as principais marcas de veículos elétricos 
-                        ✅ Sem necessidade de grandes reformas na instalação elétrica Sugestão: Ideal para casas, apartamentos com vaga individual e garagens de condomínio (com aprovação do estatuto).
-                      </p>
-                    </div>
+
+              {/* Três tópicos principais */}
+              <div className="space-y-8 text-left">
+                {/* Para casas, apartamentos e condomínios */}
+                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
+                  <img
+                    src="https://imgur.com/ctrNRtR.jpg"
+                    alt="Wallbox AC para residências"
+                    className="w-full md:w-48 h-48 object-cover rounded-lg"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Para casas, apartamentos e condomínios</h3>
+                    <p className="text-base text-white mb-4">
+                      Wallbox AC 7,2kW e 22kW Compactos, elegantes e de instalação simplificada, esses carregadores são perfeitos para quem busca conveniência no dia a dia. Deixe seu veículo carregando durante a noite e acorde com 100% de autonomia. Diferenciais: Baixo consumo em standby, Opção com Wi-Fi e gestão por aplicativo, Compatível com as principais marcas de veículos elétricos, Sem necessidade de grandes reformas na instalação elétrica. Sugestão: Ideal para casas, apartamentos com vaga individual e garagens de condomínio (com aprovação do estatuto).
+                    </p>
                   </div>
                 </div>
 
-                {/* Category 2 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/31WQDuM.jpg"
-                      alt="Para pequenos negócios, clínicas e escritórios"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🏢 Para pequenos negócios, clínicas e escritórios</h3>
-                      <p className="text-base text-white">
-                        Wallbox AC 22kW Se o seu estabelecimento recebe clientes ou colaboradores com carros elétricos, ofereça um serviço extra que agrega valor e moderniza a imagem do seu negócio. 
-                        Exemplos: 💈 Barbearias premium 🏥 Clínicas odontológicas e estéticas 🛎️ Pousadas e hotéis boutique 🏡 Coworkings residenciais e consultórios home office 
-                        Benefícios: ✅ Recarga mais rápida durante a permanência do cliente ✅ Possibilidade de personalização da cobrança ou cortesia 
-                        ✅ Atrativo a mais para fidelizar e valorizar a experiência do cliente
-                      </p>
-                    </div>
+                {/* Para pequenos negócios, clínicas e escritórios */}
+                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
+                  <img
+                    src="https://imgur.com/31WQDuM.jpg"
+                    alt="Wallbox AC para pequenos negócios"
+                    className="w-full md:w-48 h-48 object-cover rounded-lg"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Para pequenos negócios, clínicas e escritórios</h3>
+                    <p className="text-base text-white mb-4">
+                      Wallbox AC 22kW Se o seu estabelecimento recebe clientes ou colaboradores com carros elétricos, ofereça um serviço extra que agrega valor e moderniza a imagem do seu negócio. Exemplos: Barbearias premium, Clínicas odontológicas e estéticas, Pousadas e hotéis boutique, Coworkings residenciais e consultórios home office. Benefícios: Recarga mais rápida durante a permanência do cliente, Possibilidade de personalização da cobrança ou cortesia, Atrativo a mais para fidelizar e valorizar a experiência do cliente.
+                    </p>
                   </div>
                 </div>
 
-                {/* Category 3 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/rZ5NpPx.jpg"
-                      alt="Para quem viaja muito ou precisa de mobilidade"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🚙 Para quem viaja muito ou precisa de mobilidade</h3>
-                      <p className="text-base text-white">
-                        Carregadores Portáteis Multicabos (7,04kW) Leve seu carregador com você. Compacto, resistente e compatível com diferentes tomadas, 
-                        é ideal para carregar em residências de amigos, hotéis, chácaras ou onde você estiver. Ideal para: 🎒 Profissionais de venda ou consultoria em viagem 
-                        🏞️ Moradores de sítios ou casas de campo 🎥 Profissionais de audiovisual e produção externa 
-                        Vantagem: acompanha bolsa, conectores intercambiáveis e tomada de 32A.
-                      </p>
-                    </div>
+                {/* Para quem viaja muito ou precisa de mobilidade */}
+                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
+                  <img
+                    src="https://imgur.com/rZ5NpPx.jpg"
+                    alt="Carregadores Portáteis Multicabos"
+                    className="w-full md:w-48 h-48 object-cover rounded-lg"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">Para quem viaja muito ou precisa de mobilidade</h3>
+                    <p className="text-base text-white mb-4">
+                      Carregadores Portáteis Multicabos (7,04kW) Leve seu carregador com você. Compacto, resistente e compatível com diferentes tomadas, é ideal para carregar em residências de amigos, hotéis, chácaras ou onde você estiver. Ideal para: Profissionais de venda ou consultoria em viagem, Moradores de sítios ou casas de campo, Profissionais de audiovisual e produção externa. Vantagem: acompanha bolsa, conectores intercambiáveis e tomada de 32A.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <p className="text-lg text-white/70 text-center my-4 animated-element">
-                ✅ Controle total na palma da mão Com os modelos Wi-Fi ou via aplicativo, você acompanha a recarga em tempo real, 
-                define limites de consumo, horários de recarga e ainda acessa relatórios de uso.
+              <p className="text-lg text-white/70 my-4 animated-element">
+                Controle total na palma da mão. Com os modelos Wi-Fi ou via aplicativo, você acompanha a recarga em tempo real, define limites de consumo, horários de recarga e ainda acessa relatórios de uso.
               </p>
 
-              <p className="text-lg text-white/70 text-center animated-element">
-                👉 Fale com nossa equipe e peça sua proposta para instalação residencial ou corporativa. 
-                Praticidade, segurança e tecnologia de ponta para sua casa ou pequeno negócio.
+              <p className="text-lg text-white/70 animated-element">
+                Fale com nossa equipe e peça sua proposta para instalação residencial ou corporativa. Praticidade, segurança e tecnologia de ponta para sua casa ou pequeno negócio.
               </p>
             </div>
           </div>

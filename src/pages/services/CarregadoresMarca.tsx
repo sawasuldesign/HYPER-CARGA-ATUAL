@@ -20,7 +20,7 @@ const CarregadoresMarca = () => {
     
     const metaDescription = document.createElement("meta");
     metaDescription.name = "description";
-    metaDescription.content = "Personalize carregadores com sua marca e transforme em pontos de contato.";
+    metaDescription.content = "Carregadores elétricos personalizados com a sua marca - Hyper Carga.";
     document.head.appendChild(metaDescription);
 
     return () => {
@@ -37,7 +37,7 @@ const CarregadoresMarca = () => {
         <section 
           className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://i.imgur.com/glydj6W.jpg')"
+            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://imgur.com/kV1h4tU.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -86,75 +86,58 @@ const CarregadoresMarca = () => {
               <p className="text-lg text-white/70 mb-4 animated-element">
                 Seja para um shopping, condomínio, hotel, estacionamento ou empresa de frota, nós personalizamos os equipamentos para que quem recarrega, lembre de você.
               </p>
-              
-              {/* Process Steps */}
-              <div className="space-y-4 mt-8">
-                {/* Step 1 */}
+
+              {/* Lista enumerada em contêineres */}
+              <div className="space-y-4 text-left">
+                {/* Como funciona? */}
                 <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                  <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
                     <img
                       src="https://imgur.com/kV1h4tU.jpg"
                       alt="Personalização visual"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
+                      className="w-full md:w-48 h-48 object-cover rounded-lg"
                     />
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🎨 Como funciona?</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">Como funciona?</h3>
                       <p className="text-base text-white/70">
-                        ✅ Personalização visual do equipamento Deixe os carregadores com a identidade visual do seu negócio — adesivação, pintura ou até customização de totem. 
-                        ✅ Exibição de publicidade e campanhas em telas digitais Nos modelos DC com display 50″ 4K, você pode exibir mensagens institucionais, anúncios de parceiros ou campanhas promocionais diretamente na tela da estação de recarga. 
-                        ✅ Relatórios de uso e impacto Acompanhe em tempo real o volume de recargas e a audiência do seu display para mensurar resultados e criar ações exclusivas para esse público.
+                        Personalização visual do equipamento: Deixe os carregadores com a identidade visual do seu negócio — adesivação, pintura ou até customização de totem. Exibição de publicidade e campanhas em telas digitais: Nos modelos DC com display 50″ 4K, você pode exibir mensagens institucionais, anúncios de parceiros ou campanhas promocionais diretamente na tela da estação de recarga. Relatórios de uso e impacto: Acompanhe em tempo real o volume de recargas e a audiência do seu display para mensurar resultados e criar ações exclusivas para esse público.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Step 2 */}
+                {/* Para quem isso faz sentido? */}
                 <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+                  <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
                     <img
                       src="https://imgur.com/FwMHNpv.jpg"
-                      alt="Para quem isso faz sentido"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
+                      alt="Para quem faz sentido"
+                      className="w-full md:w-48 h-48 object-cover rounded-lg"
                     />
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2">⚡ Para quem isso faz sentido?</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">Para quem isso faz sentido?</h3>
                       <p className="text-base text-white/70">
-                        🏨 Hotéis e resorts — Posicione sua marca como referência em sustentabilidade e conforto, oferecendo recarga gratuita ou paga com sua identidade. 
-                        🛒 Shoppings e centros comerciais — Exiba promoções e marcas parceiras na tela do carregador enquanto os clientes recarregam. 
-                        🏢 Empresas e coworkings — Valorize seu ambiente corporativo e ofereça recarga exclusiva para colaboradores e clientes. 
-                        🏬 Supermercados e estacionamentos pagos — Use o espaço para publicidade de parceiros e gere receita adicional. 
-                        🚛 Operadoras de frota — Mantenha suas estações padronizadas e reforçando a imagem da sua empresa em cada carregamento.
+                        Hotéis e resorts — Posicione sua marca como referência em sustentabilidade e conforto, oferecendo recarga gratuita ou paga com sua identidade. Shoppings e centros comerciais — Exiba promoções e marcas parceiras na tela do carregador enquanto os clientes recarregam. Empresas e coworkings — Valorize seu ambiente corporativo e ofereça recarga exclusiva para colaboradores e clientes. Supermercados e estacionamentos pagos — Use o espaço para publicidade de parceiros e gere receita adicional. Operadoras de frota — Mantenha suas estações padronizadas e reforçando a imagem da sua empresa em cada carregamento.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <h4 className="text-base font-bold text-white text-left my-4 animated-element">
-                💡 Destaques do serviço:
-              </h4>
-              
-              <div className="text-left space-y-2 mb-8">
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Personalização nas linhas AC e DC
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Exibição de conteúdo publicitário em tela 4K nos carregadores DC
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Gestão remota dos anúncios e da recarga
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Cobrança e controle customizáveis
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Possibilidade de venda de espaço publicitário no carregador
-                </p>
+              {/* Destaques do serviço */}
+              <div className="text-left my-4 animated-element">
+                <h4 className="text-base font-bold text-white my-4">Destaques do serviço:</h4>
+                <ul className="space-y-2">
+                  <li className="text-base text-white mb-2">Personalização nas linhas AC e DC</li>
+                  <li className="text-base text-white mb-2">Exibição de conteúdo publicitário em tela 4K nos carregadores DC</li>
+                  <li className="text-base text-white mb-2">Gestão remota dos anúncios e da recarga</li>
+                  <li className="text-base text-white mb-2">Cobrança e controle customizáveis</li>
+                  <li className="text-base text-white mb-2">Possibilidade de venda de espaço publicitário no carregador</li>
+                </ul>
               </div>
 
-              <p className="text-lg text-white/70 text-center mt-4 animated-element">
-                👉 Quer ver sua marca no próximo ponto de recarga da cidade? Fale agora com a Hyper Carga e personalize sua estação. 
-                Mobilidade elétrica com a sua identidade.
+              <p className="text-lg text-white/70 mt-4 animated-element">
+                Quer ver sua marca no próximo ponto de recarga da cidade? Fale agora com a Hyper Carga e personalize sua estação. Mobilidade elétrica com a sua identidade.
               </p>
             </div>
           </div>
