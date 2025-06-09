@@ -1,15 +1,13 @@
 
-import { useEffect, useState } from "react";
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { useEffect } from "react";
+import { MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import PartnerSection from "@/components/PartnerSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
 
 const AluguelCarregadores = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   useEffect(() => {
     initScrollAnimation();
 
@@ -75,88 +73,76 @@ const AluguelCarregadores = () => {
         {/* Aluguel Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto">
-              <div className="border border-border/40 rounded-lg overflow-hidden animated-element">
-                {/* Header */}
-                <div
-                  className="flex items-center p-4 bg-darker hover:bg-darker/80 transition-colors cursor-pointer"
-                  onClick={() => setIsExpanded(!isExpanded)}
-                >
-                  <h2 className="text-2xl font-bold text-hyper-green flex-1">
-                    Aluguel de Carregadores Hyper Carga
-                  </h2>
-                  {isExpanded ? (
-                    <ChevronUp className="h-6 w-6 text-white/50" />
-                  ) : (
-                    <ChevronDown className="h-6 w-6 text-white/50" />
-                  )}
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-6 animated-element">
+                Aluguel de Carregadores
+              </h2>
+              
+              <p className="text-lg text-white/70 mb-4 animated-element">
+                A solução ideal para quem quer oferecer recarga veicular sem investir na compra de equipamentos. Na Hyper Carga, oferecemos o serviço de locação de carregadores elétricos para empresas, estacionamentos, shoppings, hotéis, condomínios e negócios de todos os portes. Nossa proposta é simples: você disponibiliza o serviço de recarga, gera receita e fideliza seu público — sem precisar investir pesado na compra dos equipamentos.
+              </p>
+
+              <div className="text-left my-6 animated-element">
+                <h3 className="text-base font-bold text-white mb-2">Vantagens do nosso serviço de aluguel:</h3>
+                
+                <div className="space-y-2">
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Ganhos desde o primeiro mês:</strong> Com a locação, sua estação já sai monetizando! Você define o preço do kWh cobrado e começa a recuperar o valor da locação e instalação desde o início.
+                  </p>
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Gestão completa e gratuita:</strong> Nosso software de cobrança e gestão de recarga está incluso na locação. Com ele, você acompanha: Quantidade de energia carregada por sessão, Horários de pico, Relatórios PDF completos por período, Curva ABC diária, semanal e mensal.
+                  </p>
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Instalação técnica sob medida:</strong> Antes de qualquer instalação, realizamos um estudo técnico para garantir a viabilidade elétrica do local e, se necessário, cuidamos de todo o processo junto à concessionária de energia.
+                  </p>
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Manutenção periódica inclusa:</strong> Cuidamos da manutenção preventiva dos equipamentos sem custo adicional durante todo o contrato, garantindo a segurança e o bom funcionamento da sua estação.
+                  </p>
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Personalização com a sua marca:</strong> Deseja ter um carregador com a identidade da sua empresa? Oferecemos a possibilidade de personalização, inclusive em modelos DC com telas 4K, onde você também pode comercializar espaços publicitários.
+                  </p>
+                  <p className="text-base text-white mb-2">
+                    <span className="text-hyper-green mr-2">✔️</span>
+                    <strong>Soluções para negócios e frotas:</strong> Possui uma frota eletrificada ou quer compartilhar estações? Criamos condições especiais de locação e parceria para empresas e operadores logísticos.
+                  </p>
                 </div>
-
-                {/* Content */}
-                {isExpanded && (
-                  <div className="p-4 bg-darker/50 text-white/70 space-y-2">
-                    <h3 className="text-lg text-white/70 mb-4">
-                      A solução ideal para quem quer oferecer recarga veicular sem investir na compra de equipamentos.
-                    </h3>
-                    
-                    <p className="text-white/70">
-                      Na Hyper Carga, oferecemos o serviço de <strong>locação de carregadores elétricos</strong> para empresas, estacionamentos, shoppings, hotéis, condomínios e negócios de todos os portes. Nossa proposta é simples: você disponibiliza o serviço de recarga, gera receita e fideliza seu público — sem precisar investir pesado na compra dos equipamentos.
-                    </p>
-
-                    <h4 className="text-base font-bold text-hyper-green my-4">
-                      Vantagens do nosso serviço de aluguel:
-                    </h4>
-
-                    <div className="space-y-3">
-                      <p className="text-white/70">
-                        ✅ <strong>Ganhos desde o primeiro mês:</strong> Com a locação, sua estação já sai monetizando! Você define o preço do kWh cobrado e começa a recuperar o valor da locação e instalação desde o início.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Gestão completa e gratuita:</strong> Nosso software de cobrança e gestão de recarga está incluso na locação. Com ele, você acompanha: Quantidade de energia carregada por sessão, Horários de pico, Relatórios PDF completos por período, Curva ABC diária, semanal e mensal.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Instalação técnica sob medida:</strong> Antes de qualquer instalação, realizamos um estudo técnico para garantir a viabilidade elétrica do local e, se necessário, cuidamos de todo o processo junto à concessionária de energia.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Manutenção periódica inclusa:</strong> Cuidamos da manutenção preventiva dos equipamentos sem custo adicional durante todo o contrato, garantindo a segurança e o bom funcionamento da sua estação.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Personalização com a sua marca:</strong> Deseja ter um carregador com a identidade da sua empresa? Oferecemos a possibilidade de personalização, inclusive em modelos DC com telas 4K, onde você também pode comercializar espaços publicitários.
-                      </p>
-                      <p className="text-white/70">
-                        ✅ <strong>Soluções para negócios e frotas:</strong> Possui uma frota eletrificada ou quer compartilhar estações? Criamos condições especiais de locação e parceria para empresas e operadores logísticos.
-                      </p>
-                    </div>
-
-                    <h4 className="text-base font-bold text-hyper-green my-4">
-                      Tipos de carregadores disponíveis para locação:
-                    </h4>
-
-                    <ul className="list-disc pl-6 space-y-1 text-white/70">
-                      <li>Linha DC: 40kWh, 80kWh, 120kWh, 160kWh e 320kWh</li>
-                      <li>Linha AC: Modelos customizados conforme a estrutura do seu espaço</li>
-                    </ul>
-
-                    <h4 className="text-base font-bold text-hyper-green my-4">
-                      Contrato flexível e seguro
-                    </h4>
-
-                    <p className="text-white/70">
-                      Prazo mínimo de 12 meses, com renovação automática, e possibilidade de expansão ou personalização de contrato para atender a demandas específicas.
-                    </p>
-
-                    <p className="text-white/70 mt-6">
-                      ➡️ Entre em contato com nossa equipe técnica agora mesmo e solicite a viabilidade de instalação no seu endereço. Transforme seu espaço em ponto de recarga inteligente e comece a lucrar com a mobilidade elétrica.
-                    </p>
-                  </div>
-                )}
               </div>
+
+              <div className="text-left my-6 animated-element">
+                <h3 className="text-base font-bold text-white mb-2">Tipos de carregadores disponíveis para locação:</h3>
+                
+                <ul className="space-y-2">
+                  <li className="text-base text-white mb-2">
+                    • Linha DC: 40kWh, 80kWh, 120kWh, 160kWh e 320kWh
+                  </li>
+                  <li className="text-base text-white mb-2">
+                    • Linha AC: Modelos customizados conforme a estrutura do seu espaço
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-lg text-white/70 mb-4 animated-element">
+                Contrato flexível e seguro. Prazo mínimo de 12 meses, com renovação automática, e possibilidade de expansão ou personalização de contrato para atender a demandas específicas.
+              </p>
+
+              <a
+                href="#contact"
+                className="inline-block bg-hyper-green text-white px-4 py-2 rounded-lg hover:bg-hyper-green/80 transition-colors font-bold text-base animated-element"
+                aria-label="Solicitar viabilidade de instalação de aluguel"
+              >
+                Entre em contato com nossa equipe técnica agora mesmo e solicite a viabilidade de instalação no seu endereço. Transforme seu espaço em ponto de recarga inteligente e comece a lucrar com a mobilidade elétrica.
+              </a>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <PartnerSection />
+        <ContactSection />
       </main>
       <Footer />
       <ScrollToTop />
