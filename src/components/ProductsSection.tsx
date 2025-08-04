@@ -10,7 +10,7 @@ const ProductsSection = () => {
       {
         id: 1,
         name: "Walbox 7,04/22 kW",
-        image: "https://i.imgur.com/H2jfR1r.png",
+        image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop",
         description: "Solução residencial compacta com tecnologia inteligente de carregamento eficiente.",
         features: ["1x Tipo 2", "OCPP 1.6 (Opcional na versão 7,04 kW)", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Walbox%207,04/22%20kW"
@@ -18,7 +18,7 @@ const ProductsSection = () => {
       {
         id: 2,
         name: "Carregador DC 80 kW",
-        image: "https://i.imgur.com/oC4s8bY.png",
+        image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop",
         description: "Carregador rápido DC de alta potência, ideal para estações públicas e corredores elétricos.",
         features: ["2x CCS2", "Display 50″", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2080%20kW"
@@ -26,7 +26,7 @@ const ProductsSection = () => {
       {
         id: 3,
         name: "Portátil Multicabos 7,04 kW Max",
-        image: "https://i.imgur.com/9OtGpB8.png",
+        image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop",
         description: "As estações de recarga Portátil Multicabos AC são a solução perfeita para quem quer flexibilidade e confiabilidade. Carregue em qualquer lugar.",
         features: ["1x Tipo 2", "Ponteiras intercambiáveis de 10A, 20A e 32A", "Tomada 32A inclusa", "Bolsa de transporte"],
         whatsappText: "Quero%20um%20orçamento%20do%20Portátil%20Multicabos%207,04%20kW"
@@ -34,7 +34,7 @@ const ProductsSection = () => {
       {
         id: 4,
         name: "Carregador DC 40 kW",
-        image: "https://i.imgur.com/GKrr3O7.png",
+        image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop",
         description: "Estação de carregamento dupla para empresas, condomínios e estabelecimentos comerciais.",
         features: ["1x CCS2", "OCPP 1.6", "Baixo consumo em standby", "Suporte nacional"],
         whatsappText: "Quero%20um%20orçamento%20do%20Carregador%20DC%2040%20kW"
@@ -44,7 +44,7 @@ const ProductsSection = () => {
       {
         id: 5,
         name: "Instalação 1",
-        image: "https://i.imgur.com/pGWHvrI.png",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
         description: "Descrição da instalação 1",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%201"
@@ -52,7 +52,7 @@ const ProductsSection = () => {
       {
         id: 6,
         name: "Instalação 2",
-        image: "https://i.imgur.com/pGWHvrI.png",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
         description: "Descrição da instalação 2",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%202"
@@ -60,7 +60,7 @@ const ProductsSection = () => {
       {
         id: 7,
         name: "Instalação 3",
-        image: "https://i.imgur.com/pGWHvrI.png",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
         description: "Descrição da instalação 3",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%203"
@@ -68,7 +68,7 @@ const ProductsSection = () => {
       {
         id: 8,
         name: "Instalação 4",
-        image: "https://i.imgur.com/pGWHvrI.png",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
         description: "Descrição da instalação 4",
         features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
         whatsappText: "Quero%20informações%20sobre%20Instalação%204"

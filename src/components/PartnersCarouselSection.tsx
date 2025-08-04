@@ -4,16 +4,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const PartnersCarouselSection = () => {
   const partners = [
-    { name: "Alfredo Jaconi", image: "https://i.imgur.com/aEwYFyN.png" },
-    { name: "Allos", image: "https://i.imgur.com/aleJWhs.png" },
-    { name: "Quinta São Luiz", image: "https://i.imgur.com/XbYBlzR.png" },
-    { name: "Villagio", image: "https://i.imgur.com/Np2xtnG.png" },
-    { name: "UCS", image: "https://i.imgur.com/AjVi8aR.png" },
-    { name: "Gramado Parks", image: "https://i.imgur.com/wC3kXoM.png" },
-    { name: "Beira Rio", image: "https://i.imgur.com/UiYWtPd.png" },
-    { name: "Recreio da Juventude", image: "https://i.imgur.com/vWAQt3J.png" },
-    { name: "Babymania", image: "https://i.imgur.com/sDifmGb.png" },
-    { name: "Arena", image: "https://i.imgur.com/SEfZzdh.png" }
+    { name: "Alfredo Jaconi", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Allos", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Quinta São Luiz", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Villagio", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "UCS", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Gramado Parks", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Beira Rio", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Recreio da Juventude", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Babymania", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Arena", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
