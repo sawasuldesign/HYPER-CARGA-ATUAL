@@ -4,16 +4,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const PartnersCarouselSection = () => {
   const partners = [
-    { name: "Alfredo Jaconi", image: "https://i.imgur.com/aEwYFyN.png" },
-    { name: "Allos", image: "https://i.imgur.com/aleJWhs.png" },
-    { name: "Quinta São Luiz", image: "https://i.imgur.com/XbYBlzR.png" },
-    { name: "Villagio", image: "https://i.imgur.com/Np2xtnG.png" },
-    { name: "UCS", image: "https://i.imgur.com/AjVi8aR.png" },
-    { name: "Gramado Parks", image: "https://i.imgur.com/wC3kXoM.png" },
-    { name: "Beira Rio", image: "https://i.imgur.com/UiYWtPd.png" },
-    { name: "Recreio da Juventude", image: "https://i.imgur.com/vWAQt3J.png" },
-    { name: "Babymania", image: "https://i.imgur.com/sDifmGb.png" },
-    { name: "Arena", image: "https://i.imgur.com/SEfZzdh.png" }
+    { name: "Gramado Parks", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421506/gramado_parks_site_tk4mb2.png" },
+    { name: "Quinta São Luiz", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421507/mgur_haufbt.png" },
+    { name: "Recreio da Juventude", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421508/recreio_site_antscb.png" },
+    { name: "Beira Rio", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421506/beira_rio_site_lc9y1k.png" },
+    { name: "UCS", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421510/ucs_site_tmgviw.png" },
+    { name: "Villagio", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421511/villagio_site_mlnybn.png" },
+    { name: "Alfredo Jaconi", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421513/alfredo_jaconi_site_xwkbww.png" },
+    { name: "Allos", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421513/allos_site_e5ezxm.png" },
+    { name: "Arena", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421514/arena_site_thvtal.png" },
+    { name: "Babymania", image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421516/baby_mania_site_ehlsy3.png" }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

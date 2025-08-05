@@ -7,22 +7,22 @@ const ServicesSection = () => {
     {
       title: "Carregadores e Equipamentos",
       subtitle: "Alta tecnologia carregando seu veículo",
-      image: "https://i.imgur.com/lsP0plf.png"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421222/Carregadores_e_Equipamentos_rldltq.png"
     },
     {
       title: "Projetos, Instalação e Manutenção",
       subtitle: "Ciência energética e funcional sob medida",
-      image: "https://i.imgur.com/ALH6KkC.png"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421222/Projetos_Instala%C3%A7%C3%A3o_e_Manuten%C3%A7%C3%A3o_gyztan.png"
     },
     {
       title: "Gestão de Pontos de Recarga",
       subtitle: "Tecnologia e integração através da inteligência e apps Hyper Carga",
-      image: "https://i.imgur.com/ywl1xih.jpeg"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421327/gest%C3%A3o_de_pontos_de_regarga_vnb8mo.png"
     },
     {
       title: "Aluguel de Carregadores",
       subtitle: "Formando as novas mentes da eletromobilidade",
-      image: "https://i.imgur.com/MWtCa0x.png"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421221/aluguel_de_carregadores_alocuw.png"
     }
   ];
 

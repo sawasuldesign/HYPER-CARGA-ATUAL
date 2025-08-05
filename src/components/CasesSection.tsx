@@ -6,25 +6,25 @@ const CasesSection = () => {
   const cases = [
     {
       title: "Recreio da Juventude",
-      image: "https://i.imgur.com/pPEYqS7.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421704/case_site_ju_efrbwi.png",
       service: "Instalação de carregadores elétricos para veículos",
       description: "Realizamos a instalação de estações de recarga no clube, oferecendo praticidade e comodidade para associados e visitantes."
     },
     {
       title: "Villagio Iguatemi",
-      image: "https://i.imgur.com/uiDMopa.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421700/villagio_site_case_krkzez.png",
       service: "Instalação de carregadores elétricos em shopping center",
       description: "Instalamos pontos de recarga em áreas estratégicas do estacionamento, agregando valor à experiência dos clientes e fortalecendo o compromisso do shopping com a sustentabilidade."
     },
     {
       title: "Quinta São Luiz",
-      image: "https://i.imgur.com/jo9aYl1.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421703/case_quinta_site_vdv5cc.png",
       service: "Instalação de carregador elétrico para clientes",
       description: "Levamos mobilidade elétrica ao Quinta São Luiz, espaço que reúne gastronomia, entretenimento e eventos em Caxias do Sul. Instalamos estações de recarga para veículos elétricos, oferecendo mais comodidade e sustentabilidade aos frequentadores e visitantes desse polo de lazer e cultura."
     },
     {
       title: "Allos | Shopping Praça",
-      image: "https://i.imgur.com/NknfRsf.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754421714/case_allos_site_wled7r.png",
       service: "Instalação de carregadores elétricos em shopping center",
       description: "Realizamos a instalação de carregadores elétricos no Shopping Praça, administrado pela Allos, oferecendo mais infraestrutura para veículos elétricos em um dos principais centros de compras e convivência da região."
     }
