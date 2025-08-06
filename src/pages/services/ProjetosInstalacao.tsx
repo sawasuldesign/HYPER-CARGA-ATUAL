@@ -185,30 +185,6 @@ const ProjetosInstalacao = () => {
                 </div>
               </div>
 
-              <h4 className="text-base font-bold text-white text-left my-4 animated-element">
-                🏙️ Onde os projetos Hyper Carga fazem a diferença?
-              </h4>
-              
-              <ul className="text-left space-y-2 mb-8">
-                <li className="text-white text-base mb-2 animated-element">
-                  • Estacionamentos de shoppings e centros comerciais
-                </li>
-                <li className="text-white text-base mb-2 animated-element">
-                  • Garagens corporativas e de frotas elétricas
-                </li>
-                <li className="text-white text-base mb-2 animated-element">
-                  • Condomínios residenciais e comerciais
-                </li>
-                <li className="text-white text-base mb-2 animated-element">
-                  • Postos de recarga rápida em rodovias e áreas urbanas
-                </li>
-                <li className="text-white text-base mb-2 animated-element">
-                  • Hotéis, resorts e pousadas
-                </li>
-                <li className="text-white text-base mb-2 animated-element">
-                  • Coworkings e clínicas privadas
-                </li>
-              </ul>
 
               <h4 className="text-base font-bold text-white text-left my-4 animated-element">
                 ⭐ Seu carregador, com a sua marca

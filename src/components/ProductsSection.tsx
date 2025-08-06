@@ -43,35 +43,11 @@ const ProductsSection = () => {
     instalacao: [
       {
         id: 5,
-        name: "Instalação 1",
-        image: "https://i.imgur.com/pGWHvrI.png",
-        description: "Descrição da instalação 1",
-        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
-        whatsappText: "Quero%20informações%20sobre%20Instalação%201"
-      },
-      {
-        id: 6,
-        name: "Instalação 2",
-        image: "https://i.imgur.com/pGWHvrI.png",
-        description: "Descrição da instalação 2",
-        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
-        whatsappText: "Quero%20informações%20sobre%20Instalação%202"
-      },
-      {
-        id: 7,
-        name: "Instalação 3",
-        image: "https://i.imgur.com/pGWHvrI.png",
-        description: "Descrição da instalação 3",
-        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
-        whatsappText: "Quero%20informações%20sobre%20Instalação%203"
-      },
-      {
-        id: 8,
-        name: "Instalação 4",
-        image: "https://i.imgur.com/pGWHvrI.png",
-        description: "Descrição da instalação 4",
-        features: ["Recurso 1", "Recurso 2", "Recurso 3", "Recurso 4"],
-        whatsappText: "Quero%20informações%20sobre%20Instalação%204"
+        name: "Solicitar Orçamento de Instalação",
+        image: null,
+        description: "Fale com especialistas que irão realizar um estudo de área para viabilizar a instalação do seu novo carregador",
+        features: ["Orçamento", "Projeto", "Adequação", "Instalação"],
+        whatsappText: "Quero%20um%20orçamento%20de%20instalação%20de%20carregador"
       }
     ]
   };
@@ -108,43 +84,75 @@ const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Products Grid - 2 columns layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {currentProducts.map((product) => (
-            <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
-              <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="object-contain h-full max-w-full transition-transform hover:scale-105"
-                />
+        {/* Products Grid - Layout based on tab */}
+        {activeTab === "carregadores" ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {currentProducts.map((product) => (
+              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
+                <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="object-contain h-full max-w-full transition-transform hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <p className="text-white/70 mb-4">{product.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="w-1.5 h-1.5 rounded-full bg-hyper-green mt-2 mr-2"></span>
+                        <span className="text-sm text-white/80">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a
+                    href={`https://wa.me/555436983939?text=${product.whatsappText}`}
+                    className="inline-flex items-center bg-hyper-blue text-white px-4 py-2 rounded-lg hover:bg-hyper-blue/90 transition-colors w-full justify-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Solicitar orçamento +
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-white/70 mb-4">{product.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="w-1.5 h-1.5 rounded-full bg-hyper-green mt-2 mr-2"></span>
-                      <span className="text-sm text-white/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <a
-                  href={`https://wa.me/555436983939?text=${product.whatsappText}`}
-                  className="inline-flex items-center bg-hyper-blue text-white px-4 py-2 rounded-lg hover:bg-hyper-blue/90 transition-colors w-full justify-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Solicitar orçamento +
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+            ))}
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            {currentProducts.map((product) => (
+              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element max-w-md w-full">
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <p className="text-white/70 mb-4">{product.description}</p>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="w-1.5 h-1.5 rounded-full bg-hyper-green mt-2 mr-2"></span>
+                        <span className="text-sm text-white/80">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a
+                    href={`https://wa.me/555436983939?text=${product.whatsappText}`}
+                    className="inline-flex items-center bg-hyper-blue text-white px-4 py-2 rounded-lg hover:bg-hyper-blue/90 transition-colors w-full justify-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* CTA */}
         <div className="mt-16 text-center animated-element">

@@ -66,9 +66,11 @@ const CasesSection = () => {
 
         <div className="mt-12 text-center animated-element">
           <a 
-            href="/sobre" 
+            href="https://wa.me/5436983939" 
             className="inline-flex items-center bg-hyper-blue text-white px-6 py-3 rounded-lg hover:bg-hyper-blue/80 transition-colors"
             aria-label="Conheça mais sobre a Hyper Carga"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Conheça mais sobre a Hyper Carga
             <ArrowRight className="ml-2 h-4 w-4" />

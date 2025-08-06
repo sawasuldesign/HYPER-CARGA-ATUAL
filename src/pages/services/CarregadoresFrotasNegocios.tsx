@@ -71,98 +71,123 @@ const CarregadoresFrotasNegocios = () => {
         </section>
 
         {/* Main Content Section */}
-        <section id="about" className="section bg-dark p-6 md:p-12">
+        <section id="about" className="section bg-dark">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-white mb-4 animated-element">
-                Carregadores para Frotas e Empresas
-              </h2>
-              <p className="text-base text-white/70 mb-6 animated-element">
-                Escolha o carregador certo para a sua operação e turbine seus resultados.
-              </p>
-              <p className="text-lg text-white/70 mb-4 animated-element">
+            <div className="text-center max-w-3xl mx-auto mb-16 animated-element">
+              <h2 className="text-3xl font-bold text-white">Carregadores para Frotas e Empresas</h2>
+              <p className="text-lg text-white/70">Escolha o carregador certo para a sua operação e turbine seus resultados.</p>
+            </div>
+
+            <div className="max-w-4xl mx-auto mb-8 animated-element">
+              <p className="text-lg text-white/70 text-center">
                 Cada negócio tem sua rotina, sua demanda e seu ritmo. Pensando nisso, a Hyper Carga oferece um portfólio completo de carregadores elétricos para atender desde pequenas operações até grandes centros logísticos. Conheça as opções e descubra qual combina mais com a sua necessidade:
               </p>
+            </div>
 
-              {/* Tópicos numerados */}
-              <div className="space-y-8 text-left">
-                {/* 1. Para estacionamentos, shoppings e hotéis */}
-                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
+            <div className="space-y-8">
+              {/* Box 1 */}
+              <div className="flex flex-col md:flex-row items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
+                <div className="w-full md:w-1/2 mr-0 md:mr-6">
                   <img
                     src="https://imgur.com/KRDaL1O.jpg"
                     alt="Carregadores AC Wallbox"
-                    className="w-full md:w-48 h-48 object-cover rounded-lg"
+                    className="w-full h-[300px] object-cover rounded-xl"
                   />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">1. Para estacionamentos, shoppings e hotéis</h3>
-                    <p className="text-base text-white mb-4">
-                      Carregadores AC Wallbox (7,2kW a 22kW) Perfeitos para locais onde o cliente permanece por períodos prolongados. Enquanto ele faz compras, almoça ou se hospeda, o veículo carrega com segurança e você monetiza esse serviço. Vantagem: instalação rápida, baixo consumo em standby e possibilidade de cobrança pelo kWh ou tempo de uso.
-                    </p>
-                  </div>
                 </div>
-
-                {/* 2. Para empresas com frotas de veículos leves */}
-                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
-                  <img
-                    src="https://imgur.com/xu4PEOe.jpg"
-                    alt="Carregadores DC para frotas leves"
-                    className="w-full md:w-48 h-48 object-cover rounded-lg"
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">2. Para empresas com frotas de veículos leves</h3>
-                    <p className="text-base text-white mb-4">
-                      Carregadores DC 40kW ou 80kW Indicado para operações de entregas urbanas, transportes corporativos ou serviços de logística leve, onde há necessidade de carregamento rápido entre turnos ou viagens. Exemplos: Empresas de e-commerce, Frotas de delivery e manutenção técnica, Serviços de transporte executivo. Destaque: recargas de 20% a 80% em menos de 40 minutos, compatibilidade com os principais veículos e gestão via software inclusa.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 3. Para centros logísticos e frotas de carga pesada */}
-                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
-                  <img
-                    src="https://imgur.com/uL9u7z8.jpg"
-                    alt="Carregadores DC para carga pesada"
-                    className="w-full md:w-48 h-48 object-cover rounded-lg"
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">3. Para centros logísticos e frotas de carga pesada</h3>
-                    <p className="text-base text-white mb-4">
-                      Carregadores DC 160kW e 320kW Ideais para operações que exigem alta velocidade de recarga e disponibilidade contínua de veículos. Permitem carregar simultaneamente dois veículos ou concentrar toda a potência em um único carregamento ultrarrápido. Exemplos: Centros de distribuição, Operadoras de logística, Garagens de ônibus elétricos. Diferencial: carregamento completo em minutos, baixo consumo em standby e possibilidade de customização com a marca da empresa.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 4. Para quem quer flexibilidade em qualquer lugar - IMAGEM CORRIGIDA */}
-                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
-                  <img
-                    src="https://i.imgur.com/9OtGpB8.png"
-                    alt="Carregadores Portáteis Multicabos"
-                    className="w-full md:w-48 h-48 object-cover rounded-lg"
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">4. Para quem quer flexibilidade em qualquer lugar</h3>
-                    <p className="text-base text-white mb-4">
-                      Carregadores Portáteis Multicabos (7,04kW) A solução perfeita para operações descentralizadas, eventos, transporte executivo ou veículos de apoio. Leves, compactos e compatíveis com diferentes tipos de tomadas. Exemplos: Eventos e feiras, Produções audiovisuais, Veículos de apoio corporativo. Benefício: mobilidade total e facilidade de transporte, com bolsa e conectores intercambiáveis.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 5. Para quem busca velocidade e alta rotatividade */}
-                <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-6 animated-element">
-                  <img
-                    src="https://imgur.com/R4tWlQ3.jpg"
-                    alt="Carregadores DC ultrarrápidos"
-                    className="w-full md:w-48 h-48 object-cover rounded-lg"
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">5. Para quem busca velocidade e alta rotatividade</h3>
-                    <p className="text-base text-white mb-4">
-                      Carregadores DC 160kW e 320kW Se o seu negócio precisa atender vários veículos elétricos por dia, com o menor tempo de espera e máxima eficiência, os carregadores ultrarrápidos DC da Hyper Carga são a solução ideal. Com capacidade de carregar dois veículos simultaneamente ou concentrar a potência total em um único carro, esses modelos garantem rapidez e satisfação ao cliente — além de gerar receita extra para o seu espaço. Exemplos de aplicação: Estacionamentos de shoppings e centros comerciais, Estacionamentos de aeroportos, Complexos hoteleiros e resorts, Centros empresariais de grande fluxo. Diferenciais: Recarga de 20% a 80% em menos de 20 minutos, Carregamento simultâneo em dois veículos, Display de 50″ para exibição de anúncios e publicidade paga, Gestão completa via software incluso, Personalização da estação com a marca do shopping ou do empreendimento. Resultado: mais clientes satisfeitos, maior tempo de permanência no local e um serviço que agrega valor à experiência do usuário — tudo isso enquanto o ponto de recarga gera receita para o seu negócio.
-                    </p>
-                  </div>
+                
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h3 className="text-xl font-bold text-white mb-2">1. Para estacionamentos, shoppings e hotéis</h3>
+                  <p className="text-white/70 font-bold mb-2">Carregadores AC Wallbox (7,2kW a 22kW)</p>
+                  <p className="text-white/70 flex items-start">
+                    <span className="h-2 w-2 bg-hyper-green rounded-full inline-block mr-2 mt-2 flex-shrink-0"></span>
+                    Perfeitos para locais onde o cliente permanece por períodos prolongados. Enquanto ele faz compras, almoça ou se hospeda, o veículo carrega com segurança e você monetiza esse serviço. Vantagem: instalação rápida, baixo consumo em standby e possibilidade de cobrança pelo kWh ou tempo de uso.
+                  </p>
                 </div>
               </div>
 
-              <p className="text-lg text-white/70 mt-4 animated-element">
+              {/* Box 2 */}
+              <div className="flex flex-col md:flex-row-reverse items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
+                <div className="w-full md:w-1/2 ml-0 md:ml-6">
+                  <img
+                    src="https://imgur.com/xu4PEOe.jpg"
+                    alt="Carregadores DC para frotas leves"
+                    className="w-full h-[300px] object-cover rounded-xl"
+                  />
+                </div>
+                
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h3 className="text-xl font-bold text-white mb-2">2. Para empresas com frotas de veículos leves</h3>
+                  <p className="text-white/70 font-bold mb-2">Carregadores DC 40kW ou 80kW</p>
+                  <p className="text-white/70 flex items-start">
+                    <span className="h-2 w-2 bg-hyper-green rounded-full inline-block mr-2 mt-2 flex-shrink-0"></span>
+                    Indicado para operações de entregas urbanas, transportes corporativos ou serviços de logística leve, onde há necessidade de carregamento rápido entre turnos ou viagens. Exemplos: Empresas de e-commerce, Frotas de delivery e manutenção técnica, Serviços de transporte executivo. Destaque: recargas de 20% a 80% em menos de 40 minutos, compatibilidade com os principais veículos e gestão via software inclusa.
+                  </p>
+                </div>
+              </div>
+
+              {/* Box 3 */}
+              <div className="flex flex-col md:flex-row items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
+                <div className="w-full md:w-1/2 mr-0 md:mr-6">
+                  <img
+                    src="https://imgur.com/uL9u7z8.jpg"
+                    alt="Carregadores DC para carga pesada"
+                    className="w-full h-[300px] object-cover rounded-xl"
+                  />
+                </div>
+                
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h3 className="text-xl font-bold text-white mb-2">3. Para centros logísticos e frotas de carga pesada</h3>
+                  <p className="text-white/70 font-bold mb-2">Carregadores DC 160kW e 320kW</p>
+                  <p className="text-white/70 flex items-start">
+                    <span className="h-2 w-2 bg-hyper-green rounded-full inline-block mr-2 mt-2 flex-shrink-0"></span>
+                    Ideais para operações que exigem alta velocidade de recarga e disponibilidade contínua de veículos. Permitem carregar simultaneamente dois veículos ou concentrar toda a potência em um único carregamento ultrarrápido. Exemplos: Centros de distribuição, Operadoras de logística, Garagens de ônibus elétricos. Diferencial: carregamento completo em minutos, baixo consumo em standby e possibilidade de customização com a marca da empresa.
+                  </p>
+                </div>
+              </div>
+
+              {/* Box 4 */}
+              <div className="flex flex-col md:flex-row-reverse items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
+                <div className="w-full md:w-1/2 ml-0 md:ml-6">
+                  <img
+                    src="https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754424679/Para_quem_quer_flexibilidade_em_qualquer_lugar_wwdegm.jpg"
+                    alt="Carregadores Portáteis Multicabos"
+                    className="w-full h-[300px] object-cover rounded-xl"
+                  />
+                </div>
+                
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h3 className="text-xl font-bold text-white mb-2">4. Para quem quer flexibilidade em qualquer lugar</h3>
+                  <p className="text-white/70 font-bold mb-2">Carregadores Portáteis Multicabos (7,04kW)</p>
+                  <p className="text-white/70 flex items-start">
+                    <span className="h-2 w-2 bg-hyper-green rounded-full inline-block mr-2 mt-2 flex-shrink-0"></span>
+                    A solução perfeita para operações descentralizadas, eventos, transporte executivo ou veículos de apoio. Leves, compactos e compatíveis com diferentes tipos de tomadas. Exemplos: Eventos e feiras, Produções audiovisuais, Veículos de apoio corporativo. Benefício: mobilidade total e facilidade de transporte, com bolsa e conectores intercambiáveis.
+                  </p>
+                </div>
+              </div>
+
+              {/* Box 5 */}
+              <div className="flex flex-col md:flex-row items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
+                <div className="w-full md:w-1/2 mr-0 md:mr-6">
+                  <img
+                    src="https://imgur.com/R4tWlQ3.jpg"
+                    alt="Carregadores DC ultrarrápidos"
+                    className="w-full h-[300px] object-cover rounded-xl"
+                  />
+                </div>
+                
+                <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                  <h3 className="text-xl font-bold text-white mb-2">5. Para quem busca velocidade e alta rotatividade</h3>
+                  <p className="text-white/70 font-bold mb-2">Carregadores DC 160kW e 320kW</p>
+                  <p className="text-white/70 flex items-start">
+                    <span className="h-2 w-2 bg-hyper-green rounded-full inline-block mr-2 mt-2 flex-shrink-0"></span>
+                    Se o seu negócio precisa atender vários veículos elétricos por dia, com o menor tempo de espera e máxima eficiência, os carregadores ultrarrápidos DC da Hyper Carga são a solução ideal. Com capacidade de carregar dois veículos simultaneamente ou concentrar a potência total em um único carro, esses modelos garantem rapidez e satisfação ao cliente — além de gerar receita extra para o seu espaço.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-8 text-center animated-element">
+              <p className="text-lg text-white/70">
                 Personalize sua estação de recarga. Além de escolher o carregador ideal, a Hyper Carga personaliza as estações com a sua marca e identidade visual. Aproveite as telas de 50″ nos modelos DC para exibir publicidade ou mensagens corporativas, transformando a estação em uma nova fonte de receita.
               </p>
             </div>
