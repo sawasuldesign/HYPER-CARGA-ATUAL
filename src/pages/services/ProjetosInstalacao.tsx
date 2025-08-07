@@ -73,132 +73,126 @@ const ProjetosInstalacao = () => {
         {/* Main Content Section */}
         <section id="about" className="section bg-dark p-6 md:p-12">
           <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-white mb-4 animated-element">
-                Projetos e Instalação de Carregadores
-              </h2>
-              <p className="text-base text-white/70 mb-6 animated-element">
-                Seu carregador, do jeito certo, no lugar certo. A Hyper Carga cuida de tudo para você.
-              </p>
-              <p className="text-lg text-white/70 mb-4 animated-element">
-                Cada espaço, cada negócio e cada operação tem suas particularidades — e a Hyper Carga entende isso como ninguém. 
-                Por isso, desenvolvemos projetos completos de infraestrutura elétrica e instalação de carregadores para empresas, condomínios, frotas, estacionamentos e residências.
-              </p>
-              <p className="text-base font-bold text-white mb-4 animated-element">
-                Aqui, o projeto é seu. A expertise é nossa.
-              </p>
-              
-              <h4 className="text-base font-bold text-white text-left my-4 animated-element">
-                📊 Por que investir em um projeto personalizado?
-              </h4>
-              
-              <div className="text-left space-y-2 mb-8">
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Garante a compatibilidade elétrica do seu espaço
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Aproveita a capacidade máxima da sua rede sem sobrecarregá-la
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Evita custos desnecessários e retrabalho
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Valoriza seu imóvel ou negócio com infraestrutura moderna e eficiente
-                </p>
-                <p className="text-white text-base mb-2 animated-element">
-                  ✅ Permite personalizar layout, cobrança e até a marca da estação
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-4 animated-element">
+                  Projetos e Instalação de Carregadores
+                </h2>
+                <p className="text-base text-white/70 mb-6 animated-element">
+                  Seu carregador, do jeito certo, no lugar certo. A Hyper Carga cuida de tudo para você.
                 </p>
               </div>
 
-              {/* Process Steps */}
-              <div className="space-y-4 mt-8">
-                {/* Step 1 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/dyrJHXP.jpg"
-                      alt="Estudo de viabilidade"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🔍 1. Estudo de viabilidade</h3>
-                      <p className="text-base text-white/70">
-                        Nossa equipe técnica realiza visita ao local para avaliar a capacidade elétrica e, se necessário, 
-                        providencia junto à concessionária de energia o aumento de carga ou contratação de poste.
-                      </p>
+              {/* Two Column Layout */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12 animated-element">
+                {/* Left Column - Checklist */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-6">Por que investir em um projeto personalizado?</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3">
+                      <span className="text-hyper-green text-xl">✓</span>
+                      <span className="text-white">Garante a compatibilidade elétrica do seu espaço</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-hyper-green text-xl">✓</span>
+                      <span className="text-white">Aproveita a capacidade máxima da sua rede sem sobrecarregá-la</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-hyper-green text-xl">✓</span>
+                      <span className="text-white">Evita custos desnecessários e retrabalho</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-hyper-green text-xl">✓</span>
+                      <span className="text-white">Valoriza seu imóvel ou negócio com infraestrutura moderna e eficiente</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-hyper-green text-xl">✓</span>
+                      <span className="text-white">Permite personalizar layout, cobrança e até a marca da estação</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Step 2 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/hFsoRLH.jpg"
-                      alt="Projeto elétrico sob medida"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">📝 2. Projeto elétrico sob medida</h3>
-                      <p className="text-base text-white/70">
-                        Desenvolvemos o projeto técnico de acordo com a estrutura do ambiente e o volume de demanda previsto — 
-                        seja para um carregador em casa ou 20 em um estacionamento corporativo.
-                      </p>
-                    </div>
-                  </div>
+                {/* Right Column - Text */}
+                <div>
+                  <p className="text-lg text-white/70 italic leading-relaxed">
+                    Cada espaço, cada negócio e cada operação tem suas particularidades — e a Hyper Carga entende isso como ninguém. 
+                    Por isso, desenvolvemos projetos completos de infraestrutura elétrica e instalação de carregadores para empresas, condomínios, frotas, estacionamentos e residências.
+                    <br /><br />
+                    <strong>Aqui, o projeto é seu. A expertise é nossa.</strong>
+                  </p>
                 </div>
+              </div>
 
-                {/* Step 3 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://imgur.com/MHicqvA.jpg"
-                      alt="Instalação profissional"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🛠️ 3. Instalação profissional</h3>
-                      <p className="text-base text-white/70">
-                        A instalação é executada pela nossa parceira especializada em instalações elétricas e solares (MGA Instalações), 
-                        garantindo segurança, qualidade e agilidade.
-                      </p>
+              {/* Step by Step Process */}
+              <div className="mb-12">
+                <h3 className="text-2xl font-bold text-white text-center mb-8 animated-element">Como Funciona</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {/* Step 1 */}
+                  <div className="bg-dark-secondary rounded-lg p-6 text-center animated-element border border-white/10">
+                    <div className="w-16 h-16 bg-hyper-green rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-dark font-bold text-xl">01</span>
                     </div>
+                    <h4 className="text-lg font-bold text-white mb-3">Estudo de viabilidade</h4>
+                    <p className="text-white/70 text-sm">
+                      Nossa equipe técnica realiza visita ao local para avaliar a capacidade elétrica e, se necessário, 
+                      providencia junto à concessionária de energia o aumento de carga ou contratação de poste.
+                    </p>
                   </div>
-                </div>
 
-                {/* Step 4 */}
-                <div className="bg-dark rounded-lg p-4 mb-4 animated-element">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-                    <img
-                      src="https://i.imgur.com/ywl1xih.jpeg"
-                      alt="Ativação e treinamento"
-                      className="w-48 h-48 object-cover rounded-lg md:float-left mr-4"
-                    />
-                    <div>
-                      <h3 className="text-lg font-bold text-white mb-2">🖥️ 4. Ativação e treinamento</h3>
-                      <p className="text-base text-white/70">
-                        Entregamos o sistema pronto para uso, configurado e, se necessário, 
-                        treinamos a sua equipe para operação e gestão das recargas.
-                      </p>
+                  {/* Step 2 */}
+                  <div className="bg-dark-secondary rounded-lg p-6 text-center animated-element border border-white/10">
+                    <div className="w-16 h-16 bg-hyper-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">02</span>
                     </div>
+                    <h4 className="text-lg font-bold text-white mb-3">Projeto Elétrico</h4>
+                    <p className="text-white/70 text-sm">
+                      Desenvolvemos o projeto técnico de acordo com a estrutura do ambiente e o volume de demanda previsto — 
+                      seja para um carregador em casa ou 20 em um estacionamento corporativo.
+                    </p>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-dark-secondary rounded-lg p-6 text-center animated-element border border-white/10">
+                    <div className="w-16 h-16 bg-hyper-green rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-dark font-bold text-xl">03</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-3">Instalação Profissional</h4>
+                    <p className="text-white/70 text-sm">
+                      A instalação é executada pela nossa parceira especializada em instalações elétricas e solares (MGA Instalações), 
+                      garantindo segurança, qualidade e agilidade.
+                    </p>
+                  </div>
+
+                  {/* Step 4 */}
+                  <div className="bg-dark-secondary rounded-lg p-6 text-center animated-element border border-white/10">
+                    <div className="w-16 h-16 bg-hyper-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white font-bold text-xl">04</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-3">Ativação e Treinamento</h4>
+                    <p className="text-white/70 text-sm">
+                      Entregamos o sistema pronto para uso, configurado e, se necessário, 
+                      treinamos a sua equipe para operação e gestão das recargas.
+                    </p>
                   </div>
                 </div>
               </div>
 
+              {/* Brand Customization */}
+              <div className="text-center">
+                <h4 className="text-xl font-bold text-white mb-4 animated-element">
+                  ⭐ Seu carregador, com a sua marca
+                </h4>
+                
+                <p className="text-lg text-white/70 mb-6 animated-element max-w-4xl mx-auto">
+                  Quer uma estação exclusiva? Personalizamos o carregador com a identidade visual da sua empresa — 
+                  desde o equipamento até as telas digitais de 50″ dos modelos DC, onde você pode explorar publicidade paga ou campanhas institucionais.
+                </p>
 
-              <h4 className="text-base font-bold text-white text-left my-4 animated-element">
-                ⭐ Seu carregador, com a sua marca
-              </h4>
-              
-              <p className="text-lg text-white/70 mb-4 animated-element">
-                Quer uma estação exclusiva? Personalizamos o carregador com a identidade visual da sua empresa — 
-                desde o equipamento até as telas digitais de 50″ dos modelos DC, onde você pode explorar publicidade paga ou campanhas institucionais.
-              </p>
-
-              <p className="text-lg text-white/70 text-center mt-4 animated-element">
-                👉 Fale com nossos especialistas e peça seu projeto agora. Com a Hyper Carga, você transforma sua operação, 
-                valoriza seu espaço e conecta sua marca ao futuro da mobilidade elétrica.
-              </p>
+                <p className="text-lg text-white/70 animated-element">
+                  👉 Fale com nossos especialistas e peça seu projeto agora. Com a Hyper Carga, você transforma sua operação, 
+                  valoriza seu espaço e conecta sua marca ao futuro da mobilidade elétrica.
+                </p>
+              </div>
             </div>
           </div>
         </section>
