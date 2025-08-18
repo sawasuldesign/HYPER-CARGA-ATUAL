@@ -11,12 +11,15 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist", // Garante que o diretório de saída é dist (padrão)
+    copyPublicDir: true, // Copia a pasta public e arquivos da raiz, como _redirects, para dist
   },
 }));
