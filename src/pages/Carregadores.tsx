@@ -1,13 +1,17 @@
 
-import { useEffect } from "react";
-import { MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { initScrollAnimation } from "@/utils/scrollAnimation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Carregadores = () => {
+  const [selectedCharger, setSelectedCharger] = useState<string | null>(null);
+
   useEffect(() => {
     initScrollAnimation();
 
@@ -29,119 +33,177 @@ const Carregadores = () => {
     };
   }, []);
 
-  const toggleContent = (id: string) => {
-    const element = document.getElementById(id);
+  const scrollToCharger = (chargerId: string) => {
+    setSelectedCharger(chargerId);
+    const element = document.getElementById(`details-${chargerId}`);
     if (element) {
-      element.classList.toggle('hidden');
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const carregadores = [
     {
-      id: "carregador-1",
-      name: "Carregador DC ZID160-2CCS2 (160 kW)",
+      id: "dc-160kw",
+      name: "Carregador DC 160 kW",
       image: "https://i.imgur.com/oC4s8bY.png",
-      description: "O ZID160-2CCS2 é um carregador de alta potência para recarga rápida de veículos elétricos. Capaz de fornecer 160 kW por meio de um único conector CCS2 ou dividir 80 kW entre dois conectores CCS2, este modelo é ideal para quem busca velocidade e versatilidade. Seu display de 50 polegadas oferece uma interface intuitiva, e o baixo consumo em standby garante eficiência energética.",
-      eficiencia: "Potência de Saída: 160 kW (um conector) ou 80 kW por conector para recarga simultânea. Consumo em Standby: Menos de 50 W, reduzindo o desperdício de energia. Tensão de Entrada: Trifásico + neutro + PE, 380 V ± 10%, 60 Hz. Corrente de Entrada: 250 A. Protocolo de Comunicação: OCPP 1.6 JSON para integração com redes de recarga. Conectividade: Ethernet. O ZID160-2CCS2 aloca a potência de forma dinâmica, garantindo desempenho otimizado para um ou dois veículos. Seu baixo consumo em standby o torna uma opção ecológica para locais de alta demanda.",
-      instalacao: "Estações de Recarga Comerciais: Ideal para postos de gasolina, áreas de descanso ou shoppings com alta demanda por recarga rápida. Depósitos de Frotas: Perfeito para empresas que gerenciam frotas de VEs, como serviços de entrega ou táxis. Centros Urbanos: Indicado para áreas urbanas com grande circulação de VEs, proporcionando recarga rápida.",
-      manutencao: "Instalação: Requer uma fonte de energia trifásica de 380 V e uma base de concreto para montagem. Recomenda-se instalação profissional para conformidade com normas elétricas. O cabo de 5 metros permite flexibilidade na posicionamento. Manutenção: Limpeza regular dos conectores e do display é recomendada. Verifique a conexão Ethernet periodicamente para garantir a comunicação com o backend. O design robusto minimiza a necessidade de manutenção, e o suporte nacional está disponível para assistência.",
-      curiosidades: "Pode carregar dois VEs simultaneamente a 80 kW cada, economizando tempo em locais movimentados. O display de 50 polegadas pode ser usado para exibir anúncios, gerando oportunidades de receita para empresas. O protocolo OCPP 1.6 JSON garante compatibilidade com a maioria dos aplicativos de recarga, aumentando a conveniência."
+      shortName: "DC 160 kW",
+      description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais. Com consumo ínfimo em standby, suporte técnico nacional 24/7 e conectores 2x CCS2, é ideal para frotas ou pontos de recarga rápida. Dicas de instalação: Posicione em áreas de alto tráfego com acesso à rede elétrica trifásica; manutenção envolve verificações mensais de cabos e atualizações de software via app Hyper Carga. Curiosidade: Essa unidade pode recarregar um VE padrão em menos de 30 minutos, impulsionando a mobilidade sustentável no Brasil.",
+      specs: {
+        potencia: "160 kW (ou 2x 80 kW)",
+        conectores: "2x CCS2",
+        consumo: "Ínfimo",
+        suporte: "Nacional",
+        status: "Disponível",
+        marca: "160 kW, Carregador DC, CCS2, Display"
+      }
     },
     {
-      id: "carregador-2",
-      name: "Carregador DC ZID60-2CCS2-TV (80 kW)",
+      id: "dc-80kw",
+      name: "Carregador DC 80 kW",
       image: "https://i.imgur.com/oC4s8bY.png",
-      description: "O ZID60-2CCS2-TV é um carregador DC versátil que entrega 80 kW por um conector CCS2 ou 40 kW por dois conectores. Seu display de 50 polegadas permite controle local ou remoto do conteúdo exibido, combinando funcionalidade com interação do usuário. O baixo consumo em standby garante eficiência energética.",
-      eficiencia: "Potência de Saída: 80 kW (um conector) ou 40 kW por conector para recarga simultânea. Consumo em Standby: Menos de 50 W. Tensão de Entrada: Trifásico + neutro + PE, 380 V ± 10%, 60 Hz. Corrente de Entrada: 122 A. Protocolo de Comunicação: OCPP 1.6 JSON. Conectividade: Ethernet. A capacidade de divisão de potência garante eficiência energética, e o baixo consumo em standby reduz custos operacionais.",
-      instalacao: "Centros Comerciais: O grande display é ideal para locais onde anúncios ou instruções podem melhorar a experiência do usuário. Estacionamentos: Indicado para escritórios ou estacionamentos públicos com tráfego moderado de VEs. Áreas de Descanso em Rodovias: Perfeito para viajantes que precisam de paradas rápidas para recarga.",
-      manutencao: "Instalação: Requer uma fonte trifásica de 380 V e uma superfície de montagem segura. Os cabos de 5 metros oferecem alcance suficiente para posicionamento. Garanta ventilação adequada ao redor da unidade. Manutenção: Limpe o display e os conectores regularmente para evitar acúmulo de poeira. Verifique a conexão Ethernet para desempenho consistente. O suporte nacional da Hyper Carga está disponível para suporte.",
-      curiosidades: "O display de 50 polegadas permite personalizar conteúdos, como promoções ou instruções de recarga, melhorando a interação. Este carregador pode recarregar a maioria dos VEs em menos de uma hora com a saída total de 80 kW. Seu baixo consumo em standby o torna um dos carregadores DC mais eficientes da categoria."
+      shortName: "DC 80 kW",
+      description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real. Ela suporta carregamento em um plugue a 80 kW ou dois a 40 kW cada, com baixo consumo em standby e conectores 2x CCS2. Com suporte nacional, é ótima para shoppings, estacionamentos ou empresas. Dicas de instalação: Integre com sistemas de gerenciamento de energia para otimização; manutenção inclui limpeza do display e calibração anual. Curiosidade: O display pode ser usado para campanhas educativas sobre EVs, alinhando com a visão Hyper Carga de um Brasil elétrico.",
+      specs: {
+        potencia: "80 kW (ou 2x 40 kW)",
+        conectores: "2x CCS2",
+        display: "50\"",
+        consumo: "Ínfimo",
+        suporte: "Nacional",
+        status: "Disponível",
+        marca: "80 kW, Carregador DC, CCS2, Display"
+      }
     },
     {
-      id: "carregador-3",
-      name: "Carregador DC ZID80 (80 kW)",
-      image: "https://i.imgur.com/oC4s8bY.png",
-      description: "O ZID80 oferece recarga robusta de 80 kW por um conector CCS2 ou 40 kW por dois conectores. Seu display compacto de 150 mm x 50 mm exibe informações claras sobre o status de recarga, ideal para quem valoriza simplicidade e velocidade.",
-      eficiencia: "Potência de Saída: 80 kW (um conector) ou 40 kW por conector para recarga simultânea. Consumo em Standby: Menos de 50 W. Tensão de Entrada: Trifásico + neutro + PE, 380 V ± 10%, 60 Hz. Corrente de Entrada: 125 A. Protocolo de Comunicação: OCPP 1.6 JSON. Conectividade: Ethernet. O ZID80 equilibra velocidade de recarga e eficiência energética, ideal para locais com tráfego moderado.",
-      instalacao: "Pequenos Negócios: Ótimo para cafés, academias ou lojas com clientes que usam VEs. Condomínios Residenciais: Indicado para prédios de alto padrão com estações de recarga compartilhadas. Estacionamentos Municipais: Ideal para áreas de estacionamento públicas com uso moderado de VEs.",
-      manutencao: "Instalação: Requer uma conexão trifásica de 380 V e uma base de montagem estável. O display compacto permite instalação em espaços menores. Manutenção: Pouca manutenção é necessária — limpe os conectores e verifique a conexão Ethernet periodicamente. O suporte nacional garante assistência rápida.",
-      curiosidades: "O display compacto é projetado para fácil leitura, mesmo sob luz solar intensa. A função de divisão de potência o torna versátil para locais com demandas variadas. Seu baixo consumo em standby está alinhado com metas de sustentabilidade, reduzindo custos energéticos."
-    },
-    {
-      id: "carregador-4",
-      name: "Carregador DC ZID40-CCS2 (40 kW)",
+      id: "dc-40kw",
+      name: "Carregador DC 40 kW",
       image: "https://i.imgur.com/GKrr3O7.png",
-      description: "O ZID40-CCS2 é um carregador DC compacto e eficiente, fornecendo 40 kW por um conector CCS2. Seu display de 50 polegadas oferece feedback claro ao usuário, e o baixo consumo em standby garante eficiência. Ideal para locais que precisam de recarga confiável para um veículo.",
-      eficiencia: "Potência de Saída: 40 kW (um conector). Consumo em Standby: Menos de 50 W. Tensão de Entrada: Trifásico + neutro + PE, 380 V ± 10%, 60 Hz. Corrente de Entrada: 122 A. Protocolo de Comunicação: OCPP 1.6 JSON. Conectividade: Ethernet. O ZID40-CCS2 é otimizado para recarga de um veículo, oferecendo equilíbrio entre velocidade e eficiência energética.",
-      instalacao: "Pequeno Varejo: Perfeito para boutiques ou restaurantes com espaços de estacionamento limitados. Edifícios de Escritórios: Ideal para locais de trabalho que oferecem recarga para funcionários ou visitantes. Centros Comunitários: Indicado para locais com necessidades ocasionais de recarga.",
-      manutencao: "Instalação: Requer uma fonte trifásica de 380 V e uma área de montagem segura. O cabo de 5 metros permite posicionamento flexível. Manutenção: Limpe o conector e o display regularmente. Verifique a conexão Ethernet para manter a comunicação com o backend. O suporte nacional está disponível.",
-      curiosidades: "É um dos carregadores DC mais compactos da nossa linha, ideal para espaços menores. Sua saída de 40 kW pode carregar a maioria dos VEs até 80% em menos de 90 minutos. O grande display melhora a experiência do usuário com informações claras."
+      shortName: "DC 40 kW",
+      description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes. Seu baixo consumo em standby e suporte nacional a tornam ideal para locais com demanda moderada, como condomínios ou pequenas empresas. Conectores: 1x CCS2. Dicas de instalação: Fixe em paredes ou pedestais com conexão elétrica dedicada; manutenção é simples, com alertas via app para filtros e conexões. Curiosidade: Essa unidade compacta é energeticamente eficiente, reduzindo custos operacionais em até 20% comparado a modelos semelhantes.",
+      specs: {
+        potencia: "40 kW",
+        conectores: "1x CCS2",
+        protocolo: "OCPP 1.6",
+        consumo: "Ínfimo",
+        suporte: "Nacional",
+        status: "Disponível",
+        marca: "40 kW, Carregador DC, CCS2, Display"
+      }
     },
     {
-      id: "carregador-5",
-      name: "Wallbox AC 7,04 kW / 22 kW",
+      id: "wallbox-22kw",
+      name: "Wallbox 7.04 / 22 kW",
       image: "https://i.imgur.com/H2jfR1r.png",
-      description: "Os carregadores Wallbox AC são projetados para conveniência, oferecendo 7,04 kW ou 22 kW por meio de um conector Tipo 2. Com OCPP 1.6 e conectividade WiFi opcionais (para o modelo de 7,04 kW), são perfeitos para ambientes residenciais e hoteleiros.",
-      eficiencia: "Potência de Saída: 7,04 kW ou 22 kW. Tensão de Entrada: 220 V (fase-neutro ou fase-fase) ou trifásico 380 V ± 10%, 60 Hz. Corrente de Entrada: 32 A. Protocolo de Comunicação: OCPP 1.6 JSON (opcional para 7,04 kW). Conectividade: WiFi (opcional para 7,04 kW). São altamente eficientes para recargas longas, como durante a noite, com consumo mínimo em standby.",
-      instalacao: "Residências: Ideal para proprietários de VEs que desejam recarga noturna. Hotéis e Resorts: Perfeito para estacionamentos de hóspedes, valorizando a oferta de serviços. Condomínios: Indicado para garagens compartilhadas com múltiplos usuários de VEs.",
-      manutencao: "Instalação: Requer uma fonte de 220 V ou 380 V, dependendo do modelo. A instalação de parede é simples, com mínimas alterações na infraestrutura. O cabo de 5 metros facilita o acesso aos veículos. Manutenção: Limpe o conector Tipo 2 regularmente. Para modelos com WiFi, garanta uma conexão de rede estável. O suporte nacional está disponível para assistência.",
-      curiosidades: "O modelo de 22 kW pode carregar até três vezes mais rápido que o de 7,04 kW, ideal para locais movimentados. A conectividade WiFi opcional permite integração com aplicativos, oferecendo monitoramento remoto. O design elegante do Wallbox se integra perfeitamente à estética de residências ou hotéis."
+      shortName: "Wallbox AC",
+      description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica. Disponível em versões de 7.04 kW ou 22 kW, com conector 1x Tipo 2 e OCPP 1.6 (opcional na versão 7.04 kW), oferece baixo consumo em standby e suporte nacional. Dicas de instalação: Monte na parede com cabo de 5m para acessibilidade; manutenção envolve inspeções visuais semanais e atualizações firmware. Curiosidade: Projetada para uso diário, pode carregar um VE overnight, promovendo a adoção de mobilidade elétrica em lares brasileiros.",
+      specs: {
+        potencia: "7.04 kW / 22 kW",
+        conectores: "1x Tipo 2",
+        protocolo: "OCPP 1.6 (opcional em 7.04 kW)",
+        consumo: "Baixo",
+        suporte: "Nacional",
+        status: "Disponível",
+        marca: "22 kW, 7.04 kW, Carregador AC, Tipo 2"
+      }
     },
     {
-      id: "carregador-6",
-      name: "Wallbox AC 7,2 kWh Z1 W07 / Z1 W07W (WiFi)",
-      image: "https://i.imgur.com/H2jfR1r.png",
-      description: "Os carregadores Wallbox AC Z1 W07 e Z1 W07W entregam 7,04 kW por um conector Tipo 2, com o Z1 W07W oferecendo WiFi e OCPP 1.6 opcionais para maior conectividade. Compactos e fáceis de usar, são ideais para uso residencial e comercial, com baixo consumo em standby.",
-      eficiencia: "Potência de Saída: 7,04 kW. Tensão de Entrada: 220 V (fase-neutro ou fase-fase) + PE. Corrente de Entrada: 32 A. Protocolo de Comunicação: OCPP 1.6 JSON (opcional). Conectividade: WiFi (opcional para Z1 W07W). Temperatura de Operação: -35°C a 50°C. Temperatura de Armazenamento: -35°C a 70°C. Otimizados para recargas lentas e eficientes, perfeitos para uso noturno.",
-      instalacao: "Garagens Residenciais: Ideal para recarga diária em casa. Pequenos Negócios: Ótimo para cafés ou escritórios com estacionamento para funcionários ou clientes. Condomínios: Indicado para estações de recarga compartilhadas.",
-      manutencao: "Instalação: Requer uma fonte de 220 V e instalação na parede. Um totem opcional (5001.001) está disponível para montagem independente. Garanta aterramento adequado para segurança. Manutenção: Limpe o conector regularmente e verifique a conectividade WiFi (se aplicável). O design robusto exige manutenção mínima, com suporte nacional disponível.",
-      curiosidades: "O Z1 W07W com WiFi permite monitoramento via aplicativos de smartphone, adicionando praticidade. Funciona em temperaturas extremas, de -35°C a 50°C, garantindo confiabilidade em diversos climas. O totem opcional oferece flexibilidade para diferentes cenários de instalação."
-    },
-    {
-      id: "carregador-7",
-      name: "Carregador Portátil Multicabos AC (7,04 kW)",
+      id: "portatil-7kw",
+      name: "Portátil Multicabos 7.04 kW Max",
       image: "https://i.imgur.com/9OtGpB8.png",
-      description: "O carregador Portátil Multicabos AC é a solução ideal para quem busca flexibilidade. Com saída de 7,04 kW por um conector Tipo 2 e plugues intercambiáveis de 10A, 20A e 32A, inclui um plugue de 32A e uma bolsa de transporte para fácil mobilidade.",
-      eficiencia: "Potência de Saída: 7,04 kW. Tensão de Entrada: 220 V (fase-neutro ou fase-fase) ± 10%, 60 Hz. Corrente de Entrada: Até 32 A. Comprimento do Cabo: 5 metros. Projetado para uso plug-and-play, sem necessidade de infraestrutura complexa.",
-      instalacao: "Recarga em Movimento: Perfeito para proprietários de VEs que viajam frequentemente ou não têm infraestrutura fixa. Casas de Férias: Ideal para residências secundárias sem carregadores permanentes. Uso de Emergência: Ótimo para assistência na estrada ou necessidades temporárias de recarga.",
-      manutencao: "Instalação: Não requer instalação fixa — basta conectar a uma tomada de 220 V compatível (10A, 20A ou 32A). Garanta que a tomada esteja devidamente aterrada. Manutenção: Armazene na bolsa de transporte para proteger contra poeira e danos. Limpe o conector e os plugues regularmente. A manutenção é mínima, com suporte nacional disponível.",
-      curiosidades: "Os plugues intercambiáveis tornam este carregador compatível com uma ampla gama de tomadas, de residenciais a industriais. Sua portabilidade o torna favorito entre proprietários de VEs que valorizam liberdade e flexibilidade. A bolsa de transporte incluída facilita armazenamento e transporte, ideal para viagens."
+      shortName: "Portátil AC",
+      description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW. Inclui conector 1x Tipo 2, ponteiras intercambiáveis (10A, 20A, 32A), tomada 32A e bolsa de transporte para portabilidade. Com suporte nacional, é ideal para viagens ou emergências. Dicas de instalação: Plugue diretamente em tomadas compatíveis; manutenção é mínima, com armazenamento seco recomendado. Curiosidade: Essa unidade versátil se adapta a diferentes redes elétricas, tornando a recarga acessível em todo o território nacional.",
+      specs: {
+        potencia: "7.04 kW Max",
+        conectores: "1x Tipo 2",
+        acessorios: "Ponteiras 10A/20A/32A, Tomada 32A, Bolsa de transporte",
+        suporte: "Nacional",
+        status: "Disponível",
+        marca: "7.04 kW, Carregador AC, Portátil"
+      }
     }
   ];
+
+  const heroSlides = [
+    {
+      image: "https://i.imgur.com/oC4s8bY.png",
+      title: "Carregadores DC de Alta Potência"
+    },
+    {
+      image: "https://i.imgur.com/H2jfR1r.png", 
+      title: "Wallbox para Casa e Empresas"
+    },
+    {
+      image: "https://i.imgur.com/9OtGpB8.png",
+      title: "Portátil para Máxima Flexibilidade"
+    }
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-dark text-white">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section com nova estrutura */}
-        <section 
-          className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://imgur.com/oz7dc74.jpg')"
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative z-10 container-custom text-left">
-            <div className="max-w-2xl">
-              <p className="text-hyper-green text-lg mb-2 animated-element">
-                Potência para a Mobilidade Elétrica
-              </p>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animated-element">
-                Carregadores Hyper Carga
-              </h1>
-              <a
-                href="#about"
-                className="inline-flex items-center bg-hyper-blue text-white px-6 py-3 rounded-lg hover:bg-hyper-blue/90 transition-colors animated-element"
-              >
-                Saiba Mais
-              </a>
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-dark via-darker to-dark">
+          <div className="absolute inset-0 bg-black/20"></div>
+          
+          {/* Hero Content */}
+          <div className="relative z-10 text-center px-6 mb-12">
+            <p className="text-primary text-lg mb-4 animated-element">
+              Potência para a Mobilidade Elétrica
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 animated-element">
+              Carregadores Hyper Carga
+              <br />
+              <span className="text-primary">a energia que move o Brasil nasce aqui.</span>
+            </h1>
+            
+            {/* Hero Carousel */}
+            <div className="relative w-full max-w-4xl mx-auto h-64 md:h-80 rounded-lg overflow-hidden">
+              {heroSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/40 flex items-end">
+                    <p className="text-white text-xl font-semibold p-6">{slide.title}</p>
+                  </div>
+                </div>
+              ))}
+              
+              {/* Carousel Navigation Dots */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {heroSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-primary' : 'bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           
           {/* WhatsApp Button */}
           <a
             href="https://wa.me/555436983939"
-            className="fixed bottom-6 right-6 z-50 bg-hyper-green p-3 rounded-xl shadow-lg hover:bg-hyper-green/90 transition-colors"
+            className="fixed bottom-6 right-6 z-50 bg-primary p-3 rounded-xl shadow-lg hover:bg-primary/90 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contatar via WhatsApp"
@@ -150,80 +212,195 @@ const Carregadores = () => {
           </a>
         </section>
 
-        {/* Nova seção estruturada conforme especificação */}
-        <section className="section bg-dark p-6 md:p-12">
-          <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-              {/* Primeira Coluna (Texto Principal) */}
-              <div className="lg:col-span-1 animated-element">
-                <h2 className="text-4xl lg:text-5xl font-bold text-hyper-green mb-4">
-                  Bem-vindo ao universo Hyper Carga!
-                </h2>
-                <p className="text-lg lg:text-xl text-white/70 mb-6 animated-element delay-200">
-                  Onde a tecnologia de ponta se une à crescente demanda por soluções de recarga para veículos elétricos (VEs). Nossa linha de carregadores foi projetada para oferecer flexibilidade, eficiência e confiabilidade em qualquer cenário — seja em casa, em hotéis ou em estações públicas de alta demanda.
-                </p>
-                <p className="text-lg lg:text-xl text-white/70 animated-element delay-400">
+        {/* Welcome Section */}
+        <section className="py-16 px-6">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-8">
+              Bem-vindo ao universo Hyper Carga!
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <p className="text-lg text-white/80 leading-relaxed">
                   Com suporte nacional e recursos inovadores, os carregadores Hyper Carga tornam a recarga de VEs prática e sustentável. Conheça abaixo cada modelo, suas especificações, dicas de instalação, manutenção e curiosidades que fazem da Hyper Carga a escolha ideal.
                 </p>
               </div>
-
-              {/* Segunda Coluna (Imagem Principal) */}
-              <div className="lg:col-span-1 flex justify-center animated-element">
-                <img
-                  src="https://imgur.com/oz7dc74.jpg"
-                  alt="Carregador Hyper Carga em ação"
-                  className="w-full lg:w-auto max-h-64 lg:max-h-96 object-cover rounded-lg animate-float mb-6 lg:mb-0"
-                />
-              </div>
-
-              {/* Terceira Coluna (Texto Secundário e Imagem) */}
-              <div className="lg:col-span-1 text-center lg:text-right animated-element delay-600">
-                <p className="text-lg lg:text-xl text-white/70 mb-4">
-                  Você é proprietário de um carro elétrico ou está inserido no ramo da eletromobilidade? Então está no lugar certo!
-                </p>
+              <div className="flex justify-center">
                 <img
                   src="https://i.imgur.com/H2jfR1r.png"
-                  alt="Estação de carregamento Hyper Carga"
-                  className="w-full lg:w-auto max-h-48 lg:max-h-64 object-cover rounded-lg mt-4 animate-float"
+                  alt="Carregador Hyper Carga"
+                  className="w-full max-w-md rounded-lg"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Seção de Carregadores com estrutura especificada */}
-        <section className="section bg-dark p-6 md:p-12">
-          <div className="container-custom">
-            <div className="space-y-4">
-              {carregadores.map((carregador) => (
-                <div key={carregador.id} className="border border-border/40 rounded-lg overflow-hidden animated-element">
-                  <div 
-                    className="flex items-center p-4 bg-darker hover:bg-darker/80 transition-colors cursor-pointer"
-                    onClick={() => toggleContent(`content-${carregador.id}`)}
-                  >
-                    <img
-                      src={carregador.image}
-                      alt={carregador.name}
-                      className="w-24 h-24 object-cover mr-4"
-                    />
-                    <h3 className="text-xl font-bold text-hyper-green">
-                      {carregador.name}
-                    </h3>
-                  </div>
-                  <div id={`content-${carregador.id}`} className="hidden p-4 bg-darker/50 text-white/70 space-y-2">
-                    <p><strong>Descrição:</strong><br />{carregador.description}</p>
-                    <p><strong>Eficiência:</strong><br />{carregador.eficiencia}</p>
-                    <p><strong>Melhores Locais para Instalação:</strong><br />{carregador.instalacao}</p>
-                    <p><strong>Instalação e Manutenção:</strong><br />{carregador.manutencao}</p>
-                    <p><strong>Curiosidades:</strong><br />{carregador.curiosidades}</p>
-                  </div>
-                </div>
-              ))}
+        {/* Chargers Carousel Section */}
+        <section className="py-16 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="relative">
+              <Carousel className="w-full">
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {carregadores.map((charger) => (
+                    <CarouselItem key={charger.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                      <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                        <div className="aspect-video relative">
+                          <img
+                            src={charger.image}
+                            alt={charger.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-6">
+                          <h3 className="text-xl font-bold text-primary mb-4">
+                            {charger.name}
+                          </h3>
+                          <button
+                            onClick={() => scrollToCharger(charger.id)}
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                          >
+                            Saiba Mais
+                          </button>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Detailed Charger Sections */}
+        <section className="py-16 px-6">
+          <div className="max-w-7xl mx-auto space-y-16">
+            {carregadores.map((charger) => (
+              <div
+                key={charger.id}
+                id={`details-${charger.id}`}
+                className={`transition-all duration-500 ${
+                  selectedCharger === charger.id ? 'ring-2 ring-primary rounded-lg' : ''
+                }`}
+              >
+                <div className="bg-card rounded-lg overflow-hidden">
+                  <div className="p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
+                      <div>
+                        <h3 className="text-3xl font-bold text-primary mb-4">
+                          {charger.name}
+                        </h3>
+                        <img
+                          src={charger.image}
+                          alt={charger.name}
+                          className="w-full max-w-sm rounded-lg"
+                        />
+                      </div>
+                      <div>
+                        <Tabs defaultValue="description" className="w-full">
+                          <TabsList className="grid w-full grid-cols-2 bg-darker">
+                            <TabsTrigger 
+                              value="description" 
+                              className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                            >
+                              Descrição
+                            </TabsTrigger>
+                            <TabsTrigger 
+                              value="specs" 
+                              className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                            >
+                              Ficha Técnica
+                            </TabsTrigger>
+                          </TabsList>
+                          
+                          <TabsContent value="description" className="mt-6">
+                            <div className="text-white/80 leading-relaxed">
+                              {charger.description}
+                            </div>
+                          </TabsContent>
+                          
+                          <TabsContent value="specs" className="mt-6">
+                            <div className="overflow-x-auto">
+                              <table className="w-full">
+                                <tbody className="space-y-2">
+                                  {Object.entries(charger.specs).map(([key, value]) => (
+                                    <tr key={key} className="border-b border-border/20">
+                                      <td className="py-3 pr-6 font-semibold text-primary capitalize">
+                                        {key === 'potencia' ? 'Potência' :
+                                         key === 'conectores' ? 'Conectores' :
+                                         key === 'consumo' ? 'Consumo em Standby' :
+                                         key === 'suporte' ? 'Suporte' :
+                                         key === 'status' ? 'Status' :
+                                         key === 'marca' ? 'Marca' :
+                                         key === 'display' ? 'Display' :
+                                         key === 'protocolo' ? 'Protocolo' :
+                                         key === 'acessorios' ? 'Acessórios' : key}
+                                      </td>
+                                      <td className="py-3 text-white/80">{value}</td>
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          </TabsContent>
+                        </Tabs>
+                      </div>
+                    </div>
+                    
+                    {/* Other Models Preview */}
+                    <div className="mt-8 pt-8 border-t border-border/20">
+                      <h4 className="text-lg font-semibold text-white mb-4">Outros modelos:</h4>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {carregadores
+                          .filter(other => other.id !== charger.id)
+                          .map((other) => (
+                            <button
+                              key={other.id}
+                              onClick={() => scrollToCharger(other.id)}
+                              className="text-center group hover:scale-105 transition-transform"
+                            >
+                              <img
+                                src={other.image}
+                                alt={other.shortName}
+                                className="w-full h-20 object-cover rounded mb-2 group-hover:ring-2 group-hover:ring-primary"
+                              />
+                              <p className="text-sm text-primary font-medium">
+                                {other.shortName}
+                              </p>
+                            </button>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-6 bg-card">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Encontre a solução perfeita na Hyper Carga!
+            </h2>
+            <p className="text-lg text-white/80 mb-8">
+              Entre em contato conosco para descobrir qual carregador é ideal para suas necessidades.
+            </p>
+            <a
+              href="https://wa.me/555436983939"
+              className="inline-flex items-center bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Fale com um especialista
+            </a>
+          </div>
+        </section>
+
         <PartnerSection />
       </main>
       <Footer />
