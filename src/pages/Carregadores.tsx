@@ -49,12 +49,17 @@ const Carregadores = () => {
       shortName: "DC 160 kW",
       description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais. Com consumo ínfimo em standby, suporte técnico nacional 24/7 e conectores 2x CCS2, é ideal para frotas ou pontos de recarga rápida. Dicas de instalação: Posicione em áreas de alto tráfego com acesso à rede elétrica trifásica; manutenção envolve verificações mensais de cabos e atualizações de software via app Hyper Carga. Curiosidade: Essa unidade pode recarregar um VE padrão em menos de 30 minutos, impulsionando a mobilidade sustentável no Brasil.",
       specs: {
-        potencia: "160 kW (ou 2x 80 kW)",
-        conectores: "2x CCS2",
-        consumo: "Ínfimo",
-        suporte: "Nacional",
-        status: "Disponível",
-        marca: "160 kW, Carregador DC, CCS2, Display"
+        "Conectores DC": "CCS2 + CCS2",
+        "Tamanho do Cabo": "5 m",
+        "Tamanho do Display": "50\"",
+        "Potência de saída": "160 kW (80 kW + 80 kW)",
+        "Consumo em Standby": "> 50 W",
+        "Tensão de entrada": "3F + N + PE 380V ± 10%, 60 Hz",
+        "Corrente de entrada": "250A",
+        "Divisão de energia": "Para cargas simultâneas em dois conectores, é destinado 80kW para cada. Se apenas um conector estiver carregando, 160kW são destinados ao conector.",
+        "Protocolo de Comunicação Backend": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet",
+        "Interface de comissionamento": "Local via IHM"
       }
     },
     {
@@ -64,13 +69,17 @@ const Carregadores = () => {
       shortName: "DC 80 kW",
       description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real. Ela suporta carregamento em um plugue a 80 kW ou dois a 40 kW cada, com baixo consumo em standby e conectores 2x CCS2. Com suporte nacional, é ótima para shoppings, estacionamentos ou empresas. Dicas de instalação: Integre com sistemas de gerenciamento de energia para otimização; manutenção inclui limpeza do display e calibração anual. Curiosidade: O display pode ser usado para campanhas educativas sobre EVs, alinhando com a visão Hyper Carga de um Brasil elétrico.",
       specs: {
-        potencia: "80 kW (ou 2x 40 kW)",
-        conectores: "2x CCS2",
-        display: "50\"",
-        consumo: "Ínfimo",
-        suporte: "Nacional",
-        status: "Disponível",
-        marca: "80 kW, Carregador DC, CCS2, Display"
+        "Conectores DC": "CCS2 + CCS2",
+        "Tamanho do Cabo": "5 m",
+        "Tamanho do Display": "50\"",
+        "Potência de saída": "80 kW (40 kW + 40 kW)",
+        "Consumo em Standby": "> 50 W",
+        "Tensão de entrada": "3F + N + PE 380V ± 10%, 60 Hz",
+        "Corrente de entrada": "122A",
+        "Divisão de energia": "Para cargas simultâneas em dois conectores, é destinado 40kW para cada. Se apenas um conector estiver carregando, 80kW são destinados ao conector.",
+        "Protocolo de Comunicação Backend": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet",
+        "Interface de comissionamento": "Local via IHM"
       }
     },
     {
@@ -80,13 +89,17 @@ const Carregadores = () => {
       shortName: "DC 40 kW",
       description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes. Seu baixo consumo em standby e suporte nacional a tornam ideal para locais com demanda moderada, como condomínios ou pequenas empresas. Conectores: 1x CCS2. Dicas de instalação: Fixe em paredes ou pedestais com conexão elétrica dedicada; manutenção é simples, com alertas via app para filtros e conexões. Curiosidade: Essa unidade compacta é energeticamente eficiente, reduzindo custos operacionais em até 20% comparado a modelos semelhantes.",
       specs: {
-        potencia: "40 kW",
-        conectores: "1x CCS2",
-        protocolo: "OCPP 1.6",
-        consumo: "Ínfimo",
-        suporte: "Nacional",
-        status: "Disponível",
-        marca: "40 kW, Carregador DC, CCS2, Display"
+        "Conectores DC": "CCS2 + CCS2",
+        "Tamanho do Cabo": "5 m",
+        "Tamanho do Display": "50\"",
+        "Potência de saída": "80 kW (40 kW + 40 kW)",
+        "Consumo em Standby": "> 50 W",
+        "Tensão de entrada": "3F + N + PE 380V ± 10%, 60 Hz",
+        "Corrente de entrada": "122A",
+        "Divisão de energia": "Para cargas simultâneas em dois conectores, é destinado 40kW para cada. Se apenas um conector estiver carregando, 80kW são destinados ao conector.",
+        "Protocolo de Comunicação Backend": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet",
+        "Interface de comissionamento": "Local via IHM"
       }
     },
     {
@@ -96,13 +109,13 @@ const Carregadores = () => {
       shortName: "Wallbox AC",
       description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica. Disponível em versões de 7.04 kW ou 22 kW, com conector 1x Tipo 2 e OCPP 1.6 (opcional na versão 7.04 kW), oferece baixo consumo em standby e suporte nacional. Dicas de instalação: Monte na parede com cabo de 5m para acessibilidade; manutenção envolve inspeções visuais semanais e atualizações firmware. Curiosidade: Projetada para uso diário, pode carregar um VE overnight, promovendo a adoção de mobilidade elétrica em lares brasileiros.",
       specs: {
-        potencia: "7.04 kW / 22 kW",
-        conectores: "1x Tipo 2",
-        protocolo: "OCPP 1.6 (opcional em 7.04 kW)",
-        consumo: "Baixo",
-        suporte: "Nacional",
-        status: "Disponível",
-        marca: "22 kW, 7.04 kW, Carregador AC, Tipo 2"
+        "Conector AC": "Tipo 2",
+        "Tamanho do Cabo": "5 m",
+        "Potência de saída": "7,04 kW / 22 kW",
+        "Tensão de entrada": "F/N 220V ou F/F 220V, 3F + N + PE 380V ± 10%, 60 Hz",
+        "Corrente de entrada": "32 A",
+        "Protocolo de Comunicação Backend": "OCPP 1.6 JSON (Opcional na versão 7,04 kW)",
+        "Conectividade": "WiFi (Opcional na versão 7,04 kW)"
       }
     },
     {
@@ -112,28 +125,27 @@ const Carregadores = () => {
       shortName: "Portátil AC",
       description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW. Inclui conector 1x Tipo 2, ponteiras intercambiáveis (10A, 20A, 32A), tomada 32A e bolsa de transporte para portabilidade. Com suporte nacional, é ideal para viagens ou emergências. Dicas de instalação: Plugue diretamente em tomadas compatíveis; manutenção é mínima, com armazenamento seco recomendado. Curiosidade: Essa unidade versátil se adapta a diferentes redes elétricas, tornando a recarga acessível em todo o território nacional.",
       specs: {
-        potencia: "7.04 kW Max",
-        conectores: "1x Tipo 2",
-        acessorios: "Ponteiras 10A/20A/32A, Tomada 32A, Bolsa de transporte",
-        suporte: "Nacional",
-        status: "Disponível",
-        marca: "7.04 kW, Carregador AC, Portátil"
+        "Conector AC": "Tipo 2",
+        "Tamanho do Cabo": "5 m",
+        "Potência de saída": "7,04 kW MAX",
+        "Tensão de entrada": "F/N 220V ou F/F 220V ± 10%, 60 Hz",
+        "Corrente de entrada": "32 A MAX"
       }
     }
   ];
 
   const heroSlides = [
     {
-      image: "https://i.imgur.com/oC4s8bY.png",
-      title: "Carregadores DC de Alta Potência"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756149794/Untitled_design_2_johl7t.png",
+      title: "Portátil para Máxima Flexibilidade"
     },
     {
-      image: "https://i.imgur.com/H2jfR1r.png", 
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756149788/Untitled_design_boufjd.png", 
       title: "Wallbox para Casa e Empresas"
     },
     {
-      image: "https://i.imgur.com/9OtGpB8.png",
-      title: "Portátil para Máxima Flexibilidade"
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756149747/Untitled_design_1_reerf7.png",
+      title: "Carregadores DC de Alta Potência"
     }
   ];
 
@@ -162,7 +174,7 @@ const Carregadores = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 animated-element">
               Carregadores Hyper Carga
               <br />
-              <span className="text-primary">a energia que move o Brasil nasce aqui.</span>
+              <span className="text-green-500">a energia que move o Brasil nasce aqui.</span>
             </h1>
             
             {/* Hero Carousel */}
@@ -227,7 +239,7 @@ const Carregadores = () => {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="https://i.imgur.com/H2jfR1r.png"
+                  src="https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756150445/Untitled_Instagram_Post_45_jk42ue.png"
                   alt="Carregador Hyper Carga"
                   className="w-full max-w-md rounded-lg"
                 />
@@ -239,30 +251,39 @@ const Carregadores = () => {
         {/* Chargers Carousel Section */}
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+              Nossos carregadores
+            </h2>
             <div className="relative">
               <Carousel className="w-full">
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {carregadores.map((charger) => (
                     <CarouselItem key={charger.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                      <div className="bg-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                        <div className="aspect-video relative">
+                      <div className="relative text-center group">
+                        {/* Green circle background */}
+                        <div className="absolute inset-x-0 top-8 mx-auto w-32 h-32 bg-green-500 rounded-full z-0 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                        
+                        {/* Charger image */}
+                        <div className="relative z-10 mb-4">
                           <img
                             src={charger.image}
                             alt={charger.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-40 object-contain mx-auto"
                           />
                         </div>
-                        <div className="p-6">
-                          <h3 className="text-xl font-bold text-primary mb-4">
-                            {charger.name}
-                          </h3>
-                          <button
-                            onClick={() => scrollToCharger(charger.id)}
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-                          >
-                            Saiba Mais
-                          </button>
-                        </div>
+                        
+                        {/* Charger name */}
+                        <h3 className="text-lg font-bold text-white mb-4 relative z-10">
+                          {charger.name}
+                        </h3>
+                        
+                        {/* Saiba Mais button */}
+                        <button
+                          onClick={() => scrollToCharger(charger.id)}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors relative z-10"
+                        >
+                          Saiba Mais
+                        </button>
                       </div>
                     </CarouselItem>
                   ))}
@@ -349,10 +370,17 @@ const Carregadores = () => {
                       </div>
                     </div>
                     
-                    {/* Other Models Preview */}
+                    {/* Manual Button */}
+                    <div className="mt-8 pt-8 border-t border-border/20 text-center">
+                      <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors mb-8">
+                        Manual
+                      </button>
+                    </div>
+
+                    {/* Produtos Relacionados */}
                     <div className="mt-8 pt-8 border-t border-border/20">
-                      <h4 className="text-lg font-semibold text-white mb-4">Outros modelos:</h4>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      <h4 className="text-lg font-semibold text-white mb-4">Produtos Relacionados:</h4>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                         {carregadores
                           .filter(other => other.id !== charger.id)
                           .map((other) => (
@@ -371,6 +399,19 @@ const Carregadores = () => {
                               </p>
                             </button>
                           ))}
+                      </div>
+                      
+                      {/* Fale Conosco Button */}
+                      <div className="text-center">
+                        <a
+                          href="https://wa.me/555436983939"
+                          className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <MessageCircle className="mr-2 h-5 w-5" />
+                          Fale Conosco
+                        </a>
                       </div>
                     </div>
                   </div>
