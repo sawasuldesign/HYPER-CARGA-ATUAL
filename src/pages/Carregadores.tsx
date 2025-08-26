@@ -41,13 +41,15 @@ const Carregadores = () => {
     }
   };
 
+  const [centerIndex, setCenterIndex] = useState(0);
+
   const carregadores = [
     {
       id: "dc-160kw",
       name: "Carregador DC 160 kW",
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146552/dc1_o514so.png",
       shortName: "DC 160 kW",
-      description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais. Com consumo ínfimo em standby, suporte técnico nacional 24/7 e conectores 2x CCS2, é ideal para frotas ou pontos de recarga rápida. Dicas de instalação: Posicione em áreas de alto tráfego com acesso à rede elétrica trifásica; manutenção envolve verificações mensais de cabos e atualizações de software via app Hyper Carga. Curiosidade: Essa unidade pode recarregar um VE padrão em menos de 30 minutos, impulsionando a mobilidade sustentável no Brasil.",
+      description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -67,7 +69,7 @@ const Carregadores = () => {
       name: "Carregador DC 80 kW",
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146590/DCtv-cabo_lakgyf.png",
       shortName: "DC 80 kW",
-      description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real. Ela suporta carregamento em um plugue a 80 kW ou dois a 40 kW cada, com baixo consumo em standby e conectores 2x CCS2. Com suporte nacional, é ótima para shoppings, estacionamentos ou empresas. Dicas de instalação: Integre com sistemas de gerenciamento de energia para otimização; manutenção inclui limpeza do display e calibração anual. Curiosidade: O display pode ser usado para campanhas educativas sobre EVs, alinhando com a visão Hyper Carga de um Brasil elétrico.",
+      description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -87,7 +89,7 @@ const Carregadores = () => {
       name: "Carregador DC 40 kW",
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wall_dc_tfoqkq.png",
       shortName: "DC 40 kW",
-      description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes. Seu baixo consumo em standby e suporte nacional a tornam ideal para locais com demanda moderada, como condomínios ou pequenas empresas. Conectores: 1x CCS2. Dicas de instalação: Fixe em paredes ou pedestais com conexão elétrica dedicada; manutenção é simples, com alertas via app para filtros e conexões. Curiosidade: Essa unidade compacta é energeticamente eficiente, reduzindo custos operacionais em até 20% comparado a modelos semelhantes.",
+      description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -107,7 +109,7 @@ const Carregadores = () => {
       name: "Wallbox 7.04 / 22 kW",
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox AC",
-      description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica. Disponível em versões de 7.04 kW ou 22 kW, com conector 1x Tipo 2 e OCPP 1.6 (opcional na versão 7.04 kW), oferece baixo consumo em standby e suporte nacional. Dicas de instalação: Monte na parede com cabo de 5m para acessibilidade; manutenção envolve inspeções visuais semanais e atualizações firmware. Curiosidade: Projetada para uso diário, pode carregar um VE overnight, promovendo a adoção de mobilidade elétrica em lares brasileiros.",
+      description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica.",
       specs: {
         "Conector AC": "Tipo 2",
         "Tamanho do Cabo": "5 m",
@@ -123,13 +125,114 @@ const Carregadores = () => {
       name: "Portátil Multicabos 7.04 kW Max",
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146565/portatil_ppkbqj.png",
       shortName: "Portátil AC",
-      description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW. Inclui conector 1x Tipo 2, ponteiras intercambiáveis (10A, 20A, 32A), tomada 32A e bolsa de transporte para portabilidade. Com suporte nacional, é ideal para viagens ou emergências. Dicas de instalação: Plugue diretamente em tomadas compatíveis; manutenção é mínima, com armazenamento seco recomendado. Curiosidade: Essa unidade versátil se adapta a diferentes redes elétricas, tornando a recarga acessível em todo o território nacional.",
+      description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW.",
       specs: {
         "Conector AC": "Tipo 2",
         "Tamanho do Cabo": "5 m",
         "Potência de saída": "7,04 kW MAX",
         "Tensão de entrada": "F/N 220V ou F/F 220V ± 10%, 60 Hz",
         "Corrente de entrada": "32 A MAX"
+      }
+    },
+    {
+      id: "wallbox-ac-7kw",
+      name: "Estação Wallbox AC 7,2kWh WiFi T2",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
+      shortName: "Wallbox AC 7.2kW",
+      description: "Carregador veicular AC residencial e comercial de 7,2 kW com conectividade WiFi e conector Tipo 2. Design compacto para fixação em parede, ideal para garagens, condomínios e estabelecimentos comerciais.",
+      specs: {
+        "Potência nominal": "7,2 kW",
+        "Tipo de carregamento": "AC",
+        "Conector": "Tipo 2",
+        "Conectividade": "WiFi integrado",
+        "OCPP": "Opcional (modelo Z1W07W)",
+        "Configuração": "Monofásica",
+        "Tensão de operação": "220V (F-N)",
+        "Frequência": "60 Hz",
+        "Corrente nominal": "32A",
+        "Bitola mínima dos cabos": "6 mm²"
+      }
+    },
+    {
+      id: "wallbox-dc-30kw",
+      name: "Estação Wallbox DC 30kWh 1 CCS2",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
+      shortName: "Wallbox DC 30kW",
+      description: "Estação de recarga DC inteligente de 30 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95%.",
+      specs: {
+        "Potência de saída": "30 kW",
+        "Tensão de saída": "200V a 1000V",
+        "Corrente máxima": "150A",
+        "Eficiência nominal": "> 95%",
+        "Fator de potência": "1",
+        "DHT (THD)": "1,30%",
+        "Conector": "CCS2",
+        "Tamanho do cabo": "5m",
+        "Protocolos": "ISO15118, DIN SPEC 70121",
+        "Comunicação": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet"
+      }
+    },
+    {
+      id: "wallbox-dc-40kw",
+      name: "Estação Wallbox DC 40kWh 1 CCS2",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
+      shortName: "Wallbox DC 40kW",
+      description: "Estação de recarga DC inteligente de 40 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95%.",
+      specs: {
+        "Potência de saída": "40 kW",
+        "Tensão de saída": "200V a 1000V",
+        "Corrente máxima": "150A",
+        "Eficiência nominal": "> 95%",
+        "Fator de potência": "1",
+        "DHT (THD)": "1,30%",
+        "Conector": "CCS2",
+        "Tamanho do cabo": "5m",
+        "Protocolos": "ISO15118, DIN SPEC 70121",
+        "Comunicação": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet"
+      }
+    },
+    {
+      id: "estacao-dc-80kw",
+      name: "Estação DC 80 kWh 2 CCS2 TV",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754420072/dc1_ok4vm9.png",
+      shortName: "Estação DC 80kW TV",
+      description: "Estação de recarga DC inteligente de 80 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (40 kW cada) ou individual (80 kW total), com eficiência superior a 95%.",
+      specs: {
+        "Potência de saída": "80 kW (40 kW + 40 kW)",
+        "Divisão de energia": "40 kW por conector (simultâneo) ou 80 kW (individual)",
+        "Tensão de saída": "200V a 1000V",
+        "Corrente máxima": "250A",
+        "Eficiência nominal": "> 95%",
+        "Fator de potência": "1",
+        "DHT (THD)": "1,30%",
+        "Conectores": "CCS2 + CCS2",
+        "Tamanho do cabo": "5m cada",
+        "Protocolos": "ISO15118, DIN SPEC 70121",
+        "Comunicação": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet"
+      }
+    },
+    {
+      id: "estacao-dc-120kw",
+      name: "Estação DC 120 kWh 2 CCS2 TV",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754420072/dc1_ok4vm9.png",
+      shortName: "Estação DC 120kW TV",
+      description: "Estação de recarga DC inteligente de 120 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (60 kW cada) ou individual (120 kW total), com eficiência superior a 95%.",
+      specs: {
+        "Potência de saída": "120 kW (60 kW + 60 kW)",
+        "Divisão de energia": "60 kW por conector (simultâneo) ou 120 kW (individual)",
+        "Tensão de saída": "200V a 1000V",
+        "Corrente máxima": "300A",
+        "Eficiência nominal": "> 95%",
+        "Fator de potência": "1",
+        "DHT (THD)": "1,30%",
+        "Conectores": "CCS2 + CCS2",
+        "Tamanho do cabo": "5m cada",
+        "Protocolos": "ISO15118, DIN SPEC 70121",
+        "Comunicação": "OCPP 1.6 JSON",
+        "Conectividade": "Ethernet"
       }
     }
   ];
@@ -157,6 +260,14 @@ const Carregadores = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  // Auto-scroll carousel effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCenterIndex((prev) => (prev + 1) % carregadores.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [carregadores.length]);
 
   return (
     <div className="flex flex-col min-h-screen bg-dark text-white">
@@ -254,43 +365,73 @@ const Carregadores = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
               Nossos carregadores
             </h2>
-            <div className="relative">
-              <Carousel className="w-full">
-                <CarouselContent className="-ml-2 md:-ml-4">
-                  {carregadores.map((charger) => (
-                    <CarouselItem key={charger.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                      <div className="relative text-center group">
+            <div className="relative overflow-hidden">
+              <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${centerIndex * (100 / 3)}%)` }}>
+                {/* Create infinite loop by duplicating items */}
+                {[...carregadores, ...carregadores, ...carregadores].map((charger, index) => {
+                  const actualIndex = index % carregadores.length;
+                  const isCenter = index === centerIndex + carregadores.length;
+                  
+                  return (
+                    <div 
+                      key={`${charger.id}-${index}`} 
+                      className={`flex-shrink-0 w-1/3 px-4 transition-all duration-300 ${
+                        isCenter ? 'transform scale-110 z-10' : 'transform scale-90 opacity-75'
+                      }`}
+                    >
+                      <div className="relative text-center group h-80 flex flex-col justify-between">
                         {/* Green circle background */}
-                        <div className="absolute inset-x-0 top-8 mx-auto w-32 h-32 bg-green-500 rounded-full z-0 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                        <div className={`absolute inset-x-0 top-8 mx-auto ${
+                          isCenter ? 'w-40 h-40' : 'w-32 h-32'
+                        } bg-green-500 rounded-full z-0 opacity-80 group-hover:opacity-100 transition-all duration-300`}></div>
                         
                         {/* Charger image */}
-                        <div className="relative z-10 mb-4">
+                        <div className="relative z-10 mb-4 flex-grow flex items-center justify-center">
                           <img
                             src={charger.image}
                             alt={charger.name}
-                            className="w-full h-40 object-contain mx-auto"
+                            className={`object-contain mx-auto transition-all duration-300 ${
+                              isCenter ? 'h-48 w-48' : 'h-40 w-40'
+                            }`}
                           />
                         </div>
                         
                         {/* Charger name */}
-                        <h3 className="text-lg font-bold text-white mb-4 relative z-10">
+                        <h3 className={`font-bold text-white mb-4 relative z-10 transition-all duration-300 ${
+                          isCenter ? 'text-xl' : 'text-lg'
+                        }`}>
                           {charger.name}
                         </h3>
                         
                         {/* Saiba Mais button */}
                         <button
                           onClick={() => scrollToCharger(charger.id)}
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors relative z-10"
+                          className={`bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-all duration-300 relative z-10 mx-auto ${
+                            isCenter ? 'transform scale-110' : ''
+                          }`}
                         >
                           Saiba Mais
                         </button>
                       </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
-              </Carousel>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Navigation buttons */}
+              <button
+                onClick={() => setCenterIndex((prev) => (prev - 1 + carregadores.length) % carregadores.length)}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full z-20"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                onClick={() => setCenterIndex((prev) => (prev + 1) % carregadores.length)}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full z-20"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+              
             </div>
           </div>
         </section>
@@ -298,37 +439,47 @@ const Carregadores = () => {
         {/* Detailed Charger Sections - Only show when selectedCharger */}
         {selectedCharger && (
           <section className="py-16 px-6">
-            <div className="max-w-7xl mx-auto space-y-16">
+            <div className="max-w-7xl mx-auto">
               {carregadores.filter(charger => charger.id === selectedCharger).map((charger) => (
-              <div
-                key={charger.id}
-                id={`details-${charger.id}`}
-                className={`transition-all duration-500 ${
-                  selectedCharger === charger.id ? 'ring-2 ring-primary rounded-lg' : ''
-                }`}
-              >
-                <div className="bg-card rounded-lg overflow-hidden">
+                <div
+                  key={charger.id}
+                  id={`details-${charger.id}`}
+                  className="bg-card rounded-lg overflow-hidden ring-2 ring-primary"
+                >
                   <div className="p-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-8">
-                      <div>
-                        <h3 className="text-3xl font-bold text-primary mb-4">
-                          {charger.name}
-                        </h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-8">
+                      {/* Charger image */}
+                      <div className="flex justify-center">
                         <img
                           src={charger.image}
                           alt={charger.name}
-                          className="w-full max-w-sm rounded-lg"
+                          className="w-full max-w-xs object-contain"
                         />
                       </div>
-                      <div>
+                      
+                      {/* Charger details */}
+                      <div className="lg:col-span-2">
+                        <h3 className="text-3xl font-bold text-primary mb-6">
+                          {charger.name}
+                        </h3>
+                        
+                        {/* Key specs as bullet points */}
+                        <div className="mb-6">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {Object.entries(charger.specs).slice(0, 6).map(([key, value]) => (
+                              <div key={key} className="flex items-center text-white/80">
+                                <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                                <span className="text-sm">
+                                  <strong className="text-white">{key}:</strong> {value}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Ficha Técnica button */}
                         <Tabs defaultValue="description" className="w-full">
-                          <TabsList className="grid w-full grid-cols-2 bg-darker">
-                            <TabsTrigger 
-                              value="description" 
-                              className="data-[state=active]:bg-primary data-[state=active]:text-white"
-                            >
-                              Descrição
-                            </TabsTrigger>
+                          <TabsList className="grid w-full grid-cols-1 bg-darker max-w-xs">
                             <TabsTrigger 
                               value="specs" 
                               className="data-[state=active]:bg-primary data-[state=active]:text-white"
@@ -337,12 +488,6 @@ const Carregadores = () => {
                             </TabsTrigger>
                           </TabsList>
                           
-                          <TabsContent value="description" className="mt-6">
-                            <div className="text-white/80 leading-relaxed">
-                              {charger.description}
-                            </div>
-                          </TabsContent>
-                          
                           <TabsContent value="specs" className="mt-6">
                             <div className="overflow-x-auto">
                               <table className="w-full">
@@ -350,15 +495,7 @@ const Carregadores = () => {
                                   {Object.entries(charger.specs).map(([key, value]) => (
                                     <tr key={key} className="border-b border-border/20">
                                       <td className="py-3 pr-6 font-semibold text-primary capitalize">
-                                        {key === 'potencia' ? 'Potência' :
-                                         key === 'conectores' ? 'Conectores' :
-                                         key === 'consumo' ? 'Consumo em Standby' :
-                                         key === 'suporte' ? 'Suporte' :
-                                         key === 'status' ? 'Status' :
-                                         key === 'marca' ? 'Marca' :
-                                         key === 'display' ? 'Display' :
-                                         key === 'protocolo' ? 'Protocolo' :
-                                         key === 'acessorios' ? 'Acessórios' : key}
+                                        {key}
                                       </td>
                                       <td className="py-3 text-white/80">{value}</td>
                                     </tr>
@@ -370,58 +507,52 @@ const Carregadores = () => {
                         </Tabs>
                       </div>
                     </div>
-                    
-                    {/* Manual Button */}
-                    <div className="mt-8 pt-8 border-t border-border/20 text-center">
-                      <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors mb-8">
-                        Manual
-                      </button>
-                    </div>
-
-                    {/* Produtos Relacionados */}
-                    <div className="mt-8 pt-8 border-t border-border/20">
-                      <h4 className="text-lg font-semibold text-white mb-4">Produtos Relacionados:</h4>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        {carregadores
-                          .filter(other => other.id !== charger.id)
-                          .map((other) => (
-                            <button
-                              key={other.id}
-                              onClick={() => scrollToCharger(other.id)}
-                              className="text-center group hover:scale-105 transition-transform"
-                            >
-                              <img
-                                src={other.image}
-                                alt={other.shortName}
-                                className="w-full h-20 object-cover rounded mb-2 group-hover:ring-2 group-hover:ring-primary"
-                              />
-                              <p className="text-sm text-primary font-medium">
-                                {other.shortName}
-                              </p>
-                            </button>
-                          ))}
-                      </div>
-                      
-                      {/* Fale Conosco Button */}
-                      <div className="text-center">
-                        <a
-                          href="https://wa.me/555436983939"
-                          className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <MessageCircle className="mr-2 h-5 w-5" />
-                          Fale Conosco
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
-              </div>
               ))}
             </div>
           </section>
         )}
+
+        {/* Produtos Relacionados Section */}
+        <section className="py-16 px-6 bg-card">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Produtos Relacionados
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-12">
+              {carregadores.map((charger) => (
+                <button
+                  key={charger.id}
+                  onClick={() => scrollToCharger(charger.id)}
+                  className="text-center group hover:scale-105 transition-transform bg-darker rounded-lg p-4"
+                >
+                  <img
+                    src={charger.image}
+                    alt={charger.shortName}
+                    className="w-full h-24 object-contain rounded mb-3 group-hover:ring-2 group-hover:ring-primary"
+                  />
+                  <p className="text-sm text-primary font-medium">
+                    {charger.shortName}
+                  </p>
+                </button>
+              ))}
+            </div>
+            
+            {/* Fale Conosco Button */}
+            <div className="text-center">
+              <a
+                href="https://wa.me/+555436983939"
+                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Fale Conosco
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-16 px-6 bg-card">
