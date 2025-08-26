@@ -45,7 +45,7 @@ const Carregadores = () => {
     {
       id: "dc-160kw",
       name: "Carregador DC 160 kW",
-      image: "https://i.imgur.com/oC4s8bY.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146552/dc1_o514so.png",
       shortName: "DC 160 kW",
       description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais. Com consumo ínfimo em standby, suporte técnico nacional 24/7 e conectores 2x CCS2, é ideal para frotas ou pontos de recarga rápida. Dicas de instalação: Posicione em áreas de alto tráfego com acesso à rede elétrica trifásica; manutenção envolve verificações mensais de cabos e atualizações de software via app Hyper Carga. Curiosidade: Essa unidade pode recarregar um VE padrão em menos de 30 minutos, impulsionando a mobilidade sustentável no Brasil.",
       specs: {
@@ -65,7 +65,7 @@ const Carregadores = () => {
     {
       id: "dc-80kw",
       name: "Carregador DC 80 kW",
-      image: "https://i.imgur.com/oC4s8bY.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146590/DCtv-cabo_lakgyf.png",
       shortName: "DC 80 kW",
       description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real. Ela suporta carregamento em um plugue a 80 kW ou dois a 40 kW cada, com baixo consumo em standby e conectores 2x CCS2. Com suporte nacional, é ótima para shoppings, estacionamentos ou empresas. Dicas de instalação: Integre com sistemas de gerenciamento de energia para otimização; manutenção inclui limpeza do display e calibração anual. Curiosidade: O display pode ser usado para campanhas educativas sobre EVs, alinhando com a visão Hyper Carga de um Brasil elétrico.",
       specs: {
@@ -85,7 +85,7 @@ const Carregadores = () => {
     {
       id: "dc-40kw",
       name: "Carregador DC 40 kW",
-      image: "https://i.imgur.com/GKrr3O7.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wall_dc_tfoqkq.png",
       shortName: "DC 40 kW",
       description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes. Seu baixo consumo em standby e suporte nacional a tornam ideal para locais com demanda moderada, como condomínios ou pequenas empresas. Conectores: 1x CCS2. Dicas de instalação: Fixe em paredes ou pedestais com conexão elétrica dedicada; manutenção é simples, com alertas via app para filtros e conexões. Curiosidade: Essa unidade compacta é energeticamente eficiente, reduzindo custos operacionais em até 20% comparado a modelos semelhantes.",
       specs: {
@@ -105,7 +105,7 @@ const Carregadores = () => {
     {
       id: "wallbox-22kw",
       name: "Wallbox 7.04 / 22 kW",
-      image: "https://i.imgur.com/H2jfR1r.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox AC",
       description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica. Disponível em versões de 7.04 kW ou 22 kW, com conector 1x Tipo 2 e OCPP 1.6 (opcional na versão 7.04 kW), oferece baixo consumo em standby e suporte nacional. Dicas de instalação: Monte na parede com cabo de 5m para acessibilidade; manutenção envolve inspeções visuais semanais e atualizações firmware. Curiosidade: Projetada para uso diário, pode carregar um VE overnight, promovendo a adoção de mobilidade elétrica em lares brasileiros.",
       specs: {
@@ -121,7 +121,7 @@ const Carregadores = () => {
     {
       id: "portatil-7kw",
       name: "Portátil Multicabos 7.04 kW Max",
-      image: "https://i.imgur.com/9OtGpB8.png",
+      image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146565/portatil_ppkbqj.png",
       shortName: "Portátil AC",
       description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW. Inclui conector 1x Tipo 2, ponteiras intercambiáveis (10A, 20A, 32A), tomada 32A e bolsa de transporte para portabilidade. Com suporte nacional, é ideal para viagens ou emergências. Dicas de instalação: Plugue diretamente em tomadas compatíveis; manutenção é mínima, com armazenamento seco recomendado. Curiosidade: Essa unidade versátil se adapta a diferentes redes elétricas, tornando a recarga acessível em todo o território nacional.",
       specs: {
@@ -295,10 +295,11 @@ const Carregadores = () => {
           </div>
         </section>
 
-        {/* Detailed Charger Sections */}
-        <section className="py-16 px-6">
-          <div className="max-w-7xl mx-auto space-y-16">
-            {carregadores.map((charger) => (
+        {/* Detailed Charger Sections - Only show when selectedCharger */}
+        {selectedCharger && (
+          <section className="py-16 px-6">
+            <div className="max-w-7xl mx-auto space-y-16">
+              {carregadores.filter(charger => charger.id === selectedCharger).map((charger) => (
               <div
                 key={charger.id}
                 id={`details-${charger.id}`}
@@ -417,9 +418,10 @@ const Carregadores = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-16 px-6 bg-card">
