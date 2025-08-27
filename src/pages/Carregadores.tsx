@@ -376,7 +376,9 @@ const Carregadores = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
               Nossos carregadores
             </h2>
-            <div className="relative overflow-hidden">
+            
+            {/* Desktop and Tablet: 3 items */}
+            <div className="relative overflow-hidden hidden md:block">
               <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${centerIndex * (100 / 3)}%)` }}>
                 {/* Create infinite loop by duplicating items */}
                 {[...carregadores, ...carregadores, ...carregadores].map((charger, index) => {
@@ -429,20 +431,94 @@ const Carregadores = () => {
                 })}
               </div>
               
-              {/* Navigation buttons */}
+              {/* Desktop Navigation buttons */}
               <button
                 onClick={() => setCenterIndex((prev) => (prev - 1 + carregadores.length) % carregadores.length)}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full z-20"
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full z-20"
               >
                 <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={() => setCenterIndex((prev) => (prev + 1) % carregadores.length)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full z-20"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-primary/80 hover:bg-primary text-white p-2 rounded-full z-20"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Mobile: 1 item at a time */}
+            <div className="relative overflow-hidden md:hidden">
+              <div className="flex transition-transform duration-500 ease-in-out touch-pan-x" style={{ transform: `translateX(-${centerIndex * 100}%)` }}>
+                {/* Create infinite loop by duplicating items */}
+                {[...carregadores, ...carregadores, ...carregadores].map((charger, index) => {
+                  const actualIndex = index % carregadores.length;
+                  const isActive = index === centerIndex + carregadores.length;
+                  
+                  return (
+                    <div 
+                      key={`${charger.id}-${index}`} 
+                      className="flex-shrink-0 w-full px-0 transition-all duration-300"
+                    >
+                      <div className="relative text-center group mx-4 flex flex-col justify-center items-center min-h-[400px] py-8">
+                        {/* Green circle background */}
+                        <div className="absolute inset-x-0 top-16 mx-auto w-48 h-48 bg-green-500 rounded-full z-0 opacity-80"></div>
+                        
+                        {/* Charger image */}
+                        <div className="relative z-10 mb-6 flex items-center justify-center">
+                          <img
+                            src={charger.image}
+                            alt={charger.name}
+                            className="h-40 w-40 object-contain mx-auto"
+                          />
+                        </div>
+                        
+                        {/* Charger name */}
+                        <h3 className="font-bold text-white text-xl mb-6 relative z-10 px-4 leading-tight">
+                          {charger.name}
+                        </h3>
+                        
+                        {/* Saiba Mais button */}
+                        <button
+                          onClick={() => scrollToCharger(charger.id)}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg transition-all duration-300 relative z-10 text-base font-medium touch-manipulation"
+                        >
+                          Saiba Mais
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Mobile Navigation arrows */}
+              <button
+                onClick={() => setCenterIndex((prev) => (prev - 1 + carregadores.length) % carregadores.length)}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/80 text-white p-3 rounded-full z-20 touch-manipulation"
+                style={{ minWidth: '48px', minHeight: '48px' }}
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+              <button
+                onClick={() => setCenterIndex((prev) => (prev + 1) % carregadores.length)}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary hover:bg-primary/80 text-white p-3 rounded-full z-20 touch-manipulation"
+                style={{ minWidth: '48px', minHeight: '48px' }}
               >
                 <ChevronRight className="h-6 w-6" />
               </button>
               
+              {/* Mobile Navigation dots */}
+              <div className="flex justify-center mt-8 space-x-2">
+                {carregadores.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 touch-manipulation ${
+                      index === centerIndex ? 'bg-primary' : 'bg-gray-600'
+                    }`}
+                    onClick={() => setCenterIndex(index)}
+                    style={{ minWidth: '24px', minHeight: '24px' }}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
