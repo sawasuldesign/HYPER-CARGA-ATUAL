@@ -11,6 +11,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const Carregadores = () => {
   const [selectedCharger, setSelectedCharger] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("specs");
 
   useEffect(() => {
     initScrollAnimation();
@@ -50,6 +51,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146552/dc1_o514so.png",
       shortName: "DC 160 kW",
       description: "A estação de recarga Hyper Carga DC 160 kW é a solução perfeita para quem busca flexibilidade e agilidade na recarga de veículos elétricos. Projetada para alta performance, ela permite o carregamento simultâneo em dois plugues a 80 kW cada ou um único a 160 kW, garantindo eficiência máxima em estações públicas ou empresariais.",
+      fullDescription: "Estação de recarga DC inteligente de 160 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (80 kW cada) ou individual (160 kW total), com eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico, divisão inteligente de energia e interface touch proporcionam máxima flexibilidade operacional. Ideal para postos de alta demanda, corredores rodoviários e terminais de transporte.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -70,6 +72,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146590/DCtv-cabo_lakgyf.png",
       shortName: "DC 80 kW",
       description: "A estação de recarga Hyper Carga DC 80 kW combina potência e inovação com um display de 50\" integrado, permitindo controle local ou remoto do conteúdo exibido – perfeito para exibir promoções ou informações em tempo real.",
+      fullDescription: "Estação de recarga DC inteligente de 80 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (40 kW cada) ou individual (80 kW total), com eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico, divisão inteligente de energia e interface touch proporcionam máxima flexibilidade operacional. Ideal para postos de alta demanda, corredores rodoviários e terminais de transporte.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -90,6 +93,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wall_dc_tfoqkq.png",
       shortName: "DC 40 kW",
       description: "A estação de recarga Hyper Carga DC 40 kW oferece flexibilidade e agilidade para recargas rápidas em um único plugue a 40 kW, com protocolo OCPP 1.6 para integração fácil em redes.",
+      fullDescription: "Estação de recarga DC inteligente de 40 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (20 kW cada) ou individual (40 kW total), com eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico, divisão inteligente de energia e interface touch proporcionam máxima flexibilidade operacional. Ideal para postos de média demanda.",
       specs: {
         "Conectores DC": "CCS2 + CCS2",
         "Tamanho do Cabo": "5 m",
@@ -110,6 +114,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox AC",
       description: "As estações de recarga Hyper Carga Wallbox AC são a escolha perfeita para hotéis, residências ou garagens, sem necessidade de grandes alterações na infraestrutura elétrica.",
+      fullDescription: "Carregador veicular AC residencial e comercial com potência ajustável entre 7,04 kW e 22 kW, conector Tipo 2 e conectividade OCPP opcional. Design robusto para instalação em parede, ideal para garagens e empresas. Oferece carregamento inteligente com proteções elétricas integradas.",
       specs: {
         "Conector AC": "Tipo 2",
         "Tamanho do Cabo": "5 m",
@@ -126,6 +131,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146565/portatil_ppkbqj.png",
       shortName: "Portátil AC",
       description: "As estações de recarga Hyper Carga Portátil Multicabos AC proporcionam flexibilidade total para carregar em qualquer lugar, com potência máxima de 7.04 kW.",
+      fullDescription: "Carregador veicular AC portátil de 7,04 kW com conector Tipo 2, ideal para uso em diferentes locais com adaptadores incluídos. Design leve e compacto, perfeito para viagens e residências. Oferece carregamento seguro com proteções elétricas.",
       specs: {
         "Conector AC": "Tipo 2",
         "Tamanho do Cabo": "5 m",
@@ -140,6 +146,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox AC 7.2kW",
       description: "Carregador veicular AC residencial e comercial de 7,2 kW com conectividade WiFi e conector Tipo 2. Design compacto para fixação em parede, ideal para garagens, condomínios e estabelecimentos comerciais.",
+      fullDescription: "Carregador veicular AC residencial e comercial de 7,2 kW com conectividade WiFi e conector Tipo 2. Design compacto para fixação em parede, ideal para garagens, condomínios e estabelecimentos comerciais. Oferece carregamento inteligente com conectividade OCPP opcional, proteções elétricas integradas e instalação simplificada. Solução econômica e eficiente para carregamento regular de veículos elétricos.",
       specs: {
         "Potência nominal": "7,2 kW",
         "Tipo de carregamento": "AC",
@@ -159,6 +166,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox DC 30kW",
       description: "Estação de recarga DC inteligente de 30 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95%.",
+      fullDescription: "Estação de recarga DC inteligente de 30 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico e resfriamento ativo garantem operação segura em temperaturas de -35°C a 50°C. Ideal para estabelecimentos comerciais, condomínios e aplicações urbanas.",
       specs: {
         "Potência de saída": "30 kW",
         "Tensão de saída": "200V a 1000V",
@@ -179,6 +187,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1756146566/wallbox_msbbpu.png",
       shortName: "Wallbox DC 40kW",
       description: "Estação de recarga DC inteligente de 40 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95%.",
+      fullDescription: "Estação de recarga DC inteligente de 40 kW com alta confiabilidade e interface touch colorida. Equipado com conector CCS2, protocolos ISO15118 e DIN SPEC 70121, oferece eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico e resfriamento ativo garantem operação segura em temperaturas de -35°C a 50°C. Ideal para postos, estacionamentos comerciais e frotas corporativas.",
       specs: {
         "Potência de saída": "40 kW",
         "Tensão de saída": "200V a 1000V",
@@ -199,6 +208,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754420072/dc1_ok4vm9.png",
       shortName: "Estação DC 80kW TV",
       description: "Estação de recarga DC inteligente de 80 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (40 kW cada) ou individual (80 kW total), com eficiência superior a 95%.",
+      fullDescription: "Estação de recarga DC inteligente de 80 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (40 kW cada) ou individual (80 kW total), com eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico, divisão inteligente de energia e interface touch proporcionam máxima flexibilidade operacional. Ideal para postos de alta demanda, corredores rodoviários e terminais de transporte.",
       specs: {
         "Potência de saída": "80 kW (40 kW + 40 kW)",
         "Divisão de energia": "40 kW por conector (simultâneo) ou 80 kW (individual)",
@@ -220,6 +230,7 @@ const Carregadores = () => {
       image: "https://res.cloudinary.com/dt2qlgxcl/image/upload/v1754420072/dc1_ok4vm9.png",
       shortName: "Estação DC 120kW TV",
       description: "Estação de recarga DC inteligente de 120 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (60 kW cada) ou individual (120 kW total), com eficiência superior a 95%.",
+      fullDescription: "Estação de recarga DC inteligente de 80 kW com duplo conector CCS2 e display de 50\". Oferece carregamento simultâneo (40 kW cada) ou individual (80 kW total), com eficiência superior a 95% e conectividade OCPP 1.6. Sistema de auto-diagnóstico, divisão inteligente de energia e interface touch proporcionam máxima flexibilidade operacional. Ideal para postos de alta demanda, corredores rodoviários e terminais de transporte.",
       specs: {
         "Potência de saída": "120 kW (60 kW + 60 kW)",
         "Divisão de energia": "60 kW por conector (simultâneo) ou 120 kW (individual)",
@@ -463,6 +474,13 @@ const Carregadores = () => {
                           {charger.name}
                         </h3>
                         
+                        {/* Full description */}
+                        <div className="mb-6">
+                          <p className="text-white/90 leading-relaxed">
+                            {charger.fullDescription}
+                          </p>
+                        </div>
+                        
                         {/* Key specs as bullet points */}
                         <div className="mb-6">
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -477,27 +495,41 @@ const Carregadores = () => {
                           </div>
                         </div>
                         
-                        {/* Ficha Técnica button */}
-                        <Tabs defaultValue="description" className="w-full">
-                          <TabsList className="grid w-full grid-cols-1 bg-darker max-w-xs">
+                        {/* Tabs for Description and Ficha Técnica */}
+                        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                          <TabsList className="grid w-full grid-cols-2 bg-darker max-w-md">
+                            <TabsTrigger 
+                              value="description" 
+                              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+                            >
+                              Descrição
+                            </TabsTrigger>
                             <TabsTrigger 
                               value="specs" 
-                              className="data-[state=active]:bg-primary data-[state=active]:text-white"
+                              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
                             >
                               Ficha Técnica
                             </TabsTrigger>
                           </TabsList>
                           
+                          <TabsContent value="description" className="mt-6">
+                            <div className="bg-darker/50 rounded-lg p-6">
+                              <p className="text-white/90 leading-relaxed">
+                                {charger.fullDescription}
+                              </p>
+                            </div>
+                          </TabsContent>
+                          
                           <TabsContent value="specs" className="mt-6">
                             <div className="overflow-x-auto">
-                              <table className="w-full">
-                                <tbody className="space-y-2">
-                                  {Object.entries(charger.specs).map(([key, value]) => (
-                                    <tr key={key} className="border-b border-border/20">
-                                      <td className="py-3 pr-6 font-semibold text-primary capitalize">
+                              <table className="w-full bg-darker/50 rounded-lg">
+                                <tbody>
+                                  {Object.entries(charger.specs).map(([key, value], index) => (
+                                    <tr key={key} className={`${index % 2 === 0 ? 'bg-darker/30' : 'bg-transparent'}`}>
+                                      <td className="py-3 px-4 font-semibold text-green-500 capitalize border-r border-border/20">
                                         {key}
                                       </td>
-                                      <td className="py-3 text-white/80">{value}</td>
+                                      <td className="py-3 px-4 text-white/80">{value}</td>
                                     </tr>
                                   ))}
                                 </tbody>
