@@ -88,7 +88,7 @@ const ProductsSection = () => {
         {activeTab === "carregadores" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {currentProducts.map((product) => (
-              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element">
+              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animate-fade-in-up">
                 <div className="h-60 bg-darker flex items-center justify-center p-6 overflow-hidden">
                   <img
                     src={product.image}
@@ -125,7 +125,7 @@ const ProductsSection = () => {
         ) : (
           <div className="flex justify-center">
             {currentProducts.map((product) => (
-              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animated-element max-w-md w-full">
+              <div key={product.id} className="bg-dark rounded-xl overflow-hidden border border-border/40 hover:border-hyper-blue/30 transition-all animate-fade-in-up max-w-md w-full">
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                   <p className="text-white/70 mb-4">{product.description}</p>
