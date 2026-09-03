@@ -56,17 +56,21 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative h-[400px] lg:h-[500px] animated-element">
+          <div className="relative h-[400px] lg:h-[500px]">
             <div className="absolute inset-0 flex items-center justify-center">
               <video
-                className="w-full md:w-[70%] h-auto rounded-lg max-w-[600px] animated-element fade-in-up shadow-lg"
+                className="w-full md:w-[70%] h-auto rounded-lg max-w-[600px] shadow-lg"
+                width={854}
+                height={854}
+                poster="/images/hero-cars-poster.webp"
+                preload="auto"
                 autoPlay
                 loop
                 muted
                 playsInline
                 aria-label="Vídeo introdutório da Hyper Carga"
               >
-                <source src="https://imgur.com/yB8CsB4.mp4" type="video/mp4" />
+                <source src="/media/hero-cars.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
             </div>
