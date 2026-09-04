@@ -14,6 +14,7 @@ import CarregadoresCasa from "./pages/services/CarregadoresCasa";
 import ProjetosInstalacao from "./pages/services/ProjetosInstalacao";
 import CarregadoresMarca from "./pages/services/CarregadoresMarca";
 import NotFound from "./pages/NotFound";
+import HashNavigation from "./components/HashNavigation";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <HashNavigation />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/solucoes/motoristas" element={<Motoristas />} />
