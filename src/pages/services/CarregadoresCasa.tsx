@@ -37,7 +37,7 @@ const CarregadoresCasa = () => {
         <section 
           className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://imgur.com/ctrNRtR.jpg')"
+            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('/media/home/wallbox-residencias.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -60,7 +60,7 @@ const CarregadoresCasa = () => {
           
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/555436983939"
+            href="https://wa.me/5554999893465"
             className="fixed bottom-6 right-6 z-50 bg-hyper-green p-3 rounded-xl shadow-lg hover:bg-hyper-green/90 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +89,7 @@ const CarregadoresCasa = () => {
               <div className="flex flex-col md:flex-row items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
                 <div className="w-full md:w-1/2 mr-0 md:mr-6">
                   <img
-                    src="https://imgur.com/ctrNRtR.jpg"
+                    src="/media/home/wallbox-residencias.jpg"
                     alt="Wallbox AC para residências"
                     className="w-full h-[300px] object-cover rounded-xl"
                   />
@@ -109,7 +109,7 @@ const CarregadoresCasa = () => {
               <div className="flex flex-col md:flex-row-reverse items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
                 <div className="w-full md:w-1/2 ml-0 md:ml-6">
                   <img
-                    src="https://imgur.com/31WQDuM.jpg"
+                    src="/media/home/wallbox-pequenos-negocios.png"
                     alt="Wallbox AC para pequenos negócios"
                     className="w-full h-[300px] object-cover rounded-xl"
                   />
@@ -129,7 +129,7 @@ const CarregadoresCasa = () => {
               <div className="flex flex-col md:flex-row items-center bg-darker rounded-xl border border-border/40 hover:border-hyper-blue/30 transition-all p-6 animated-element">
                 <div className="w-full md:w-1/2 mr-0 md:mr-6">
                   <img
-                    src="https://imgur.com/rZ5NpPx.jpg"
+                    src="/media/home/portatil-multicabos.jpg"
                     alt="Carregadores Portáteis Multicabos"
                     className="w-full h-[300px] object-cover rounded-xl"
                   />

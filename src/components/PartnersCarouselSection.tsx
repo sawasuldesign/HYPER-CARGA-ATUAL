@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const PartnersCarouselSection = () => {
@@ -17,16 +17,30 @@ const PartnersCarouselSection = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(1);
+
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const nextVisibleCount = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+      setVisibleCount(nextVisibleCount);
+      setCurrentIndex(0);
+    };
+
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex + 2 >= partners.length ? 0 : prevIndex + 2
-    );
+    setCurrentIndex((prevIndex) => {
+      const nextIndex = prevIndex + visibleCount;
+      return nextIndex >= partners.length ? 0 : Math.min(nextIndex, partners.length - visibleCount);
+    });
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex - 2 < 0 ? Math.max(0, partners.length - 2) : prevIndex - 2
+    setCurrentIndex((prevIndex) =>
+      prevIndex - visibleCount < 0 ? Math.max(0, partners.length - visibleCount) : prevIndex - visibleCount
     );
   };
 
@@ -55,7 +69,7 @@ const PartnersCarouselSection = () => {
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}
             >
               {partners.map((partner, index) => (
                 <div 

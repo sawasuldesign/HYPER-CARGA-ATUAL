@@ -16,7 +16,7 @@ const PartnerSection = () => {
         {/* Two-column button layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-md mx-auto animated-element">
           <a 
-            href="https://wa.me/555436983939" 
+            href="https://wa.me/555499140301?text=Ol%C3%A1%2C%20Rudinei!%20Vim%20pelo%20site%20da%20Hypercarga%20e%20gostaria%20de%20falar%20com%20um%20especialista."
             className="inline-flex items-center justify-center bg-hyper-green text-white px-6 py-3 rounded-lg hover:bg-hyper-green/90 transition-colors md:w-auto md:whitespace-nowrap md:text-center"
             target="_blank"
             rel="noopener noreferrer"
@@ -51,8 +51,8 @@ const PartnerSection = () => {
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-hyper-green mr-2" />
-                <a href="tel:+555436983939" className="hover:text-hyper-blue transition-colors">
-                  +55 (54) 3698 3939
+                <a href="tel:+5554999893465" className="hover:text-hyper-blue transition-colors">
+                  +55 54 99989-3465
                 </a>
               </div>
             </div>

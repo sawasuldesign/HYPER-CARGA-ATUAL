@@ -70,7 +70,7 @@ const AboutSection = () => {
                 playsInline
                 aria-label="Vídeo sobre a Hyper Carga"
               >
-                <source src="https://imgur.com/IWYUnfj.mp4" type="video/mp4" />
+                <source src="/media/home/sobre-hypercarga.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
             </div>
