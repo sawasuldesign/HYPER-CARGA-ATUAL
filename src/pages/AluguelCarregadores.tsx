@@ -112,7 +112,7 @@ const AluguelCarregadores = () => {
         <section 
           className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('https://i.imgur.com/glydj6W.jpg')"
+            backgroundImage: "linear-gradient(to right bottom, rgba(14, 17, 22, 0.8), rgba(7, 8, 10, 0.95)), url('/media/home/solucao-motoristas.png')"
           }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
@@ -135,7 +135,7 @@ const AluguelCarregadores = () => {
           
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/555436983939"
+            href="https://wa.me/5554999893465"
             className="fixed bottom-6 right-6 z-50 bg-hyper-green p-3 rounded-xl shadow-lg hover:bg-hyper-green/90 transition-colors"
             target="_blank"
             rel="noopener noreferrer"

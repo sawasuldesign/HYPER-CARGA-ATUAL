@@ -24,8 +24,9 @@ const Navbar = () => {
     { name: "Home", href: "/", ariaLabel: "Ir para a página inicial" },
     { name: "Sobre", href: "#about", ariaLabel: "Ir para a seção sobre" },
     { name: "Produtos", href: "#products", ariaLabel: "Ir para a seção produtos" },
+    { name: "Carregadores", href: "/carregadores", ariaLabel: "Ver catálogo de carregadores" },
     { 
-      name: "Serviços", 
+      name: "Serviço",
       href: "#services", 
       ariaLabel: "Expandir menu de serviços",
       hasDropdown: true,

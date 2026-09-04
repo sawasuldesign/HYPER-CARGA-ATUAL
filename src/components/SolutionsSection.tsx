@@ -6,25 +6,25 @@ const SolutionsSection = () => {
   const solutions = [
     {
       title: "Motoristas",
-      image: "https://imgur.com/glydj6W.jpg",
+      image: "/media/home/solucao-motoristas.png",
       href: "/solucoes/motoristas",
       cta: "Acesse as Soluções"
     },
     {
       title: "Frotas e Empresas",
-      image: "https://imgur.com/IQWDgYh.jpg",
+      image: "/media/home/solucao-frotas-empresas.png",
       href: "/solucoes/frotas",
       cta: "Acesse as Soluções"
     },
     {
       title: "Tudo sobre os carregadores",
-      image: "https://imgur.com/oz7dc74.jpg",
+      image: "/media/home/solucao-carregadores.png",
       href: "/solucoes/carregadores",
       cta: "seu carregador ideal"
     },
     {
       title: "Hyper Carga Store",
-      image: "https://imgur.com/0ev9Idx.jpg",
+      image: "/media/home/solucao-loja.png",
       href: "https://hypercarga.lojavirtualnuvem.com.br/",
       cta: "Acesse a nossa Loja"
     }
