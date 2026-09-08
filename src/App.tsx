@@ -15,6 +15,7 @@ import ProjetosInstalacao from "./pages/services/ProjetosInstalacao";
 import CarregadoresMarca from "./pages/services/CarregadoresMarca";
 import NotFound from "./pages/NotFound";
 import HashNavigation from "./components/HashNavigation";
+import RouteSeo from "./components/RouteSeo";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <RouteSeo />
         <HashNavigation />
         <Routes>
           <Route path="/" element={<Index />} />
